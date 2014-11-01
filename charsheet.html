@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Fenrir Fireaxe - Character sheet</title>
+    <style type="text/css">
+        .fieldFooter {
+            text-transform: uppercase;
+            display: block;
+            clear: both;
+            font-size: 0.6em;
+        }
+
+        .fieldHeader {
+            text-transform: uppercase;
+            display: block;
+            clear: both;
+            font-size: 0.8em;
+        }
+
+        .charnameContainer {
+            alignment: center;
+            display: block;
+            float: left;
+            width: 50%;
+            max-width: 40em;
+        }
+
+        .charname {
+            text-align: center;
+            font-size: 2em;
+            width: 6em;
+            margin: 0.5em auto auto;
+        }
+
+        .mainAttributes {
+            float: left;
+            display: block;
+            border: 1px gray solid;
+            border-radius: 15px;
+            width: 50%;
+            max-width: 40em;
+            min-width: 14em;
+            margin-bottom: 1em;
+        }
+
+        .mainAttribute {
+            font-size: 1.2em;
+            float: left;
+            display: block;
+            margin-left: 0.4em;
+            padding: 0.3em;
+            width: 10em;
+        }
+
+        .mainAttribute .fieldFooter {
+            border-top: 1px solid gray;
+        }
+
+        .blockContainer {
+            clear: both;
+
+        }
+
+        .mainStats {
+            background-color: lightgray;
+            border: darkgray 1px solid;
+            border-radius: 15%;
+            display: block;
+            text-align: center;
+            width: 6em;
+            padding: 1em;
+            margin-right: 1em;
+            clear: left;
+            float: left;
+            margin-bottom: 1em;
+        }
+
+        .mainStat {
+            background-color: white;
+            margin-top: 1em;
+            padding-top: 0.5em;
+            display: block;
+            clear: both;
+            height: 2.5em;
+            font-size: 2em;
+            border: 1px gray solid;
+            border-radius: 8px;
+        }
+
+        .mainStat .fieldHeader {
+            font-size: 0.4em;
+            text-align: center;
+        }
+
+        .mainStatModifier {
+            margin: auto;
+            width: 1em;
+            font-size: 0.5em;
+            border: 1px lightgray solid;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .throwsAndSkillsContainer {
+            display:block;
+            float:left;
+            width:16em;
+            padding: 1em;
+            font-size: 0.8em;
+        }
+
+        .inspirationContainer {
+            display: block;
+            line-height: 2.2em;
+            width: 16em;
+        }
+
+        .inspirationPoints {
+            display: block;
+            float: left;
+            border: 3px black solid;
+            border-radius: 15%;
+            margin-top:-0.1em;
+            line-height:2.6em;
+            width: 2.7em;
+            height: 2.6em;
+            text-align: center;
+        }
+
+        .inspiration {
+            display: block;
+            border: 3px double gray;
+            text-align: center;
+            float: left;
+            width: 12em;
+            margin-top: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .proficiencyContainer
+        {
+            margin-top: 1em;
+            display: block;
+            float: left;
+            line-height: 2.2em;
+            width: 16em;
+        }
+
+        .proficiencyModifier {
+            display: block;
+            float: left;
+            border: 1px black solid;
+            border-radius: 50%;
+            padding: 0.5em;
+            width: 2em;
+            height: 2em;
+            text-align: center;
+        }
+
+        .proficiencyBonus {
+            display: block;
+            float: left;
+            margin-top: 0.3em;
+            width: 12em;
+            border: 3px double gray;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .savingThrows, .skills {
+            width: 15.2em;
+            line-height: 1.8em;
+            float: left;
+            margin-top: 1em;
+            display: block;
+            border: 3px double gray;
+            font-size: 1.0em;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .savingThrows ul, .skills ul {
+            text-transform: capitalize;
+            text-align: left;
+            padding: 0.2em;
+            margin: 0.5em 0.5em 1em 1.8em;
+        }
+
+        li {
+            list-style-type: circle;
+        }
+
+        .proficient {
+            list-style-type: disc;
+        }
+
+        .checkModifier, .skillModifier {
+            display: inline-block;
+            width: 2em;
+            text-align: center;
+            margin-right: 1em;
+            line-height: 1em;
+            border-bottom: 1px lightgray solid;
+        }
+
+    </style>
+</head>
+<body>
+<div class="charnameContainer">
+    <div class="charname">
+        Fenrir Fireaxe
+        <span class="fieldFooter">Character name</span>
+    </div>
+</div>
+<div class="mainAttributes">
+    <div class="blockContainer">
+        <div class="mainAttribute">
+            Barbarian 2
+            <span class="fieldFooter">Class & level</span>
+        </div>
+        <div class="mainAttribute">
+            Noble
+            <span class="fieldFooter">Background</span>
+        </div>
+        <div class="mainAttribute">
+            Jóhann
+            <span class="fieldFooter">Player name</span>
+        </div>
+    </div>
+    <div class="blockContainer">
+        <div class="mainAttribute">
+            Mountain Dwarf
+            <span class="fieldFooter">Race</span>
+        </div>
+        <div class="mainAttribute">
+            Chaotic Neutral / Good
+            <span class="fieldFooter">Alignment</span>
+        </div>
+        <div class="mainAttribute">
+            *
+            <span class="fieldFooter">Experience points</span>
+        </div>
+    </div>
+</div>
+<div class="mainStats">
+    <div class="mainStat">
+        <span class="fieldHeader">Strength</span>
+        17
+        <span class="mainStatModifier">+3</span>
+    </div>
+    <div class="mainStat">
+        <span class="fieldHeader">Dexterity</span>
+        13
+        <span class="mainStatModifier">+1</span>
+    </div>
+    <div class="mainStat">
+        <span class="fieldHeader">Constitution</span>
+        17
+        <span class="mainStatModifier">+3</span>
+    </div>
+    <div class="mainStat">
+        <span class="fieldHeader">Intelligence</span>
+        8
+        <span class="mainStatModifier">-1</span>
+    </div>
+    <div class="mainStat">
+        <span class="fieldHeader">Wisdom</span>
+        10
+        <span class="mainStatModifier">0</span>
+    </div>
+    <div class="mainStat">
+        <span class="fieldHeader">Charisma</span>
+        13
+        <span class="mainStatModifier">+1</span>
+    </div>
+</div>
+
+<div class="throwsAndSkillsContainer">
+    <div class="inspirationContainer">
+        <span class="inspirationPoints">1</span>
+        <span class="inspiration">Inspiration</span>
+    </div>
+    <div class="proficiencyContainer">
+        <span class="proficiencyModifier">+2</span>
+        <span class="proficiencyBonus">Proficiency bonus</span>
+    </div>
+
+    <div class="savingThrows">
+        <ul>
+        <li class="proficient"><span class="checkModifier">+5</span>Strength</li>
+        <li><span class="checkModifier">+1</span>Dexterity</li>
+        <li class="proficient"><span class="checkModifier">+5</span>Constitution</li>
+        <li><span class="checkModifier">-1</span>Intelligence</li>
+        <li><span class="checkModifier">+0</span>Wisdom</li>
+        <li><span class="checkModifier">+1</span>Charisma</li>
+        </ul>
+        Saving throws
+    </div>
+
+    <div class="skills">
+        <ul>
+        <li><span class="checkModifier">+1</span>Acrobatics <i>(Dex)</i></li>
+        <li><span class="checkModifier">+0</span>Animal Handling <i>(Wis)</i></li>
+        <li><span class="checkModifier">-1</span>Arcana <i>(Int)</i></li>
+        <li class="proficient"><span class="checkModifier">+5</span>Athletics <i>(Str)</i></li>
+        <li><span class="checkModifier">+0</span>Deception <i>(Cha)</i></li>
+        <li class="proficient"><span class="checkModifier">+1</span>History <i>(Int)</i></li>
+        <li><span class="checkModifier">+0</span>Insight <i>(Wis)</i></li>
+        <li><span class="checkModifier">+1</span>Intimidation <i>(Cha)</i></li>
+        <li><span class="checkModifier">-1</span>Investigation <i>(Int)</i></li>
+        <li><span class="checkModifier">+0</span>Medicine <i>(Wis)</i></li>
+        <li><span class="checkModifier">-1</span>Nature <i>(Int)</i></li>
+        <li class="proficient"><span class="checkModifier">+2</span>Perception <i>(Wis)</i></li>
+        <li><span class="checkModifier">+1</span>Performance <i>(Cha)</i></li>
+        <li class="proficient"><span class="checkModifier">+3</span>Persuasion <i>(Cha)</i></li>
+        <li><span class="checkModifier">-1</span>Religion <i>(Int)</i></li>
+        <li><span class="checkModifier">+1</span>Sleight of Hand <i>(Dex)</i></li>
+        <li><span class="checkModifier">+1</span>Stealth <i>(Dex)</i></li>
+        <li><span class="checkModifier">+0</span>Survival <i>(Wis)</i></li>
+        </ul>
+        Skills
+    </div>
+</div>
+<br/>
+<br/>
+</body>
+</html>
