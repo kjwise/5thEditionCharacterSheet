@@ -5,34 +5,103 @@
     <meta charset="UTF-8">
     <title>Fenrir Fireaxe - Character sheet</title>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!--<script src="https://dl.dropboxusercontent.com/u/68767/fireaxe.js"></script>-->
     <script>
 
-        // Main stat to modifier mapping
-        function getStatModifier(statValue)
-        {
-            return Math.floor((statValue - 10) / 2);
-        }
-
-        function mapStat(ability, abilityscores)
-        {
-            var abilityScoreValue = abilityscores[ability];
-            $("#" + ability).text(abilityScoreValue);
-            var modifier = getStatModifier(abilityScoreValue);
-            $("#" + ability + " ~ .mainStatModifier").text(modifier);
-        }
-
-        var vars = [], hash;
-        var q = document.URL.split('?')[1];
-        if(q != undefined){
-            q = q.split('&');
-            for(var i = 0; i < q.length; i++){
-                hash = q[i].split('=');
-                vars.push(hash[1]);
-                vars[hash[0]] = hash[1];
+        function getVars() {
+            var vars = [], hash;
+            var q = document.URL.split('?')[1];
+            if (q != undefined) {
+                q = q.split('&');
+                for (var i = 0; i < q.length; i++) {
+                    hash = q[i].split('=');
+                    vars.push(hash[1]);
+                    vars[hash[0]] = hash[1];
+                }
             }
+            return vars;
         }
-        // TODO: Handle undefined json parameter
-        $.getJSON( vars.json, function( characterJson ) {
+
+        var skillsToAbility = {
+            "Acrobatics": "dex",
+            "Animal Handling": "wis",
+            "Arcana": "int",
+            "Athletics": "str",
+            "Deception": "cha",
+            "History": "int",
+            "Insight": "wis",
+            "Intimidation": "cha",
+            "Investigation": "int",
+            "Medicine": "wis",
+            "Nature": "int",
+            "Perception": "wis",
+            "Performance": "cha",
+            "Persuasion": "cha",
+            "Religion": "int",
+            "Sleight of Hand": "dex",
+            "Stealth": "dex",
+            "Survival": "wis"
+        };
+
+        // Main stat to modifier mapping
+        function computeAbilityModifier(abilityScore)
+        {
+            return Math.floor((abilityScore - 10) / 2);
+        }
+
+        //var abilityScoreToModifier = {};
+        function formatModifier(modifier) {
+            if (modifier >= 0) {
+                modifier = "+" + modifier;
+            }
+            return modifier;
+        }
+
+        function mapStat(ability, characterJson, abilityToModifierStore)
+        {
+            var abilityScoreValue = characterJson.abilityscores[ability];
+            $("#" + ability).text(abilityScoreValue);
+
+            // Show the modifier that is a function of the ability score
+            var modifier = computeAbilityModifier(abilityScoreValue);
+
+            // Save the result in a possibly provided object
+            if (abilityToModifierStore !== undefined) {
+                abilityToModifierStore[ability] = modifier;
+            }
+
+            $("#" + ability + " ~ .mainStatModifier").text(formatModifier(modifier));
+
+            // Deal with the saving throws and proficiencies
+            if ($.inArray(ability, characterJson.savingthrow_proficiencies) > -1) {
+                modifier += 2;
+                $("#save_" + ability).addClass("proficient");
+            }
+            $("#save_" + ability + " .checkModifier").text(formatModifier(modifier));
+
+        }
+
+        function computeProficiencyModifier(totalLevels) {
+            return (Math.floor((totalLevels - 1) / 4) + 2);
+        }
+
+        $.getScript(getVars().charURL, function () {
+            loadChar(charJson);
+        });
+
+        function mapSkills(characterJson, abilityToModifierStore) {
+            $.each(skillsToAbility, function (skill, ability) {
+                var modifier = abilityToModifierStore[ability];
+                // This is ugly but it works.
+                if ($.inArray(skill.toLowerCase(), characterJson.skill_proficiences) > -1) {
+                    $("#skills").find("ul").append("<li class='proficient'><span class='checkModifier'>" + formatModifier(modifier + 2) + "</span>" + skill + "<i> (" + ability + ")</i></li>");
+                }
+                else {
+                    $("#skills").find("ul").append("<li><span class='checkModifier'>" + formatModifier(modifier) + "</span>" + skill + "<i> (" + ability + ")</i></li>");
+                }
+            });
+        }
+        function loadChar(characterJson) {
             $("#character_name").text(characterJson.name);
 
             // Compute all classes into a single string
@@ -47,7 +116,7 @@
             $("#character_class").text(charClass.join(" / "));
 
             // Proficiency modifier is a function of the total character level
-            $("#proficiencyModifier").text("+" + (Math.floor((totalLevels - 1) / 4) + 2))   ;
+            $("#proficiencyModifier").text("+" + computeProficiencyModifier(totalLevels));
 
             $("#character_background").text(characterJson.background);
             $("#character_race").text(characterJson.race);
@@ -55,15 +124,19 @@
             $("#player_name").text(characterJson.playername);
             $("#character_xp").html(characterJson.xp || "&nbsp");
 
-            // Plug in the stats and modifiers
-            mapStat("str", characterJson.abilityscores);
-            mapStat("dex", characterJson.abilityscores);
-            mapStat("con", characterJson.abilityscores);
-            mapStat("int", characterJson.abilityscores);
-            mapStat("wis", characterJson.abilityscores);
-            mapStat("cha", characterJson.abilityscores);
+            // Plug in ability scores, modifiers and saving throws
+            var abilityToModifierStore = {};
+            mapStat("str", characterJson, abilityToModifierStore);
+            mapStat("dex", characterJson, abilityToModifierStore);
+            mapStat("con", characterJson, abilityToModifierStore);
+            mapStat("int", characterJson, abilityToModifierStore);
+            mapStat("wis", characterJson, abilityToModifierStore);
+            mapStat("cha", characterJson, abilityToModifierStore);
 
-        });
+            // Handle skills
+            mapSkills(characterJson, abilityToModifierStore);
+
+        }
     </script>
     <style type="text/css">
         .fieldFooter {
@@ -147,11 +220,11 @@
             font-size: 2em;
             border: 1px gray solid;
             border-radius: 8px;
+            text-align: center;
         }
 
         .mainStat .fieldHeader {
             font-size: 0.4em;
-            text-align: center;
         }
 
         .mainStatModifier {
@@ -229,7 +302,7 @@
             text-align: center;
         }
 
-        .savingThrows, .skills {
+        .savingThrows, #skills {
             width: 15.2em;
             line-height: 1.8em;
             float: left;
@@ -241,7 +314,7 @@
             text-align: center;
         }
 
-        .savingThrows ul, .skills ul {
+        .savingThrows ul, #skills ul {
             text-transform: capitalize;
             text-align: left;
             padding: 0.2em;
@@ -265,6 +338,62 @@
             border-bottom: 1px lightgray solid;
         }
 
+        .combatContainer {
+            background-color: lightgray;
+            border: solid 1px darkgray;
+            border-radius: 15%;
+            display: block;
+            float: left;
+            clear: none;
+            width: 25em;
+            padding: 1em;
+            font-size: 0.8em;
+        }
+
+        .combatContainer .mainStat {
+            margin: 0.2em;
+            font-size: 2.7em;
+            height: 1.6em;
+        }
+
+        #armorClass {
+            border-bottom-left-radius: 100%;
+            border-bottom-right-radius: 100%;
+            width: 1.6em;
+            padding: 0.5em;
+            clear: none;
+            float: left;
+        }
+
+        #initiative {
+            width: 2em;
+            float: left;
+            padding: 0.3em;
+            clear: none;
+        }
+
+        #speed {
+            width: 2em;
+            float: left;
+            padding: 0.3em;
+            clear: none;
+        }
+
+        #hitpoints, #hitdice {
+            padding: 0;
+        }
+
+        #attacksAndSpellcasting {
+            width: 15.2em;
+            line-height: 1.8em;
+            float: left;
+            margin-top: 1em;
+            display: block;
+            border: 3px double gray;
+            font-size: 1.0em;
+            text-transform: uppercase;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -349,41 +478,40 @@
 
     <div class="savingThrows">
         <ul>
-        <li class="proficient"><span class="checkModifier">+5</span>Strength</li>
-        <li><span class="checkModifier">+1</span>Dexterity</li>
-        <li class="proficient"><span class="checkModifier">+5</span>Constitution</li>
-        <li><span class="checkModifier">-1</span>Intelligence</li>
-        <li><span class="checkModifier">+0</span>Wisdom</li>
-        <li><span class="checkModifier">+1</span>Charisma</li>
+            <li id="save_str"><span class="checkModifier"></span>Strength</li>
+            <li id="save_dex"><span class="checkModifier"></span>Dexterity</li>
+            <li id="save_con"><span class="checkModifier"></span>Constitution</li>
+            <li id="save_int"><span class="checkModifier"></span>Intelligence</li>
+            <li id="save_wis"><span class="checkModifier"></span>Wisdom</li>
+            <li id="save_cha"><span class="checkModifier"></span>Charisma</li>
         </ul>
         Saving throws
     </div>
 
-    <div class="skills">
+    <div id="skills">
+        <!-- Filled out by jquery -->
         <ul>
-        <li><span class="checkModifier">+1</span>Acrobatics <i>(Dex)</i></li>
-        <li><span class="checkModifier">+0</span>Animal Handling <i>(Wis)</i></li>
-        <li><span class="checkModifier">-1</span>Arcana <i>(Int)</i></li>
-        <li class="proficient"><span class="checkModifier">+5</span>Athletics <i>(Str)</i></li>
-        <li><span class="checkModifier">+0</span>Deception <i>(Cha)</i></li>
-        <li class="proficient"><span class="checkModifier">+1</span>History <i>(Int)</i></li>
-        <li><span class="checkModifier">+0</span>Insight <i>(Wis)</i></li>
-        <li><span class="checkModifier">+1</span>Intimidation <i>(Cha)</i></li>
-        <li><span class="checkModifier">-1</span>Investigation <i>(Int)</i></li>
-        <li><span class="checkModifier">+0</span>Medicine <i>(Wis)</i></li>
-        <li><span class="checkModifier">-1</span>Nature <i>(Int)</i></li>
-        <li class="proficient"><span class="checkModifier">+2</span>Perception <i>(Wis)</i></li>
-        <li><span class="checkModifier">+1</span>Performance <i>(Cha)</i></li>
-        <li class="proficient"><span class="checkModifier">+3</span>Persuasion <i>(Cha)</i></li>
-        <li><span class="checkModifier">-1</span>Religion <i>(Int)</i></li>
-        <li><span class="checkModifier">+1</span>Sleight of Hand <i>(Dex)</i></li>
-        <li><span class="checkModifier">+1</span>Stealth <i>(Dex)</i></li>
-        <li><span class="checkModifier">+0</span>Survival <i>(Wis)</i></li>
         </ul>
         Skills
     </div>
 </div>
-<br/>
-<br/>
-</body>
-</html>
+<div class="combatContainer">
+    <div id="armorClass" class="mainStat">16
+        <div class="fieldHeader">Armor Class</div>
+    </div>
+    <div id="initiative" class="mainStat">+1
+        <div class="fieldHeader">Initiative</div>
+    </div>
+    <div id="speed" class="mainStat">25
+        <div class="fieldHeader">Speed</div>
+    </div>
+    <div id="hitpoints" class="mainStat">25
+        <div class="fieldHeader">Hit points</div>
+    </div>
+    <div id="hitdice" class="mainStat">1d12
+        <div class="fieldHeader">Hit dice</div>
+    </div>
+</div>
+<div id="attacksAndSpellcasting">
+    Attacks & Spellcasting
+</div>

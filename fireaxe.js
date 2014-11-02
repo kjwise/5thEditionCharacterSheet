@@ -1,3 +1,4 @@
+var charJson =
 {
   "name": "Fenrir Fireaxe",
   "classes": [
@@ -33,8 +34,6 @@
     "perception",
     "persuasion"
   ],
-  "hitpoints": 25,
-  "inspirationpoints": 1,
   "ac": 16,
   "speed": 25
-}
+};
