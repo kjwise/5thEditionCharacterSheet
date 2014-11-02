@@ -10,14 +10,15 @@
         // Main stat to modifier mapping
         function getStatModifier(statValue)
         {
-            return math.floor((statValue - 10) / 2);
+            return Math.floor((statValue - 10) / 2);
         }
 
         function mapStat(ability, abilityscores)
         {
             var abilityScoreValue = abilityscores[ability];
             $("#" + ability).text(abilityScoreValue);
-            $("#" + ability + " ~ .mainStatModifier").text(getStatModifier(abilityScoreValue));
+            var modifier = getStatModifier(abilityScoreValue);
+            $("#" + ability + " ~ .mainStatModifier").text(modifier);
         }
 
         var vars = [], hash;
@@ -36,12 +37,17 @@
 
             // Compute all classes into a single string
             var charClass = [];
+            var totalLevels = 0;
             $.each(characterJson.classes, function(i, item){
                 $.each(item, function(cclass, clvl) {
                     charClass.push(cclass + " " + clvl);
+                    totalLevels += clvl;
                 });
             });
             $("#character_class").text(charClass.join(" / "));
+
+            // Proficiency modifier is a function of the total character level
+            $("#proficiencyModifier").text("+" + (Math.floor((totalLevels - 1) / 4) + 2))   ;
 
             $("#character_background").text(characterJson.background);
             $("#character_race").text(characterJson.race);
@@ -202,7 +208,7 @@
             width: 16em;
         }
 
-        .proficiencyModifier {
+        #proficiencyModifier {
             display: block;
             float: left;
             border: 1px black solid;
@@ -337,7 +343,7 @@
         <span class="inspiration">Inspiration</span>
     </div>
     <div class="proficiencyContainer">
-        <span class="proficiencyModifier">+2</span>
+        <span id="proficiencyModifier">+2</span>
         <span class="proficiencyBonus">Proficiency bonus</span>
     </div>
 
