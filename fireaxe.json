@@ -1,0 +1,20 @@
+{
+  "name": "Fenrir Fireaxe",
+  "classes": [
+    {"Barbarian": 2}
+    ],
+  "background": "Noble",
+  "race": "Mountain Dwarf",
+  "alignment": "Chaotic Neutral",
+  "hitpoints": 25,
+  "playername": "Jóhann",
+  "xp": null,
+  "abilityscores": [
+    {"str": 17},
+    {"dex": 13},
+    {"con": 17},
+    {"int": 8},
+    {"wis": 10},
+    {"cha": 13}
+  ]
+}

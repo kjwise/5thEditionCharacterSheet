@@ -4,6 +4,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Fenrir Fireaxe - Character sheet</title>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script>
+
+        // Main stat to modifier mapping
+        function getStatModifier(statValue)
+        {
+            return math.floor((statValue - 10) / 2);
+        }
+
+        function mapStat(ability, abilityscores)
+        {
+            var abilityScoreValue = abilityscores[ability];
+            $("#" + ability).text(abilityScoreValue);
+            $("#" + ability + " ~ .mainStatModifier").text(getStatModifier(abilityScoreValue));
+        }
+
+        var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+        }
+        // TODO: Handle undefined json parameter
+        $.getJSON( vars.json, function( characterJson ) {
+            $("#character_name").text(characterJson.name);
+
+            // Compute all classes into a single string
+            var charClass = [];
+            $.each(characterJson.classes, function(i, item){
+                $.each(item, function(cclass, clvl) {
+                    charClass.push(cclass + " " + clvl);
+                });
+            });
+            $("#character_class").text(charClass.join(" / "));
+
+            $("#character_background").text(characterJson.background);
+            $("#character_race").text(characterJson.race);
+            $("#character_alignment").text(characterJson.alignment);
+            $("#player_name").text(characterJson.playername);
+            $("#character_xp").html(characterJson.xp || "&nbsp");
+
+            // Plug in the stats and modifiers
+            mapStat("str", characterJson.abilityscores);
+            mapStat("dex", characterJson.abilityscores);
+            mapStat("con", characterJson.abilityscores);
+            mapStat("int", characterJson.abilityscores);
+            mapStat("wis", characterJson.abilityscores);
+            mapStat("cha", characterJson.abilityscores);
+
+        });
+    </script>
     <style type="text/css">
         .fieldFooter {
             text-transform: uppercase;
@@ -60,7 +115,6 @@
 
         .blockContainer {
             clear: both;
-
         }
 
         .mainStats {
@@ -196,7 +250,7 @@
             list-style-type: disc;
         }
 
-        .checkModifier, .skillModifier {
+        .checkModifier {
             display: inline-block;
             width: 2em;
             text-align: center;
@@ -210,36 +264,36 @@
 <body>
 <div class="charnameContainer">
     <div class="charname">
-        Fenrir Fireaxe
+        <span id="character_name">Fenrir Fireaxe</span>
         <span class="fieldFooter">Character name</span>
     </div>
 </div>
 <div class="mainAttributes">
     <div class="blockContainer">
         <div class="mainAttribute">
-            Barbarian 2
+            <span id="character_class">Barbarian 2</span>
             <span class="fieldFooter">Class & level</span>
         </div>
         <div class="mainAttribute">
-            Noble
+            <span id="character_background">Noble</span>
             <span class="fieldFooter">Background</span>
         </div>
         <div class="mainAttribute">
-            Jóhann
+            <span id="player_name">Jóhann</span>
             <span class="fieldFooter">Player name</span>
         </div>
     </div>
     <div class="blockContainer">
         <div class="mainAttribute">
-            Mountain Dwarf
+            <span id="character_race">Mountain Dwarf</span>
             <span class="fieldFooter">Race</span>
         </div>
         <div class="mainAttribute">
-            Chaotic Neutral / Good
+            <span id="character_alignment">Chaotic Neutral / Good</span>
             <span class="fieldFooter">Alignment</span>
         </div>
         <div class="mainAttribute">
-            *
+            <span id="character_xp">*</span>
             <span class="fieldFooter">Experience points</span>
         </div>
     </div>
@@ -247,32 +301,32 @@
 <div class="mainStats">
     <div class="mainStat">
         <span class="fieldHeader">Strength</span>
-        17
+        <span id="str">17</span>
         <span class="mainStatModifier">+3</span>
     </div>
     <div class="mainStat">
         <span class="fieldHeader">Dexterity</span>
-        13
+        <span id="dex">13</span>
         <span class="mainStatModifier">+1</span>
     </div>
     <div class="mainStat">
         <span class="fieldHeader">Constitution</span>
-        17
+        <span id="con">17</span>
         <span class="mainStatModifier">+3</span>
     </div>
     <div class="mainStat">
         <span class="fieldHeader">Intelligence</span>
-        8
+        <span id="int">8</span>
         <span class="mainStatModifier">-1</span>
     </div>
     <div class="mainStat">
         <span class="fieldHeader">Wisdom</span>
-        10
+        <span id="wis">10</span>
         <span class="mainStatModifier">0</span>
     </div>
     <div class="mainStat">
         <span class="fieldHeader">Charisma</span>
-        13
+        <span id="cha">13</span>
         <span class="mainStatModifier">+1</span>
     </div>
 </div>
