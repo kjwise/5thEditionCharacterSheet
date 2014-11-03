@@ -1,0 +1,239 @@
+.fieldFooter {
+    text-transform: uppercase;
+    display: block;
+    clear: both;
+    font-size: 0.6em;
+}
+
+.fieldHeader {
+    text-transform: uppercase;
+    display: block;
+    clear: both;
+    font-size: 0.8em;
+}
+
+.charnameContainer {
+    alignment: center;
+    display: block;
+    float: left;
+    width: 50%;
+    max-width: 40em;
+}
+
+.charname {
+    text-align: center;
+    font-size: 2em;
+    width: 6em;
+    margin: 0.5em auto auto;
+}
+
+.mainAttributes {
+    float: left;
+    display: block;
+    border: 1px gray solid;
+    border-radius: 15px;
+    width: 50%;
+    max-width: 40em;
+    min-width: 14em;
+    margin-bottom: 1em;
+}
+
+.mainAttribute {
+    font-size: 1.2em;
+    float: left;
+    display: block;
+    margin-left: 0.4em;
+    padding: 0.3em;
+    width: 10em;
+}
+
+.mainAttribute .fieldFooter {
+    border-top: 1px solid gray;
+}
+
+.blockContainer {
+    clear: both;
+}
+
+.mainStats {
+    background-color: lightgray;
+    border: darkgray 1px solid;
+    border-radius: 15%;
+    display: block;
+    text-align: center;
+    width: 6em;
+    padding: 1em;
+    margin-right: 1em;
+    clear: left;
+    float: left;
+    margin-bottom: 1em;
+}
+
+.mainStat {
+    background-color: white;
+    margin-top: 1em;
+    padding-top: 0.5em;
+    display: block;
+    clear: both;
+    height: 2.5em;
+    font-size: 2em;
+    border: 1px gray solid;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.mainStat .fieldHeader {
+    font-size: 0.4em;
+}
+
+.mainStatModifier {
+    margin: auto;
+    width: 1em;
+    font-size: 0.5em;
+    border: 1px lightgray solid;
+    border-radius: 8px;
+    display: block;
+}
+
+.throwsAndSkillsContainer {
+    display: block;
+    float: left;
+    width: 16em;
+    padding: 1em;
+    font-size: 0.8em;
+}
+
+.inspirationContainer {
+    display: block;
+    line-height: 2.2em;
+    width: 16em;
+}
+
+#inspirationPoints {
+    display: block;
+    float: left;
+    border: 3px black solid;
+    border-radius: 15%;
+    margin-top: -0.1em;
+    line-height: 2.6em;
+    width: 2.7em;
+    height: 2.6em;
+    text-align: center;
+}
+
+#inspiration, .proficiencyBonus {
+    display: block;
+    border: 3px double gray;
+    text-align: center;
+    float: left;
+    width: 12em;
+    text-transform: uppercase;
+}
+
+#inspiration {
+    margin-top: 0.2em;
+}
+
+.proficiencyContainer {
+    margin-top: 1em;
+    display: block;
+    float: left;
+    line-height: 2.2em;
+    width: 16em;
+}
+
+#proficiencyModifier {
+    display: block;
+    float: left;
+    border: 1px black solid;
+    border-radius: 50%;
+    padding: 0.5em;
+    width: 2em;
+    height: 2em;
+    text-align: center;
+}
+
+.proficiencyBonus {
+    margin-top: 0.3em;
+}
+
+.savingThrows, #skills, #attacksAndSpellcasting {
+    width: 15.2em;
+    line-height: 1.8em;
+    float: left;
+    margin-top: 1em;
+    display: block;
+    border: 3px double gray;
+    font-size: 1.0em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.savingThrows ul, #skills ul {
+    text-transform: capitalize;
+    text-align: left;
+    padding: 0.2em;
+    margin: 0.5em 0.5em 1em 1.8em;
+}
+
+li {
+    list-style-type: circle;
+}
+
+.proficient {
+    list-style-type: disc;
+}
+
+.checkModifier {
+    display: inline-block;
+    width: 2em;
+    text-align: center;
+    margin-right: 1em;
+    line-height: 1em;
+    border-bottom: 1px lightgray solid;
+}
+
+.combatContainer {
+    background-color: lightgray;
+    border: solid 1px darkgray;
+    border-radius: 15%;
+    display: block;
+    float: left;
+    clear: none;
+    width: 25em;
+    padding: 1em;
+    font-size: 0.8em;
+}
+
+.combatContainer .mainStat {
+    margin: 0.2em;
+    font-size: 2.7em;
+    height: 1.6em;
+}
+
+#armorClass {
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    width: 1.6em;
+    padding: 0.5em;
+    clear: none;
+    float: left;
+}
+
+#initiative {
+    width: 2em;
+    float: left;
+    padding: 0.3em;
+    clear: none;
+}
+
+#speed {
+    width: 2em;
+    float: left;
+    padding: 0.3em;
+    clear: none;
+}
+
+#hitpoints, #hitdice {
+    padding: 0;
+}
