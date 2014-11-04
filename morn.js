@@ -37,12 +37,9 @@ var charJson =
     "stealth",
     "survival"
   ],
-  "hitpoints": 20,
   "inspiration": 0,
   "ac": 14,
-  "speed": 30
-  "ac": 16,
-  "speed": 25,
+  "speed": 30,
   "attacks": {
     "longbow": {
       "ability": "dex",
