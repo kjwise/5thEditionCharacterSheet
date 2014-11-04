@@ -1,16 +1,18 @@
 var charJson = 
 {
   "name": "Morn",
-  "classes": [
-    {"Ranger": 2}
-    ],
+  "classes": {
+    "Ranger": {
+      "level": 2,
+      "hitdice": "D10"
+    }
+  },
   "age": 27,
   "height": "5\"9",
   "weight": "138 lbs",
   "eyes": "brown",
   "skin": "tan",
   "hair": "brown",
-  "hitdice": "1d10",
   "background": "Outlander",
   "race": "Human",
   "alignment": "Chaotic Good",
@@ -36,7 +38,7 @@ var charJson =
     "survival"
   ],
   "hitpoints": 20,
-  "inspiration": false,
+  "inspiration": 0,
   "ac": 14,
   "speed": 30
 };
