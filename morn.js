@@ -41,4 +41,26 @@ var charJson =
   "inspiration": 0,
   "ac": 14,
   "speed": 30
+  "ac": 16,
+  "speed": 25,
+  "attacks": {
+    "longbow": {
+      "ability": "dex",
+      "die": "1d8",
+      "proficient": 1,
+      "type": "piercing"
+    },
+    "scimitar": {
+      "ability": "dex",
+      "die": "1d6",
+      "proficient": 1,
+      "type": "slashing"
+    },
+    "dagger": {
+      "ability": "dex",
+      "die": "1d4",
+      "proficient": 1,
+      "type": "piercing"
+    }
+  }
 };
