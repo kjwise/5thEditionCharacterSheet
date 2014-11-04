@@ -85,22 +85,37 @@ function mapSkills(characterJson, abilityToModifierStore) {
     });
 }
 
+function mapAttacks(characterJson, abilityToModifierStore, proficiencyModifier) {
+    $.each(characterJson.attacks, function (attackName, attackObject) {
+        var abilityModifier = abilityToModifierStore[attackObject.ability];
+        var attackBonus = abilityModifier;
+        if (attackObject.proficient == 1) attackBonus += proficiencyModifier;
+        attackBonus = formatModifier(attackBonus);
+        var dmgDieWithModifier = attackObject.die + " " + formatModifier(abilityModifier);
+        $("#attacksAndSpellcasting").find("table").append(
+            "<tr><td>" + attackName + "</td><td>" + attackBonus + "</td><td>" + dmgDieWithModifier + "</td><td>" + attackObject.type + "</td></tr>");
+    });
+}
+
 function loadChar(characterJson) {
+
+    document.title = characterJson.name + " - Character Sheet";
     $("#character_name").text(characterJson.name);
 
-    // Compute all classes into a single string
+    // Compute all classes into a single string, deal with hit dice
     var charClass = [];
     var totalLevels = 0;
-    $.each(characterJson.classes, function (i, item) {
-        $.each(item, function (cclass, clvl) {
-            charClass.push(cclass + " " + clvl);
-            totalLevels += clvl;
-        });
+    var hitdice = [];
+    $.each(characterJson.classes, function (className, classObject) {
+        charClass.push(className + " " + classObject.level);
+        totalLevels += classObject.level;
+        hitdice.push(classObject.hitdice);
     });
     $("#character_class").text(charClass.join(" / "));
 
     // Proficiency modifier is a function of the total character level
-    $("#proficiencyModifier").text("+" + computeProficiencyModifier(totalLevels));
+    var proficiencyModifier = computeProficiencyModifier(totalLevels);
+    $("#proficiencyModifier").text("+" + proficiencyModifier);
 
     $("#character_background").text(characterJson.background);
     $("#character_race").text(characterJson.race);
@@ -119,6 +134,19 @@ function loadChar(characterJson) {
 
     // Handle skills
     mapSkills(characterJson, abilityToModifierStore);
+
+    // Handle combat stats
+    $("#armorClass").prepend(characterJson.ac);
+    // If initiative is supplied in the json it will be used, otherwise, the dex modifier is used.
+    $("#initiative").prepend(
+        formatModifier(characterJson.inititative || abilityToModifierStore["dex"]));
+
+    $("#speed").prepend(characterJson.speed);
+    $("#hitpoints").prepend(characterJson.hitpoints);
+    $("#hitdice").prepend(hitdice.join(" / "));
+
+    // And for the attacks
+    mapAttacks(characterJson, abilityToModifierStore, proficiencyModifier);
 }
 
 $.getScript(decodeURIComponent(getVars().charURL), function () {

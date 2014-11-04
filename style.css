@@ -16,8 +16,8 @@
     alignment: center;
     display: block;
     float: left;
-    width: 50%;
-    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .charname {
@@ -32,10 +32,13 @@
     display: block;
     border: 1px gray solid;
     border-radius: 15px;
-    width: 50%;
-    max-width: 40em;
-    min-width: 14em;
     margin-bottom: 1em;
+}
+
+.mainAttributes, .charnameContainer {
+    width: 49%;
+    min-width: 15em;
+    max-width: 40em;
 }
 
 .mainAttribute {
@@ -49,10 +52,6 @@
 
 .mainAttribute .fieldFooter {
     border-top: 1px solid gray;
-}
-
-.blockContainer {
-    clear: both;
 }
 
 .mainStats {
@@ -193,19 +192,26 @@ li {
     border-bottom: 1px lightgray solid;
 }
 
-.combatContainer {
+#combatAndAttacksContainer {
+    display: block;
+    float: left;
+    width: 20em;
+    padding: 0 1em;
+    font-size: 0.8em;
+}
+
+#combatContainer {
     background-color: lightgray;
     border: solid 1px darkgray;
     border-radius: 15%;
     display: block;
     float: left;
-    clear: none;
-    width: 25em;
+    width: 100%;
     padding: 1em;
     font-size: 0.8em;
 }
 
-.combatContainer .mainStat {
+#combatContainer .mainStat {
     margin: 0.2em;
     font-size: 2.7em;
     height: 1.6em;
@@ -236,4 +242,29 @@ li {
 
 #hitpoints, #hitdice {
     padding: 0;
+}
+
+#hitdice {
+    font-size: 2.5em !important;
+}
+
+#attacksAndSpellcasting {
+    width: 100%;
+    padding: 0.75em;
+}
+
+#attacksAndSpellcasting table {
+    text-align: left;
+}
+
+#attacksAndSpellcasting table td {
+    text-transform: capitalize;
+    font-size: 1.1em;
+    background-color: lightgray;
+    border-radius: 15%;
+}
+
+#attacksAndSpellcasting table th {
+    font-weight: normal;
+    font-size: 0.75em;
 }

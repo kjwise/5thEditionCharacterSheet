@@ -1,16 +1,22 @@
 var charJson =
 {
   "name": "Fenrir Fireaxe",
-  "classes": [
-    {"Barbarian": 2}
-    ],
+  "classes": {
+    "Barbarian": {
+      "level": 2,
+      "hitdice": "D12"
+    },
+    "Fighter": {
+      "level": 12,
+      "hitdice": "D10"
+    }
+  },
   "age": 37,
   "height": "5\"2",
   "weight": "180 lbs",
   "eyes": "brown",
   "skin": "pale",
   "hair": "red & gray",
-  "hitdice": "1d12",
   "background": "Noble",
   "race": "Mountain Dwarf",
   "alignment": "Chaotic Neutral",
@@ -35,5 +41,26 @@ var charJson =
     "persuasion"
   ],
   "ac": 16,
-  "speed": 25
+  "speed": 25,
+  "attacks": {
+    "greataxe": {
+      "ability": "str",
+      "die": "1d12",
+      "proficient": 1,
+      "type": "slashing"
+    },
+    "battleaxe": {
+      "ability": "str",
+      "die": "1d8/1d10",
+      "proficient": 1,
+      "type": "slashing"
+    },
+    "handaxe": {
+      "ability": "str",
+      "die": "1d6",
+      "proficient": 1,
+      "type": "slashing"
+    }
+  }
+
 };

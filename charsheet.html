@@ -3,7 +3,7 @@
 <head lang="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>Fenrir Fireaxe - Character sheet</title>
+    <title>No data loaded - Character sheet</title>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" media="all" href="style.css">
@@ -11,70 +11,67 @@
 <body>
 <div class="charnameContainer">
     <div class="charname">
-        <span id="character_name">Fenrir Fireaxe</span>
+        <span id="character_name">No Data!</span>
         <span class="fieldFooter">Character name</span>
     </div>
 </div>
 <div class="mainAttributes">
-    <div class="blockContainer">
-        <div class="mainAttribute">
-            <span id="character_class">Barbarian 2</span>
-            <span class="fieldFooter">Class & level</span>
-        </div>
-        <div class="mainAttribute">
-            <span id="character_background">Noble</span>
-            <span class="fieldFooter">Background</span>
-        </div>
-        <div class="mainAttribute">
-            <span id="player_name">Jóhann</span>
-            <span class="fieldFooter">Player name</span>
-        </div>
+    <div class="mainAttribute">
+        <span id="character_class"></span>
+        <span class="fieldFooter">Class & level</span>
     </div>
-    <div class="blockContainer">
-        <div class="mainAttribute">
-            <span id="character_race">Mountain Dwarf</span>
-            <span class="fieldFooter">Race</span>
-        </div>
-        <div class="mainAttribute">
-            <span id="character_alignment">Chaotic Neutral / Good</span>
-            <span class="fieldFooter">Alignment</span>
-        </div>
-        <div class="mainAttribute">
-            <span id="character_xp">*</span>
-            <span class="fieldFooter">Experience points</span>
-        </div>
+    <div class="mainAttribute">
+        <span id="character_background"></span>
+        <span class="fieldFooter">Background</span>
+    </div>
+    <div class="mainAttribute">
+        <span id="player_name"></span>
+        <span class="fieldFooter">Player name</span>
+    </div>
+
+    <div class="mainAttribute">
+        <span id="character_race"></span>
+        <span class="fieldFooter">Race</span>
+    </div>
+    <div class="mainAttribute">
+        <span id="character_alignment"></span>
+        <span class="fieldFooter">Alignment</span>
+    </div>
+    <div class="mainAttribute">
+        <span id="character_xp">&nbsp</span>
+        <span class="fieldFooter">Experience points</span>
     </div>
 </div>
 <div class="mainStats">
     <div class="mainStat">
         <span class="fieldHeader">Strength</span>
-        <span id="str">17</span>
-        <span class="mainStatModifier">+3</span>
+        <span id="str"></span>
+        <span class="mainStatModifier"></span>
     </div>
     <div class="mainStat">
         <span class="fieldHeader">Dexterity</span>
-        <span id="dex">13</span>
-        <span class="mainStatModifier">+1</span>
+        <span id="dex"></span>
+        <span class="mainStatModifier"></span>
     </div>
     <div class="mainStat">
         <span class="fieldHeader">Constitution</span>
-        <span id="con">17</span>
-        <span class="mainStatModifier">+3</span>
+        <span id="con"></span>
+        <span class="mainStatModifier">+</span>
     </div>
     <div class="mainStat">
         <span class="fieldHeader">Intelligence</span>
-        <span id="int">8</span>
-        <span class="mainStatModifier">-1</span>
+        <span id="int"></span>
+        <span class="mainStatModifier"></span>
     </div>
     <div class="mainStat">
         <span class="fieldHeader">Wisdom</span>
-        <span id="wis">10</span>
-        <span class="mainStatModifier">0</span>
+        <span id="wis"></span>
+        <span class="mainStatModifier"></span>
     </div>
     <div class="mainStat">
         <span class="fieldHeader">Charisma</span>
-        <span id="cha">13</span>
-        <span class="mainStatModifier">+1</span>
+        <span id="cha"></span>
+        <span class="mainStatModifier"></span>
     </div>
 </div>
 
@@ -84,7 +81,7 @@
         <span id="inspiration">Inspiration</span>
     </div>
     <div class="proficiencyContainer">
-        <span id="proficiencyModifier">+2</span>
+        <span id="proficiencyModifier"></span>
         <span class="proficiencyBonus">Proficiency bonus</span>
     </div>
 
@@ -107,23 +104,34 @@
         Skills
     </div>
 </div>
-<div class="combatContainer">
-    <div id="armorClass" class="mainStat">16
-        <div class="fieldHeader">Armor Class</div>
+<div id="combatAndAttacksContainer">
+    <div id="combatContainer">
+        <div id="armorClass" class="mainStat">
+            <div class="fieldHeader">Armor Class</div>
+        </div>
+        <div id="initiative" class="mainStat">
+            <div class="fieldHeader">Initiative</div>
+        </div>
+        <div id="speed" class="mainStat">
+            <div class="fieldHeader">Speed</div>
+        </div>
+        <div id="hitpoints" class="mainStat">
+            <div class="fieldHeader">Hit points</div>
+        </div>
+        <div id="hitdice" class="mainStat">
+            <div class="fieldHeader">Hit dice</div>
+        </div>
     </div>
-    <div id="initiative" class="mainStat">+1
-        <div class="fieldHeader">Initiative</div>
+    <div id="attacksAndSpellcasting">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Atk bonus</th>
+                <th>Damage</th>
+                <th>Type</th>
+            </tr>
+
+        </table>
+        Attacks & Spellcasting
     </div>
-    <div id="speed" class="mainStat">25
-        <div class="fieldHeader">Speed</div>
-    </div>
-    <div id="hitpoints" class="mainStat">25
-        <div class="fieldHeader">Hit points</div>
-    </div>
-    <div id="hitdice" class="mainStat">1d12
-        <div class="fieldHeader">Hit dice</div>
-    </div>
-</div>
-<div id="attacksAndSpellcasting">
-    Attacks & Spellcasting
 </div>
