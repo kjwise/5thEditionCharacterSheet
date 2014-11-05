@@ -9,13 +9,13 @@
     <link rel="stylesheet" media="all" href="style.css">
 </head>
 <body>
-<div class="charnameContainer">
-    <div class="charname">
+<div id="charnameContainer">
+    <div id="charname">
         <span id="character_name">No Data!</span>
         <span class="fieldFooter">Character name</span>
     </div>
 </div>
-<div class="mainAttributes">
+<div id="mainAttributes">
     <div class="mainAttribute">
         <span id="character_class"></span>
         <span class="fieldFooter">Class & level</span>
@@ -42,7 +42,7 @@
         <span class="fieldFooter">Experience points</span>
     </div>
 </div>
-<div class="mainStats">
+<div id="mainStatsContainer" class="grayRoundedBox">
     <div class="mainStat">
         <span class="fieldHeader">Strength</span>
         <span id="str"></span>
@@ -75,17 +75,17 @@
     </div>
 </div>
 
-<div class="throwsAndSkillsContainer">
-    <div class="inspirationContainer">
+<div id="throwsAndSkillsContainer">
+    <div id="inspirationContainer">
         <span id="inspirationPoints"></span>
-        <span id="inspiration">Inspiration</span>
+        <span id="inspiration" class="doubleBorderBox">Inspiration</span>
     </div>
-    <div class="proficiencyContainer">
+    <div id="proficiencyContainer">
         <span id="proficiencyModifier"></span>
-        <span class="proficiencyBonus">Proficiency bonus</span>
+        <span id="proficiencyBonus" class="doubleBorderBox">Proficiency bonus</span>
     </div>
 
-    <div class="savingThrows">
+    <div id="savingThrows" class="doubleBorderBox">
         <ul>
             <li id="save_str"><span class="checkModifier"></span>Strength</li>
             <li id="save_dex"><span class="checkModifier"></span>Dexterity</li>
@@ -97,7 +97,7 @@
         Saving throws
     </div>
 
-    <div id="skills">
+    <div id="skills" class="doubleBorderBox">
         <!-- Filled out by jquery -->
         <ul>
         </ul>
@@ -105,24 +105,24 @@
     </div>
 </div>
 <div id="combatAndAttacksContainer">
-    <div id="combatContainer">
+    <div id="combatContainer" class="grayRoundedBox">
         <div id="armorClass" class="mainStat">
-            <div class="fieldHeader">Armor Class</div>
+            <span class="fieldHeader">Armor Class</span>
         </div>
         <div id="initiative" class="mainStat">
-            <div class="fieldHeader">Initiative</div>
+            <span class="fieldHeader">Initiative</span>
         </div>
         <div id="speed" class="mainStat">
-            <div class="fieldHeader">Speed</div>
+            <span class="fieldHeader">Speed</span>
         </div>
         <div id="hitpoints" class="mainStat">
-            <div class="fieldHeader">Hit points</div>
+            <span class="fieldHeader">Hit points</span>
         </div>
         <div id="hitdice" class="mainStat">
-            <div class="fieldHeader">Hit dice</div>
+            <span class="fieldHeader">Hit dice</span>
         </div>
     </div>
-    <div id="attacksAndSpellcasting">
+    <div id="attacksAndSpellcasting" class="doubleBorderBox">
         <table>
             <tr>
                 <th>Name</th>
@@ -133,5 +133,38 @@
 
         </table>
         Attacks & Spellcasting
+    </div>
+    <div id="equipment" class="doubleBorderBox">Equipment</div>
+</div>
+<div id="traitsProficienciesMiscContainer">
+    <div id="traitsidealsbondsflaws" class="grayRoundedBox">
+        <div id="personalityTraits" class="whiteBox">
+            If you do me an injury, I will crush you, ruin your name and salt your fields!
+            <span class="fieldFooter">Personality Traits</span>
+        </div>
+        <div id="ideals" class="whiteBox">
+            I need to prove my own worth and create my own legacy.
+            <span class="fieldFooter">Ideals</span>
+        </div>
+        <div id="bonds" class="whiteBox">
+            The common folk must see me as a hero of the people.
+            I will avenge the people of the town that gave me such fun and enjoyment whilst I studied there.
+            <span class="fieldFooter">Bonds</span>
+        </div>
+        <div id="flaws" class="whiteBox">
+            I too often hear veiled insults and threats in every word addressed to me.
+            I am quick to anger & I have an insatiable desire for carnal pleasures.
+            <span class="fieldFooter">Flaws</span>
+        </div>
+    </div>
+    <div id="featuresandtraits" class="doubleBorderBox">
+        Rage 2x day
+        Darkvision
+        <span class="fieldFooter">Features & traits</span>
+    </div>
+    <div id="otherProficienciesAndLanguages" class="doubleBorderBox">
+        Dwarfish, Draconic, Common
+        Smith's tools
+        <span class="fieldFooter">Other proficiencies & languages</span>
     </div>
 </div>

@@ -7,22 +7,29 @@ var charJson =
       "hitdice": "D12"
     },
     "Fighter": {
-      "level": 12,
+      "level": 1,
       "hitdice": "D10"
     }
   },
-  "age": 37,
-  "height": "5\"2",
-  "weight": "180 lbs",
-  "eyes": "brown",
-  "skin": "pale",
-  "hair": "red & gray",
-  "background": "Noble",
-  "race": "Mountain Dwarf",
-  "alignment": "Chaotic Neutral",
+  "inspirationpoints": 1,
   "hitpoints": 25,
-  "playername": "Jóhann",
-  "xp": null,
+  "ac": 16,
+  "speed": 25,
+  "mainattributes": {
+    "background": "Noble",
+    "race": "Mountain Dwarf",
+    "alignment": "Chaotic Neutral",
+    "playername": "Jóhann",
+    "xp": null
+  },
+  "appearance": {
+    "age": 37,
+    "height": "5\"2",
+    "weight": "180 lbs",
+    "eyes": "brown",
+    "skin": "pale",
+    "hair": "red & gray"
+  },
   "abilityscores": {
     "str": 17,
     "dex": 13,
@@ -40,25 +47,23 @@ var charJson =
     "perception",
     "persuasion"
   ],
-  "ac": 16,
-  "speed": 25,
   "attacks": {
     "greataxe": {
       "ability": "str",
       "die": "1d12",
-      "proficient": 1,
+      "proficient": true,
       "type": "slashing"
     },
     "battleaxe": {
       "ability": "str",
       "die": "1d8/1d10",
-      "proficient": 1,
+      "proficient": true,
       "type": "slashing"
     },
     "handaxe": {
       "ability": "str",
       "die": "1d6",
-      "proficient": 1,
+      "proficient": true,
       "type": "slashing"
     }
   }

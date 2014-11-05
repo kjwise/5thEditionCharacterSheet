@@ -1,3 +1,18 @@
+body {
+    max-width: 61em;
+}
+
+ul {
+    text-transform: capitalize;
+    text-align: left;
+    padding: 0.2em;
+    margin: 0.5em 0.5em 1em 1.8em;
+}
+
+li {
+    list-style-type: circle;
+}
+
 .fieldFooter {
     text-transform: uppercase;
     display: block;
@@ -10,35 +25,6 @@
     display: block;
     clear: both;
     font-size: 0.8em;
-}
-
-.charnameContainer {
-    alignment: center;
-    display: block;
-    float: left;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.charname {
-    text-align: center;
-    font-size: 2em;
-    width: 6em;
-    margin: 0.5em auto auto;
-}
-
-.mainAttributes {
-    float: left;
-    display: block;
-    border: 1px gray solid;
-    border-radius: 15px;
-    margin-bottom: 1em;
-}
-
-.mainAttributes, .charnameContainer {
-    width: 49%;
-    min-width: 15em;
-    max-width: 40em;
 }
 
 .mainAttribute {
@@ -54,31 +40,50 @@
     border-top: 1px solid gray;
 }
 
-.mainStats {
-    background-color: lightgray;
-    border: darkgray 1px solid;
-    border-radius: 15%;
+.doubleBorderBox {
     display: block;
-    text-align: center;
-    width: 6em;
-    padding: 1em;
-    margin-right: 1em;
-    clear: left;
     float: left;
-    margin-bottom: 1em;
+    width: 100%;
+    border: 3px double gray;
+    font-size: 1.0em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.grayRoundedBox {
+    display: block;
+    padding: 1em;
+    float: left;
+    background-color: lightgray;
+    border: solid 1px darkgray;
+    border-radius: 15%;
+}
+
+.whiteBox {
+    text-align: left;
+    font-size: 1.2em;
+    padding: 0.3em;
+}
+
+.whiteBox .fieldFooter {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.whiteBox, .mainStat {
+    background-color: white;
+    display: block;
+    border: 1px gray solid;
+    border-radius: 8px;
 }
 
 .mainStat {
-    background-color: white;
+    text-align: center;
     margin-top: 1em;
     padding-top: 0.5em;
-    display: block;
     clear: both;
     height: 2.5em;
     font-size: 2em;
-    border: 1px gray solid;
-    border-radius: 8px;
-    text-align: center;
 }
 
 .mainStat .fieldHeader {
@@ -94,7 +99,58 @@
     display: block;
 }
 
-.throwsAndSkillsContainer {
+.proficient {
+    list-style-type: disc;
+}
+
+.checkModifier {
+    display: inline-block;
+    width: 2em;
+    text-align: center;
+    margin-right: 1em;
+    line-height: 1em;
+    border-bottom: 1px lightgray solid;
+}
+
+#mainStatsContainer {
+    text-align: center;
+    width: 6em;
+    clear: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+#mainAttributes, #charnameContainer {
+    min-width: 20em;
+}
+
+#charnameContainer {
+    max-width: 40em;
+    alignment: center;
+    display: block;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#charname {
+    text-align: center;
+    font-size: 2em;
+    width: 6em;
+    margin: 0.5em auto auto;
+}
+
+#mainAttributes {
+    max-width: 40em;
+    float: left;
+    clear: right;
+    display: block;
+    border: 1px gray solid;
+    border-radius: 15px;
+    margin-bottom: 1em;
+}
+
+#throwsAndSkillsContainer {
     display: block;
     float: left;
     width: 16em;
@@ -102,10 +158,10 @@
     font-size: 0.8em;
 }
 
-.inspirationContainer {
+#inspirationContainer {
     display: block;
     line-height: 2.2em;
-    width: 16em;
+    width: 100%;
 }
 
 #inspirationPoints {
@@ -120,25 +176,22 @@
     text-align: center;
 }
 
-#inspiration, .proficiencyBonus {
-    display: block;
-    border: 3px double gray;
-    text-align: center;
-    float: left;
-    width: 12em;
-    text-transform: uppercase;
+#inspiration, #proficiencyBonus {
+    width: 81%;
+    margin-left: 3.1em;
+    float: none;
 }
 
 #inspiration {
     margin-top: 0.2em;
 }
 
-.proficiencyContainer {
+#proficiencyContainer {
     margin-top: 1em;
     display: block;
     float: left;
     line-height: 2.2em;
-    width: 16em;
+    width: 100%;
 }
 
 #proficiencyModifier {
@@ -152,44 +205,13 @@
     text-align: center;
 }
 
-.proficiencyBonus {
+#proficiencyBonus {
     margin-top: 0.3em;
 }
 
-.savingThrows, #skills, #attacksAndSpellcasting {
-    width: 15.2em;
+#savingThrows, #skills {
     line-height: 1.8em;
-    float: left;
     margin-top: 1em;
-    display: block;
-    border: 3px double gray;
-    font-size: 1.0em;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.savingThrows ul, #skills ul {
-    text-transform: capitalize;
-    text-align: left;
-    padding: 0.2em;
-    margin: 0.5em 0.5em 1em 1.8em;
-}
-
-li {
-    list-style-type: circle;
-}
-
-.proficient {
-    list-style-type: disc;
-}
-
-.checkModifier {
-    display: inline-block;
-    width: 2em;
-    text-align: center;
-    margin-right: 1em;
-    line-height: 1em;
-    border-bottom: 1px lightgray solid;
 }
 
 #combatAndAttacksContainer {
@@ -198,17 +220,12 @@ li {
     width: 20em;
     padding: 0 1em;
     font-size: 0.8em;
+    margin-right: 1em;
 }
 
 #combatContainer {
-    background-color: lightgray;
-    border: solid 1px darkgray;
-    border-radius: 15%;
-    display: block;
-    float: left;
-    width: 100%;
-    padding: 1em;
     font-size: 0.8em;
+    width: 100%;
 }
 
 #combatContainer .mainStat {
@@ -226,14 +243,7 @@ li {
     float: left;
 }
 
-#initiative {
-    width: 2em;
-    float: left;
-    padding: 0.3em;
-    clear: none;
-}
-
-#speed {
+#initiative, #speed {
     width: 2em;
     float: left;
     padding: 0.3em;
@@ -248,13 +258,15 @@ li {
     font-size: 2.5em !important;
 }
 
-#attacksAndSpellcasting {
-    width: 100%;
-    padding: 0.75em;
+#attacksAndSpellcasting, #equipment {
+    padding: 0.75em 0.75em 0;
+    line-height: 1.5em;
+    margin-top: 1em;
 }
 
 #attacksAndSpellcasting table {
     text-align: left;
+    margin: auto auto 1em;
 }
 
 #attacksAndSpellcasting table td {
@@ -267,4 +279,25 @@ li {
 #attacksAndSpellcasting table th {
     font-weight: normal;
     font-size: 0.75em;
+}
+
+#traitsProficienciesMiscContainer {
+    display: block;
+    float: left;
+    text-align: center;
+    width: 21em;
+    padding: 0 1em;
+    font-size: 0.8em;
+}
+
+#traitsidealsbondsflaws {
+    width: 20em;
+    margin-bottom: 1em;
+}
+
+#featuresandtraits {
+    margin-bottom: 1em;
+}
+
+#otherProficienciesAndLanguages {
 }

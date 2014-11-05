@@ -89,9 +89,12 @@ function mapAttacks(characterJson, abilityToModifierStore, proficiencyModifier) 
     $.each(characterJson.attacks, function (attackName, attackObject) {
         var abilityModifier = abilityToModifierStore[attackObject.ability];
         var attackBonus = abilityModifier;
-        if (attackObject.proficient == 1) attackBonus += proficiencyModifier;
+        if (attackObject.proficient) attackBonus += proficiencyModifier;
+        if ($.isNumeric(attackObject.extraAttackMod)) attackBonus += attackObject.extraAttackMod;
         attackBonus = formatModifier(attackBonus);
-        var dmgDieWithModifier = attackObject.die + " " + formatModifier(abilityModifier);
+        var damageBonus = abilityModifier;
+        if ($.isNumeric(attackObject.extraDmgMod)) damageBonus += attackObject.extraDmgMod;
+        var dmgDieWithModifier = attackObject.die + " " + formatModifier(damageBonus);
         $("#attacksAndSpellcasting").find("table").append(
             "<tr><td>" + attackName + "</td><td>" + attackBonus + "</td><td>" + dmgDieWithModifier + "</td><td>" + attackObject.type + "</td></tr>");
     });
@@ -117,11 +120,13 @@ function loadChar(characterJson) {
     var proficiencyModifier = computeProficiencyModifier(totalLevels);
     $("#proficiencyModifier").text("+" + proficiencyModifier);
 
-    $("#character_background").text(characterJson.background);
-    $("#character_race").text(characterJson.race);
-    $("#character_alignment").text(characterJson.alignment);
-    $("#player_name").text(characterJson.playername);
-    $("#character_xp").html(characterJson.xp || "&nbsp");
+    $("#character_background").text(characterJson.mainattributes.background);
+    $("#character_race").text(characterJson.mainattributes.race);
+    $("#character_alignment").text(characterJson.mainattributes.alignment);
+    $("#player_name").text(characterJson.mainattributes.playername);
+    $("#character_xp").html(characterJson.mainattributes.xp || "&nbsp");
+
+    $("#inspirationPoints").text(characterJson.inspirationpoints);
 
     // Plug in ability scores, modifiers and saving throws
     var abilityToModifierStore = {};
@@ -139,7 +144,7 @@ function loadChar(characterJson) {
     $("#armorClass").prepend(characterJson.ac);
     // If initiative is supplied in the json it will be used, otherwise, the dex modifier is used.
     $("#initiative").prepend(
-        formatModifier(characterJson.inititative || abilityToModifierStore["dex"]));
+        formatModifier(characterJson.initiative || abilityToModifierStore["dex"]));
 
     $("#speed").prepend(characterJson.speed);
     $("#hitpoints").prepend(characterJson.hitpoints);
@@ -149,6 +154,6 @@ function loadChar(characterJson) {
     mapAttacks(characterJson, abilityToModifierStore, proficiencyModifier);
 }
 
-$.getScript(decodeURIComponent(getVars().charURL), function () {
+$.getScript(decodeURIComponent(getVars()["charURL"]), function () {
     loadChar(charJson);
 });
