@@ -45,27 +45,36 @@ function formatModifier(modifier) {
     return modifier;
 }
 
-function mapStat(ability, characterJson, abilityToModifierStore) {
-    var abilityScoreValue = characterJson.abilityscores[ability];
-    $("#" + ability).text(abilityScoreValue);
+function mapStats(characterJson, abilityToModifierStore) {
+    var mainStats = ["str", "dex", "con", "int", "wis", "cha"];
+    $.each(mainStats, function (i, ability) {
+        var abilityScoreValue = characterJson.abilityscores[ability];
+        // Set text and add fancy hover interaction
+        $("#" + ability).text(abilityScoreValue).hover(
+            function () {
+                $("." + ability).css("color", "red")
+            },
+            function () {
+                $("." + ability).css("color", "")
+            });
 
-    // Show the modifier that is a function of the ability score
-    var modifier = computeAbilityModifier(abilityScoreValue);
+        // Show the modifier that is a function of the ability score
+        var modifier = computeAbilityModifier(abilityScoreValue);
 
-    // Save the result in a possibly provided object
-    if (abilityToModifierStore !== undefined) {
-        abilityToModifierStore[ability] = modifier;
-    }
+        // Save the result in a possibly provided object
+        if (abilityToModifierStore !== undefined) {
+            abilityToModifierStore[ability] = modifier;
+        }
 
-    $("#" + ability + " ~ .mainStatModifier").text(formatModifier(modifier));
+        $("#" + ability + " ~ .mainStatModifier").text(formatModifier(modifier));
 
-    // Deal with the saving throws and proficiencies
-    if ($.inArray(ability, characterJson.savingthrow_proficiencies) > -1) {
-        modifier += 2;
-        $("#save_" + ability).addClass("proficient");
-    }
-    $("#save_" + ability + " .checkModifier").text(formatModifier(modifier));
-
+        // Deal with the saving throws and proficiencies
+        if ($.inArray(ability, characterJson.savingthrow_proficiencies) > -1) {
+            modifier += 2;
+            $("#save_" + ability).addClass("proficient");
+        }
+        $("#save_" + ability + " .checkModifier").text(formatModifier(modifier));
+    });
 }
 
 function computeProficiencyModifier(totalLevels) {
@@ -77,10 +86,10 @@ function mapSkills(characterJson, abilityToModifierStore) {
         var modifier = abilityToModifierStore[ability];
         // This is ugly but it works.
         if ($.inArray(skill.toLowerCase(), characterJson.skill_proficiences) > -1) {
-            $("#skills").find("ul").append("<li class='proficient'><span class='checkModifier'>" + formatModifier(modifier + 2) + "</span>" + skill + "<i> (" + ability + ")</i></li>");
+            $("#skills").find("ul").append("<li class='" + ability + " proficient'><span class='checkModifier'>" + formatModifier(modifier + 2) + "</span>" + skill + "<i> (" + ability + ")</i></li>");
         }
         else {
-            $("#skills").find("ul").append("<li><span class='checkModifier'>" + formatModifier(modifier) + "</span>" + skill + "<i> (" + ability + ")</i></li>");
+            $("#skills").find("ul").append("<li class='" + ability + "'><span class='checkModifier'>" + formatModifier(modifier) + "</span>" + skill + "<i> (" + ability + ")</i></li>");
         }
     });
 }
@@ -130,12 +139,7 @@ function loadChar(characterJson) {
 
     // Plug in ability scores, modifiers and saving throws
     var abilityToModifierStore = {};
-    mapStat("str", characterJson, abilityToModifierStore);
-    mapStat("dex", characterJson, abilityToModifierStore);
-    mapStat("con", characterJson, abilityToModifierStore);
-    mapStat("int", characterJson, abilityToModifierStore);
-    mapStat("wis", characterJson, abilityToModifierStore);
-    mapStat("cha", characterJson, abilityToModifierStore);
+    mapStats(characterJson, abilityToModifierStore);
 
     // Handle skills
     mapSkills(characterJson, abilityToModifierStore);
