@@ -48,7 +48,7 @@ var charJson =
     "longbow": {
       "ability": "dex",
       "extraAttackMod": 2, // Ranged to hit bonus
-      "extraDmgMod": 1,
+      "extraDmgMod": 0,
       "die": "1d8",
       "proficient": true,
       "type": "piercing"

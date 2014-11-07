@@ -28,7 +28,6 @@
         <span id="player_name"></span>
         <span class="fieldFooter">Player name</span>
     </div>
-
     <div class="mainAttribute">
         <span id="character_race"></span>
         <span class="fieldFooter">Race</span>
@@ -43,32 +42,32 @@
     </div>
 </div>
 <div id="mainStatsContainer" class="grayRoundedBox">
-    <div class="mainStat">
+    <div class="mainStat str">
         <span class="fieldHeader">Strength</span>
         <span id="str"></span>
         <span class="mainStatModifier"></span>
     </div>
-    <div class="mainStat">
+    <div class="mainStat dex">
         <span class="fieldHeader">Dexterity</span>
         <span id="dex"></span>
         <span class="mainStatModifier"></span>
     </div>
-    <div class="mainStat">
+    <div class="mainStat con">
         <span class="fieldHeader">Constitution</span>
         <span id="con"></span>
         <span class="mainStatModifier">+</span>
     </div>
-    <div class="mainStat">
+    <div class="mainStat int">
         <span class="fieldHeader">Intelligence</span>
         <span id="int"></span>
         <span class="mainStatModifier"></span>
     </div>
-    <div class="mainStat">
+    <div class="mainStat wis">
         <span class="fieldHeader">Wisdom</span>
         <span id="wis"></span>
         <span class="mainStatModifier"></span>
     </div>
-    <div class="mainStat">
+    <div class="mainStat cha">
         <span class="fieldHeader">Charisma</span>
         <span id="cha"></span>
         <span class="mainStatModifier"></span>
@@ -134,37 +133,40 @@
         </table>
         Attacks & Spellcasting
     </div>
-    <div id="equipment" class="doubleBorderBox">Equipment</div>
+    <div id="equipment" class="doubleBorderBox">
+        <div class="coins">
+            <span class="coinType">cp</span><span class="coin" id="copper"></span>
+            <span class="coinType">sp</span><span class="coin" id="silver"></span>
+            <span class="coinType">ep</span><span class="coin" id="electrum"></span>
+            <span class="coinType">gp</span><span class="coin" id="gold"></span>
+            <span class="coinType">pp</span><span class="coin" id="platinium"></span>
+        </div>
+        <ul id="equipmentList">
+        </ul>
+        Equipment
+    </div>
 </div>
 <div id="traitsProficienciesMiscContainer">
     <div id="traitsidealsbondsflaws" class="grayRoundedBox">
         <div id="personalityTraits" class="whiteBox">
-            If you do me an injury, I will crush you, ruin your name and salt your fields!
             <span class="fieldFooter">Personality Traits</span>
         </div>
         <div id="ideals" class="whiteBox">
-            I need to prove my own worth and create my own legacy.
             <span class="fieldFooter">Ideals</span>
         </div>
         <div id="bonds" class="whiteBox">
-            The common folk must see me as a hero of the people.
-            I will avenge the people of the town that gave me such fun and enjoyment whilst I studied there.
             <span class="fieldFooter">Bonds</span>
         </div>
         <div id="flaws" class="whiteBox">
-            I too often hear veiled insults and threats in every word addressed to me.
-            I am quick to anger & I have an insatiable desire for carnal pleasures.
             <span class="fieldFooter">Flaws</span>
         </div>
     </div>
-    <div id="featuresandtraits" class="doubleBorderBox">
-        Rage 2x day
-        Darkvision
-        <span class="fieldFooter">Features & traits</span>
+    <div class="doubleBorderBox">
+        <div id="featuresandtraits"></div>
+        Features & traits
     </div>
-    <div id="otherProficienciesAndLanguages" class="doubleBorderBox">
-        Dwarfish, Draconic, Common
-        Smith's tools
-        <span class="fieldFooter">Other proficiencies & languages</span>
+    <div class="doubleBorderBox">
+        <div id="otherProficienciesAndLanguages"></div>
+        Other proficiencies & languages
     </div>
 </div>

@@ -109,6 +109,37 @@ function mapAttacks(characterJson, abilityToModifierStore, proficiencyModifier) 
     });
 }
 
+function mapEquipment(equipment) {
+    $.each(equipment.coins, function (coinType, amount) {
+        $("#" + coinType).text(amount);
+    });
+    $.each(equipment.other, function (i, item) {
+        $("#equipmentList").append('<li>' + item + '</li>');
+    });
+}
+
+function mapPersonality(personality) {
+    $("#personalityTraits").prepend(personality.traits);
+    $("#ideals").prepend(personality.ideals);
+    $("#bonds").prepend(personality.bonds);
+    $("#flaws").prepend(personality.flaws);
+}
+
+function mapFeatures(features) {
+    $.each(features.reverse(), function (i, feature) {
+        $("#featuresandtraits").prepend(feature + "<br/>");
+    });
+}
+
+function mapProficiencesAndLanguages(characterJson) {
+    $.each(characterJson.languages.reverse(), function (i, language) {
+        $("#otherProficienciesAndLanguages").prepend(language + "<br/>");
+    });
+    $.each(characterJson.proficiencies.reverse(), function (i, proficiency) {
+        $("#otherProficienciesAndLanguages").prepend(proficiency + "<br/>");
+    });
+}
+
 function loadChar(characterJson) {
 
     document.title = characterJson.name + " - Character Sheet";
@@ -156,6 +187,13 @@ function loadChar(characterJson) {
 
     // And for the attacks
     mapAttacks(characterJson, abilityToModifierStore, proficiencyModifier);
+
+    // Coins & other equipment
+    mapEquipment(characterJson.equipment);
+
+    mapPersonality(characterJson.personality);
+    mapFeatures(characterJson.features);
+    mapProficiencesAndLanguages(characterJson);
 }
 
 $.getScript(decodeURIComponent(getVars()["charURL"]), function () {

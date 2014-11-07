@@ -44,6 +44,7 @@ li {
     display: block;
     float: left;
     width: 100%;
+    margin-bottom: 1em;
     border: 3px double gray;
     font-size: 1.0em;
     text-transform: uppercase;
@@ -110,6 +111,41 @@ li {
     margin-right: 1em;
     line-height: 1em;
     border-bottom: 1px lightgray solid;
+}
+
+.coins {
+    margin: -0.3em 1.2em 0 -1.5em;
+    display: block;
+    float: left;
+    width: 3em;
+}
+
+.coinType {
+    z-index: 2;
+    background: white;
+    border: 1px solid black;
+    padding: 0;
+    height: 1em;
+    margin-top: 0.6em;
+    line-height: 1.2em;
+    display: block;
+    width: 1.5em;
+    float: left;
+}
+
+.coin {
+    background-color: white;
+    padding: 0.2em;
+    display: block;
+    border: 3px black double;
+    border-radius: 25%;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    height: 1.5em;
+    margin-bottom: 0.5em;
+    width: 1.6em;
+    margin-left: 1em;
+    clear: right;
 }
 
 #mainStatsContainer {
@@ -264,6 +300,18 @@ li {
     margin-top: 1em;
 }
 
+#equipment ul {
+    margin: 0;
+    padding: 0 3em;
+    font-size: 1.2em;
+    min-height: 14em;
+}
+
+#equipment li {
+    list-style-type: none;
+    text-transform: none;
+}
+
 #attacksAndSpellcasting table {
     text-align: left;
     margin: auto auto 1em;
@@ -295,9 +343,9 @@ li {
     margin-bottom: 1em;
 }
 
-#featuresandtraits {
+#featuresandtraits, #otherProficienciesAndLanguages {
     margin-bottom: 1em;
-}
-
-#otherProficienciesAndLanguages {
+    padding: 1em;
+    font-size: 1.2em;
+    text-transform: none;
 }

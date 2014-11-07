@@ -66,6 +66,47 @@ var charJson =
       "proficient": true,
       "type": "slashing"
     }
-  }
-
+  },
+  "equipment": {
+    "coins": {
+      "copper": 0,
+      "silver": 0,
+      "electrum": 0,
+      "gold": 15,
+      "platinium": 0
+    },
+    "other": [
+      "Explorer's pack",
+      "Set of fine clothes",
+      "Signet ring",
+      "Scroll of pedigree",
+      "Fine purse",
+      "Crested shield"
+    ]
+  },
+  "personality": {
+    "traits": "If you do me an injury, I will crush you, ruin your name and salt your fields!",
+    "ideals": "I need to prove my own worth and create my own legacy.",
+    "bonds": "The common folk must see me as a hero of the people. I will avenge the people of the town that gave me such fun and enjoyment whilst I studied there.",
+    "flaws": "I too often hear veiled insults and threats in every word addressed to me. I am quick to anger & I have an insatiable desire for carnal pleasures."
+  },
+  "features": [
+    "Reckless attack",
+    "Unarmoured combat",
+    "Rage 2x/day",
+    "Darkvision",
+    "Dwarven resilience",
+    "Stonecunning",
+    "Stoneworking"
+  ],
+  "proficiencies": [
+    "Smith's tools",
+    "Three dragon ante set",
+    "Simple & martial weapons"
+  ],
+  "languages": [
+    "Common",
+    "Dwarfish",
+    "Draconian"
+  ]
 };
