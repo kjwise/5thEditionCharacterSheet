@@ -4,7 +4,7 @@ var charJson =
   "classes": {
     "Ranger": {
       "level": 2,
-      "hitdice": "D10"
+      "hitdice": "d10"
     }
   },
   "inspirationpoints": 0,
@@ -20,7 +20,7 @@ var charJson =
   },
   "appearance": {
     "age": 27,
-    "height": "5\"9",
+    "height": "5\'9\"",
     "weight": "138 lbs",
     "eyes": "brown",
     "skin": "tan",
@@ -47,7 +47,7 @@ var charJson =
   "attacks": {
     "longbow": {
       "ability": "dex",
-      "extraAttackMod": 2, // Ranged to hit bonus
+      "extraAttackMod": 2, // Ranged to hit bonus from "Fighting Style - Archery"
       "extraDmgMod": 0,
       "die": "1d8",
       "proficient": true,
@@ -65,5 +65,61 @@ var charJson =
       "proficient": true,
       "type": "piercing"
     }
-  }
+  },
+  {
+  "equipment": {
+      "coins": {
+        "copper": 10,
+        "silver": 0,
+        "electrum": 0,
+        "gold": 10,
+        "platinum": 0
+      }
+    }
+    "other": [
+      "backpack",
+      "bedroll",
+      "mess kit",
+      "tinderbox",
+      "10 torches",
+      "8 days rations",
+      "waterskin",
+      "50\' hemp rope",
+      "rabbits foot keepsake",
+      "travelers clothes",
+      "small blanket",
+      "leather armour",
+      "dagger",
+      "sickle",
+      "scimitar",
+      "longbow",
+      "quiver of 20 arrows",
+      "flute"
+    ]
+  },
+  "personality": {
+    "traits": "I place no stock in wealthy or well-mannered folk. Money and manners won’t save you from a hungry owlbear. I feel far more comfortable around animals than people.",
+    "ideals": "Life is like the seasons, in constant change, and we must change with it.",
+    "bonds": "Dragons destroyed our home and killed my family. Now, with nothing but what I can carry, I seek vengeance.",
+    "flaws": "I am too enamored of ale, wine, and other intoxicants."
+  },
+  "features": [
+    "Wanderer",
+    "Favored Enemy: Dragons, (6th, 14th)",
+    "Natural Explorer: Mountains, (6th, 10th)",
+    "Fighting Style: Archery",
+    "Ranger Spellcasting: 1st - Cure Wounds, Ensnaring Strike"
+  ],
+  "proficiencies": [
+    "Flute",
+    "Light & medium armor",
+    "Simple & martial weapons"
+  ],
+  "languages": [
+    "Common",
+    "Draconian",
+    "Halfling",
+    "Elvish"
+
+  ]
 };
