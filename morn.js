@@ -66,16 +66,15 @@ var charJson =
       "type": "piercing"
     }
   },
+  "equipment":
   {
-  "equipment": {
-      "coins": {
-        "copper": 10,
-        "silver": 0,
-        "electrum": 0,
-        "gold": 10,
-        "platinum": 0
-      }
-    }
+    "coins": {
+      "copper": 10,
+      "silver": 0,
+      "electrum": 0,
+      "gold": 10,
+      "platinum": 0
+    },
     "other": [
       "backpack",
       "bedroll",
@@ -120,6 +119,5 @@ var charJson =
     "Draconian",
     "Halfling",
     "Elvish"
-
   ]
 };

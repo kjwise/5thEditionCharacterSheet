@@ -196,6 +196,16 @@ function loadChar(characterJson) {
     mapProficiencesAndLanguages(characterJson);
 }
 
-$.getScript(decodeURIComponent(getVars()["charURL"]), function () {
-    loadChar(charJson);
+// Inject the JSONp "script" from the location defined in the URL.
+var charURL = decodeURIComponent(getVars()["charURL"]);
+$.ajax({
+    url: charURL,
+    dataType: 'script',
+    timeout: 5000,
+    success: function () {
+        loadChar(charJson);
+    },
+    error: function (XMLHttpRequest, textStatus, errorThrown) {
+        alert("Failed loading data from charURL - " + textStatus + " - " + errorThrown);
+    }
 });
