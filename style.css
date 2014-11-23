@@ -27,7 +27,7 @@ li {
     font-size: 0.8em;
 }
 
-.mainAttribute {
+.mainAttribute, #appearanceContainer {
     font-size: 1.2em;
     float: left;
     display: block;
@@ -36,7 +36,22 @@ li {
     width: 10em;
 }
 
-.mainAttribute .fieldFooter {
+#appearanceContainer {
+    width: 100%;
+    text-align: center;
+}
+
+#appearanceContainer .fieldHeader {
+    padding-top: 1em;
+}
+
+#appearanceContainer > div {
+    width: 5em;
+    padding: 0.2em;
+    float: left;
+}
+
+.mainAttribute .fieldFooter, #appearanceContainer .fieldFooter {
     border-top: 1px solid gray;
 }
 
@@ -176,7 +191,7 @@ li {
     margin: 0.5em auto auto;
 }
 
-#mainAttributes {
+#mainAttributes, #appearanceContainer {
     max-width: 40em;
     float: left;
     clear: right;

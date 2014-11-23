@@ -3,16 +3,12 @@ var charJson =
   "name": "Fenrir Fireaxe",
   "classes": {
     "Barbarian": {
-      "level": 2,
+      "level": 3,
       "hitdice": "D12"
-    },
-    "Fighter": {
-      "level": 1,
-      "hitdice": "D10"
     }
   },
   "inspirationpoints": 1,
-  "hitpoints": 25,
+  "hitpoints": 37,
   "ac": 16,
   "speed": 25,
   "mainattributes": {
@@ -78,10 +74,18 @@ var charJson =
     "other": [
       "Explorer's pack",
       "Set of fine clothes",
-      "Signet ring",
+      "Signet ring, vial of perfume",
       "Scroll of pedigree",
       "Fine purse",
-      "Crested shield"
+      "Crested shield",
+      "Splint mail & sack",
+      "Crowbar, hammer",
+      "Map, paper & casing",
+      "Ink pen & bottle of ink",
+      "Sealing wax, soap, 2 flasks of oil",
+      "Grappling hook, traveller clothes",
+      "Travellers' clothes",
+      "Fancy scimitar scabbard"
     ]
   },
   "personality": {
@@ -91,9 +95,11 @@ var charJson =
     "flaws": "I too often hear veiled insults and threats in every word addressed to me. I am quick to anger & I have an insatiable desire for carnal pleasures."
   },
   "features": [
+    "Frenzy",
     "Reckless attack",
+    "Danger Sense",
     "Unarmoured combat",
-    "Rage 2x/day",
+    "Rage 3x/day +2 dmg",
     "Darkvision",
     "Dwarven resilience",
     "Stonecunning",
@@ -102,7 +108,8 @@ var charJson =
   "proficiencies": [
     "Smith's tools",
     "Three dragon ante set",
-    "Simple & martial weapons"
+    "Simple & martial weapons",
+    "Light, medium & heavy armor"
   ],
   "languages": [
     "Common",

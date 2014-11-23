@@ -140,6 +140,12 @@ function mapProficiencesAndLanguages(characterJson) {
     });
 }
 
+function mapAppearance(characterJson) {
+    $.each(characterJson.appearance, function (attrKey, attrValue) {
+        $("#" + attrKey).prepend(attrValue)
+    });
+}
+
 function loadChar(characterJson) {
 
     document.title = characterJson.name + " - Character Sheet";
@@ -160,10 +166,10 @@ function loadChar(characterJson) {
     var proficiencyModifier = computeProficiencyModifier(totalLevels);
     $("#proficiencyModifier").text("+" + proficiencyModifier);
 
-    $("#character_background").text(characterJson.mainattributes.background);
-    $("#character_race").text(characterJson.mainattributes.race);
-    $("#character_alignment").text(characterJson.mainattributes.alignment);
-    $("#player_name").text(characterJson.mainattributes.playername);
+    $("#character_background").html(characterJson.mainattributes.background || "&nbsp");
+    $("#character_race").html(characterJson.mainattributes.race || "&nbsp");
+    $("#character_alignment").html(characterJson.mainattributes.alignment || "&nbsp");
+    $("#player_name").html(characterJson.mainattributes.playername || "&nbsp");
     $("#character_xp").html(characterJson.mainattributes.xp || "&nbsp");
 
     $("#inspirationPoints").text(characterJson.inspirationpoints);
@@ -194,6 +200,7 @@ function loadChar(characterJson) {
     mapPersonality(characterJson.personality);
     mapFeatures(characterJson.features);
     mapProficiencesAndLanguages(characterJson);
+    mapAppearance(characterJson);
 }
 
 // Inject the JSONp "script" from the location defined in the URL.
