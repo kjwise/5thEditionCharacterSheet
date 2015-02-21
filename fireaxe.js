@@ -3,13 +3,13 @@ var charJson =
   "name": "Fenrir Fireaxe",
   "classes": {
     "Barbarian": {
-      "level": 3,
+      "level": 4,
       "hitdice": "D12"
     }
   },
   "inspirationpoints": 1,
-  "hitpoints": 37,
-  "ac": 16,
+  "hitpoints": 52,
+  "ac": 18,
   "speed": 25,
   "mainattributes": {
     "background": "Noble",
@@ -28,8 +28,8 @@ var charJson =
   },
   "abilityscores": {
     "str": 17,
-    "dex": 13,
-    "con": 17,
+    "dex": 14,
+    "con": 18,
     "int": 8,
     "wis": 10,
     "cha": 13
@@ -44,13 +44,7 @@ var charJson =
     "persuasion"
   ],
   "attacks": {
-    "greataxe": {
-      "ability": "str",
-      "die": "1d12",
-      "proficient": true,
-      "type": "slashing"
-    },
-    "battleaxe": {
+    "axe of many + 1": {
       "ability": "str",
       "die": "1d8/1d10",
       "proficient": true,
@@ -68,7 +62,7 @@ var charJson =
       "copper": 0,
       "silver": 0,
       "electrum": 0,
-      "gold": 15,
+      "gold": 465,
       "platinium": 0
     },
     "other": [
@@ -85,7 +79,7 @@ var charJson =
       "Sealing wax, soap, 2 flasks of oil",
       "Grappling hook, traveller clothes",
       "Travellers' clothes",
-      "Fancy scimitar scabbard"
+      "Vial of perfume"
     ]
   },
   "personality": {
