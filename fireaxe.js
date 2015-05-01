@@ -3,14 +3,14 @@ var charJson =
   "name": "Fenrir Fireaxe",
   "classes": {
     "Barbarian": {
-      "level": 4,
+      "level": 5,
       "hitdice": "D12"
     }
   },
-  "inspirationpoints": 1,
-  "hitpoints": 52,
+  "inspirationpoints": 0,
+  "hitpoints": 63,
   "ac": 18,
-  "speed": 25,
+  "speed": 35,
   "mainattributes": {
     "background": "Noble",
     "race": "Mountain Dwarf",
@@ -33,7 +33,7 @@ var charJson =
     "int": 8,
     "wis": 10,
     "cha": 13
-    },
+  },
   "savingthrow_proficiencies":[
     "str", "con"
   ],
@@ -46,15 +46,17 @@ var charJson =
   "attacks": {
     "axe of many + 1": {
       "ability": "str",
-      "die": "1d8/1d10",
+      "die": "1dX",
       "proficient": true,
-      "type": "slashing"
+      "type": "s",
+      "extraAttackMod" : 1,
+      "extraDmgMod" : 1
     },
-    "handaxe": {
+    "3x handaxe": {
       "ability": "str",
       "die": "1d6",
       "proficient": true,
-      "type": "slashing"
+      "type": "s"
     }
   },
   "equipment": {
@@ -62,7 +64,7 @@ var charJson =
       "copper": 0,
       "silver": 0,
       "electrum": 0,
-      "gold": 465,
+      "gold": 680,
       "platinium": 0
     },
     "other": [
@@ -79,7 +81,10 @@ var charJson =
       "Sealing wax, soap, 2 flasks of oil",
       "Grappling hook, traveller clothes",
       "Travellers' clothes",
-      "Vial of perfume"
+      "Vial of perfume",
+      "Cloack & hood",
+      "6x 250gp rainbow gems",
+      "2 potions of greater healing (4d4+4)"
     ]
   },
   "personality": {
@@ -89,6 +94,8 @@ var charJson =
     "flaws": "I too often hear veiled insults and threats in every word addressed to me. I am quick to anger & I have an insatiable desire for carnal pleasures."
   },
   "features": [
+    "Extra attack",
+    "Fast movement",
     "Frenzy",
     "Reckless attack",
     "Danger Sense",

@@ -45,7 +45,7 @@ function formatModifier(modifier) {
     return modifier;
 }
 
-function mapStats(characterJson, abilityToModifierStore) {
+function mapStats(characterJson, abilityToModifierStore, proficiencyModifier) {
     var mainStats = ["str", "dex", "con", "int", "wis", "cha"];
     $.each(mainStats, function (i, ability) {
         var abilityScoreValue = characterJson.abilityscores[ability];
@@ -70,7 +70,7 @@ function mapStats(characterJson, abilityToModifierStore) {
 
         // Deal with the saving throws and proficiencies
         if ($.inArray(ability, characterJson.savingthrow_proficiencies) > -1) {
-            modifier += 2;
+            modifier += proficiencyModifier;
             $("#save_" + ability).addClass("proficient");
         }
         $("#save_" + ability + " .checkModifier").text(formatModifier(modifier));
@@ -81,12 +81,12 @@ function computeProficiencyModifier(totalLevels) {
     return (Math.floor((totalLevels - 1) / 4) + 2);
 }
 
-function mapSkills(characterJson, abilityToModifierStore) {
+function mapSkills(characterJson, abilityToModifierStore, proficiencyModifier) {
     $.each(skillsToAbility, function (skill, ability) {
         var modifier = abilityToModifierStore[ability];
         // This is ugly but it works.
         if ($.inArray(skill.toLowerCase(), characterJson.skill_proficiences) > -1) {
-            $("#skills").find("ul").append("<li class='" + ability + " proficient'><span class='checkModifier'>" + formatModifier(modifier + 2) + "</span>" + skill + "<i> (" + ability + ")</i></li>");
+            $("#skills").find("ul").append("<li class='" + ability + " proficient'><span class='checkModifier'>" + formatModifier(modifier + proficiencyModifier) + "</span>" + skill + "<i> (" + ability + ")</i></li>");
         }
         else {
             $("#skills").find("ul").append("<li class='" + ability + "'><span class='checkModifier'>" + formatModifier(modifier) + "</span>" + skill + "<i> (" + ability + ")</i></li>");
@@ -176,10 +176,10 @@ function loadChar(characterJson) {
 
     // Plug in ability scores, modifiers and saving throws
     var abilityToModifierStore = {};
-    mapStats(characterJson, abilityToModifierStore);
+    mapStats(characterJson, abilityToModifierStore, proficiencyModifier);
 
     // Handle skills
-    mapSkills(characterJson, abilityToModifierStore);
+    mapSkills(characterJson, abilityToModifierStore, proficiencyModifier);
 
     // Handle combat stats
     $("#armorClass").prepend(characterJson.ac);
