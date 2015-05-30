@@ -65,7 +65,7 @@ var charJson =
       "copper": 0,
       "silver": 0,
       "electrum": 0,
-      "gold": 680,
+      "gold": 0,
       "platinium": 0
     },
     "armor": [
@@ -102,15 +102,18 @@ var charJson =
     "Extra Attack",
     "Military Rank"
   ],
-  "spell slots": {
-    "cantrips": 0,
-    "1st level": 4,
-    "2nd level": 2
-  },
-  "spells": {
-    "cantrips": [],
-    "1st level": ["Compelled Duel", "Shield of Faith", "Hunter's Mark"],
-    "2nd level": ["Branding Strike"]
+  "spellcasting": {
+    "spellcastingAbility": "cha",
+    "spell slots": {
+      "cantrips": 0,
+      "1st level": 4,
+      "2nd level": 2
+    },
+    "spells": {
+      "cantrips": [],
+      "1st level": ["Compelled Duel", "Shield of Faith", "Hunter's Mark"],
+      "2nd level": ["Branding Strike"]
+    }
   },
   "proficiencies": [
     "Blacksmith's tools",
