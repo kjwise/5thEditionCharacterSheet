@@ -146,6 +146,16 @@ function mapAppearance(characterJson) {
     });
 }
 
+function mapSpells(characterJson) {
+    if("spells" in characterJson.spellcasting){
+        $.each(characterJson.spellcasting["spells"], function (attrKey, attrValue) { 
+            console.log(attrKey);
+            $("#" + attrKey).prepend(attrValue)        
+        });        
+    }
+}
+
+
 function loadChar(characterJson) {
 
     document.title = characterJson.name + " - Character Sheet";
@@ -201,6 +211,9 @@ function loadChar(characterJson) {
     mapFeatures(characterJson.features);
     mapProficiencesAndLanguages(characterJson);
     mapAppearance(characterJson);
+    if("spellcasting" in characterJson){
+        mapSpells(characterJson);
+    }
 }
 
 // Inject the JSONp "script" from the location defined in the URL.

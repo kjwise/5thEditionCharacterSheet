@@ -110,9 +110,9 @@ var charJson =
       "2nd level": 2
     },
     "spells": {
-      "cantrips": [],
-      "1st level": ["Compelled Duel", "Shield of Faith", "Hunter's Mark"],
-      "2nd level": ["Branding Strike"]
+      "spells0": [],
+      "spells1": ["Compelled Duel", "Shield of Faith", "Hunter's Mark"],
+      "spells2": ["Branding Strike"]
     }
   },
   "proficiencies": [
