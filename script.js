@@ -146,6 +146,23 @@ function mapAppearance(characterJson) {
     });
 }
 
+function mapSpells(characterJson, abilityToModifierStore, proficiencyModifier) {
+    if("spellcastingAbility" in characterJson.spellcasting){
+        var spellCastingAttackModifier = abilityToModifierStore[characterJson.spellcasting.spellcastingAbility] + proficiencyModifier;
+        $("#spellAttackBonus").prepend("+"+spellCastingAttackModifier);
+        $("#spellSaveDC").prepend("+"+(spellCastingAttackModifier+8));
+        $("#spellcastingAbility").prepend(characterJson.spellcasting.spellcastingAbility);
+    }
+    if("spells" in characterJson.spellcasting){
+        $.each(characterJson.spellcasting.spells, function (attrKey, attrValue) { 
+            $.each(attrValue, function(spellKey, spellName){
+                $("#" + attrKey).append("<div>"+spellName+"</div>")
+            });           
+        });        
+    }
+}
+
+
 function loadChar(characterJson) {
 
     document.title = characterJson.name + " - Character Sheet";
@@ -201,6 +218,9 @@ function loadChar(characterJson) {
     mapFeatures(characterJson.features);
     mapProficiencesAndLanguages(characterJson);
     mapAppearance(characterJson);
+    if("spellcasting" in characterJson){
+        mapSpells(characterJson, abilityToModifierStore, proficiencyModifier);
+    }
 }
 
 // Inject the JSONp "script" from the location defined in the URL.
