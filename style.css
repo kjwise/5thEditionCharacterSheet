@@ -364,3 +364,7 @@ li {
     font-size: 1.2em;
     text-transform: none;
 }
+
+#spellAttackBonus, #spellSaveDC, #spellcastingAbility {
+    text-align: center;
+}

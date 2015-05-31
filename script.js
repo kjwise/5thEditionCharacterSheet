@@ -146,11 +146,18 @@ function mapAppearance(characterJson) {
     });
 }
 
-function mapSpells(characterJson) {
+function mapSpells(characterJson, abilityToModifierStore, proficiencyModifier) {
+    if("spellcastingAbility" in characterJson.spellcasting){
+        var spellCastingAttackModifier = abilityToModifierStore[characterJson.spellcasting.spellcastingAbility] + proficiencyModifier;
+        $("#spellAttackBonus").prepend("+"+spellCastingAttackModifier);
+        $("#spellSaveDC").prepend("+"+(spellCastingAttackModifier+8));
+        $("#spellcastingAbility").prepend(characterJson.spellcasting.spellcastingAbility);
+    }
     if("spells" in characterJson.spellcasting){
-        $.each(characterJson.spellcasting["spells"], function (attrKey, attrValue) { 
-            console.log(attrKey);
-            $("#" + attrKey).prepend(attrValue)        
+        $.each(characterJson.spellcasting.spells, function (attrKey, attrValue) { 
+            $.each(attrValue, function(spellKey, spellName){
+                $("#" + attrKey).append("<div>"+spellName+"</div>")
+            });           
         });        
     }
 }
@@ -212,7 +219,7 @@ function loadChar(characterJson) {
     mapProficiencesAndLanguages(characterJson);
     mapAppearance(characterJson);
     if("spellcasting" in characterJson){
-        mapSpells(characterJson);
+        mapSpells(characterJson, abilityToModifierStore, proficiencyModifier);
     }
 }
 

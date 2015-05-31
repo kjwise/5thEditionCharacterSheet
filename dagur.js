@@ -104,7 +104,7 @@ var charJson =
   ],
   "spellcasting": {
     "spellcastingAbility": "cha",
-    "spell slots": {
+    "spellSlots": {
       "spells0": 0,
       "spells1": 4,
       "spells2": 2
