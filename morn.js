@@ -8,13 +8,13 @@ var charJson =
     }
   },
   "inspirationpoints": 0,
-  "hitpoints": 47,
+  "hitpoints": 57,
   "ac": 15,
   "speed": 30,
   "mainattributes": {
     "background": "Outlander",
     "race": "Human",
-    "alignment": "Chaotic Good",
+    "alignment": "Chaotic Neutral",
     "playername": "Haffi",
     "xp": null
   },
@@ -107,13 +107,26 @@ var charJson =
   },
   "features": [
     "Wanderer",
-    "Favored Enemy: Dragons, (6th, 14th)",
-    "Natural Explorer: Mountains, (6th, 10th)",
+    "Favored Enemy: Dragons, Humans, (14th)",
+    "Natural Explorer: Mountains, Grassland (10th)",
     "Fighting Style: Archery",
     "Ranger Spellcasting: 1st - Hunter\'s Mark; 2nd - Cordon of Arrows, Darkvision, Spike Growth",
     "Hunter\'s Prey - Colossus Slayer: Extra 1d8 on already injured enemy once per turn",
     "Sharpshooter: Ignore cover, -5 to hit +10 dmg"
   ],
+  "spellcasting": {
+    "spellcastingAbility": "Wisdom",
+    "spellSlots": {
+      "spells0": 0,
+      "spells1": 4,
+      "spells2": 2
+    },
+    "spells": {
+      "spells0": [],
+      "spells1": ["Hunter's Mark"],
+      "spells2": ["Cordon of Arrows", "Darkvision", "Spike Growth"]
+    }
+  },
   "proficiencies": [
     "Flute",
     "Light & medium armor",
