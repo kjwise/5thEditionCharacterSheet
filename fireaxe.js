@@ -3,12 +3,12 @@ var charJson =
   "name": "Fenrir Fireaxe",
   "classes": {
     "Barbarian": {
-      "level": 5,
+      "level": 6,
       "hitdice": "D12"
     }
   },
   "inspirationpoints": 0,
-  "hitpoints": 63,
+  "hitpoints": 77,
   "ac": 18,
   "speed": 35,
   "mainattributes": {
@@ -83,8 +83,7 @@ var charJson =
       "Travellers' clothes",
       "Vial of perfume",
       "Cloack & hood",
-      "6x 250gp rainbow gems",
-      "2 potions of greater healing (4d4+4)"
+      "6x 250gp rainbow gems"
     ]
   },
   "personality": {
@@ -100,7 +99,7 @@ var charJson =
     "Reckless attack",
     "Danger Sense",
     "Unarmoured combat",
-    "Rage 3x/day +2 dmg",
+    "Rage 4x/day +2 dmg",
     "Darkvision",
     "Dwarven resilience",
     "Stonecunning",
