@@ -93,6 +93,7 @@ var charJson =
     "flaws": "I too often hear veiled insults and threats in every word addressed to me. I am quick to anger & I have an insatiable desire for carnal pleasures."
   },
   "features": [
+    "Mindless rage",
     "Extra attack",
     "Fast movement",
     "Frenzy",
