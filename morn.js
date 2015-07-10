@@ -8,7 +8,7 @@ var charJson =
     }
   },
   "inspirationpoints": 0,
-  "hitpoints": 57,
+  "hitpoints": 69, // 12, 8, 8, 8, 11, 10, 12
   "ac": 15,
   "speed": 30,
   "mainattributes": {
@@ -112,19 +112,20 @@ var charJson =
     "Fighting Style: Archery",
     "Ranger Spellcasting: 1st - Hunter\'s Mark; 2nd - Cordon of Arrows, Darkvision, Spike Growth",
     "Hunter\'s Prey - Colossus Slayer: Extra 1d8 on already injured enemy once per turn",
-    "Sharpshooter: Ignore cover, -5 to hit +10 dmg"
+    "Sharpshooter: Long range without disadvantage; ignore cover; can choose -5 to hit, +10 to damage",
+    "Steel Will: Advantage on saving throws against being frightened"
   ],
   "spellcasting": {
     "spellcastingAbility": "Wisdom",
     "spellSlots": {
       "spells0": 0,
       "spells1": 4,
-      "spells2": 2
+      "spells2": 3
     },
     "spells": {
       "spells0": [],
-      "spells1": ["Hunter's Mark"],
-      "spells2": ["Cordon of Arrows", "Darkvision", "Spike Growth"]
+      "spells1": ["Alarm (R)", "Hunter's Mark", "Longstrider"],
+      "spells2": ["Darkvision", "Spike Growth"]
     }
   },
   "proficiencies": [
@@ -134,7 +135,7 @@ var charJson =
   ],
   "languages": [
     "Common",
-    "Draconian",
+    "Draconic",
     "Halfling",
     "Elvish"
   ]
