@@ -3,12 +3,12 @@ var charJson =
   "name": "Fenrir Fireaxe",
   "classes": {
     "Barbarian": {
-      "level": 6,
+      "level": 7,
       "hitdice": "D12"
     }
   },
   "inspirationpoints": 0,
-  "hitpoints": 77,
+  "hitpoints": 91,
   "ac": 18,
   "speed": 35,
   "mainattributes": {
@@ -19,7 +19,7 @@ var charJson =
     "xp": null
   },
   "appearance": {
-    "age": 37,
+    "age": 38,
     "height": "5\"2",
     "weight": "180 lbs",
     "eyes": "brown",
@@ -93,6 +93,7 @@ var charJson =
     "flaws": "I too often hear veiled insults and threats in every word addressed to me. I am quick to anger & I have an insatiable desire for carnal pleasures."
   },
   "features": [
+    "Feral Instinct",
     "Mindless rage",
     "Extra attack",
     "Fast movement",
