@@ -221,6 +221,10 @@ function loadChar(characterJson) {
     if("spellcasting" in characterJson){
         mapSpells(characterJson, abilityToModifierStore, proficiencyModifier);
     }
+    else {
+        $("#spells").remove();
+        $("#spellcastingAbilitySaveAttack").remove();
+    }
 }
 
 // Inject the JSONp "script" from the location defined in the URL.
