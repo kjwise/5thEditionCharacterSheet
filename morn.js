@@ -8,7 +8,7 @@ var charJson =
     }
   },
   "inspirationpoints": 0,
-  "hitpoints": 69, // 12, 8, 8, 8, 11, 10, 12
+  "hitpoints": 77, // 12, 8, 8, 8, 11, 10, 12, 8
   "ac": 15,
   "speed": 30,
   "mainattributes": {
@@ -16,7 +16,7 @@ var charJson =
     "race": "Human",
     "alignment": "Chaotic Neutral",
     "playername": "Haffi",
-    "xp": null
+    "xp": 34000
   },
   "appearance": {
     "age": 27,
@@ -28,7 +28,7 @@ var charJson =
   },
   "abilityscores": {
     "str": 14,
-    "dex": 16,
+    "dex": 18, // 8th level ability score increase bumped this from 16
     "con": 14,
     "int": 11,
     "wis": 16,
@@ -80,9 +80,8 @@ var charJson =
       "bedroll",
       "mess kit",
       "tinderbox",
-      "10 torches",
-      "8 days rations",
-      "waterskin",
+      "3 torches",
+      "3 days rations",
       "50\' hemp rope",
       "rabbits foot keepsake",
       "travelers clothes",
@@ -96,7 +95,8 @@ var charJson =
       "flute",
       "Arrow of the Phoenix",
       "religious icons inlaid with precious gems x 5",
-      "Decanter of endless water"
+      "Decanter of endless water",
+      "pearl worth 375gp"
     ]
   },
   "personality": {
@@ -106,14 +106,15 @@ var charJson =
     "flaws": "I am too enamored of ale, wine, and other intoxicants."
   },
   "features": [
-    "Wanderer",
-    "Favored Enemy: Dragons, Humans, (14th)",
-    "Natural Explorer: Mountains, Grassland (10th)",
-    "Fighting Style: Archery",
-    "Ranger Spellcasting: 1st - Hunter\'s Mark; 2nd - Cordon of Arrows, Darkvision, Spike Growth",
-    "Hunter\'s Prey - Colossus Slayer: Extra 1d8 on already injured enemy once per turn",
-    "Sharpshooter: Long range without disadvantage; ignore cover; can choose -5 to hit, +10 to damage",
-    "Steel Will: Advantage on saving throws against being frightened"
+    "Wanderer: Don\'t get lost, can find food in the wild (p.136)",
+    "Favored Enemy: Dragons, Humans, (14th) (p.91)",
+    "Natural Explorer: Mountains, Grassland (10th) (p.91)",
+    "Fighting Style: Archery (p.91)",
+    "Ranger Spellcasting (p.90-91)",
+    "Hunter\'s Prey - Colossus Slayer: Extra 1d8 on already injured enemy once per turn (p.93)",
+    "Sharpshooter: Long range without disadvantage; ignore cover; can choose -5 to hit, +10 to damage (p.170)",
+    "Steel Will: Advantage on saving throws against being frightened (p.93)",
+    "Land\'s Stride: Unhindered movement (p.92)"
   ],
   "spellcasting": {
     "spellcastingAbility": "Wisdom",
@@ -123,9 +124,9 @@ var charJson =
       "spells2": 3
     },
     "spells": {
-      "spells0": [],
-      "spells1": ["Alarm (R)", "Hunter's Mark", "Longstrider"],
-      "spells2": ["Darkvision", "Spike Growth"]
+      "spells0": ["N/A"],
+      "spells1": ["Alarm (R)", "Hunter's Mark", "Jump"],
+      "spells2": ["Darkvision", "Silence (R)"]
     }
   },
   "proficiencies": [
