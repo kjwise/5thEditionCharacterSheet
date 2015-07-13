@@ -3,13 +3,13 @@ var charJson =
   "name": "Morn",
   "classes": {
     "Ranger": {
-      "level": 6,
+      "level": 8,
       "hitdice": "d10"
     }
   },
   "inspirationpoints": 0,
   "hitpoints": 77, // 12, 8, 8, 8, 11, 10, 12, 8
-  "ac": 15,
+  "ac": 16, // 12 + 4
   "speed": 30,
   "mainattributes": {
     "background": "Outlander",
@@ -86,7 +86,7 @@ var charJson =
       "rabbits foot keepsake",
       "travelers clothes",
       "small blanket",
-      "leather armour",
+      "studded leather armour",
       "dagger",
       "sickle",
       "scimitar",
@@ -107,8 +107,8 @@ var charJson =
   },
   "features": [
     "Wanderer: Don\'t get lost, can find food in the wild (p.136)",
-    "Favored Enemy: Dragons, Humans, (14th) (p.91)",
-    "Natural Explorer: Mountains, Grassland (10th) (p.91)",
+    "Favored Enemy: Dragons, Humans, Half-Dragons (p.91)",
+    "Natural Explorer: Mountains, Grassland (p.91)",
     "Fighting Style: Archery (p.91)",
     "Ranger Spellcasting (p.90-91)",
     "Hunter\'s Prey - Colossus Slayer: Extra 1d8 on already injured enemy once per turn (p.93)",
@@ -119,12 +119,10 @@ var charJson =
   "spellcasting": {
     "spellcastingAbility": "Wisdom",
     "spellSlots": {
-      "spells0": 0,
       "spells1": 4,
       "spells2": 3
     },
     "spells": {
-      "spells0": ["N/A"],
       "spells1": ["Alarm (R)", "Hunter's Mark", "Jump"],
       "spells2": ["Darkvision", "Silence (R)"]
     }
