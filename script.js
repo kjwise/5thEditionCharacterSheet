@@ -154,11 +154,18 @@ function mapSpells(characterJson, abilityToModifierStore, proficiencyModifier) {
         $("#spellcastingAbility").prepend(characterJson.spellcasting.spellcastingAbility);
     }
     if("spells" in characterJson.spellcasting){
-        $.each(characterJson.spellcasting.spells, function (attrKey, attrValue) { 
+        $.each(characterJson.spellcasting.spells, function (attrKey, attrValue) {
             $.each(attrValue, function(spellKey, spellName){
                 $("#" + attrKey).append("<div>"+spellName+"</div>")
             });           
-        });        
+        });
+        // Remove empty spell slots
+        for (var n = 0; n < 10; ++ n) {
+            var spell = "spells" + n;
+            if (!(spell in characterJson.spellcasting.spells)) {
+                $("#" + spell).remove();
+            }
+        }
     }
 }
 
