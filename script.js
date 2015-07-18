@@ -142,7 +142,7 @@ function mapProficiencesAndLanguages(characterJson) {
 
 function mapAppearance(characterJson) {
     $.each(characterJson.appearance, function (attrKey, attrValue) {
-        $("#" + attrKey).prepend(attrValue)
+        $("#" + attrKey).append(attrValue)
     });
 }
 
