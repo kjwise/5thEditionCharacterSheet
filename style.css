@@ -15,11 +15,31 @@
 }
 
 span:empty:before {
-    content: "\200b"; // unicode zero width space character
+    content: "\200b";
+/ / unicode zero width space character
 }
 
 .mainStat {
+    border-radius: 10px;
+    box-shadow: 0 0 1px #555555;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+}
+
+.mainStat .fieldHeader {
+    font-weight: bold;
+}
+
+.mainStatValue {
+    display: block;
     font-size: 2em;
+}
+
+.mainAttribute {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
 }
 
 .mainAttribute .fieldFooter {
@@ -39,10 +59,12 @@ span:empty:before {
 
 .combatStat {
     border: 1px solid #e3e3e3;
-    border-radius: 20px;
+    border-radius: 10px;
     text-align: center;
     background-color: #ffffff;
     font-size: 1.25em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
 }
 
 .combatStat .fieldHeader {
@@ -51,4 +73,12 @@ span:empty:before {
     font-size: 0.5em;
     display: block;
     clear: both;
+}
+
+.checkModifier {
+    text-align: center;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    display: inline-block;
+    width: 2em;
 }

@@ -86,10 +86,10 @@ function mapSkills(characterJson, abilityToModifierStore, proficiencyModifier) {
         var modifier = abilityToModifierStore[ability];
         // This is ugly but it works.
         if ($.inArray(skill.toLowerCase(), characterJson.skill_proficiences) > -1) {
-            $("#skills").find("ul").append("<li class='" + ability + " proficient'><span class='checkModifier'>" + formatModifier(modifier + proficiencyModifier) + "</span>" + skill + "<i> (" + ability + ")</i></li>");
+            $("#skills").find("div").first().append("<div class='" + ability + " proficient'><span class='checkModifier'>" + formatModifier(modifier + proficiencyModifier) + "</span> " + skill + "<i> (" + ability + ")</i></div>");
         }
         else {
-            $("#skills").find("ul").append("<li class='" + ability + "'><span class='checkModifier'>" + formatModifier(modifier) + "</span>" + skill + "<i> (" + ability + ")</i></li>");
+            $("#skills").find("div").first().append("<div class='" + ability + "'><span class='checkModifier'>" + formatModifier(modifier) + "</span> " + skill + "<i> (" + ability + ")</i></div>");
         }
     });
 }

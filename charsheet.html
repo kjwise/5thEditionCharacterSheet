@@ -16,39 +16,48 @@
 <div class="container">
     <div class="row">
         <div id="charname">
-            <span id="character_name">No Data!</span>, <span id="age"></span>
-
+            <h1><span id="character_name">No Data!</span>, <span id="age"></span></h1>
             <div id="player">played by <span id="player_name"></span></div>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-4">
-            <div class="mainBlock">
-                <div class="row">
-                    <div class="col-xs-4 combatStat">
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="combatStat">
                         <span class="fieldHeader">Initiative</span>
                         <span id="initiative"></span>
                     </div>
-                    <div class="col-xs-4 combatStat">
+                </div>
+                <div class="col-xs-4">
+                    <div class="combatStat">
                         <span class="fieldHeader">Hit points</span>
                         <span id="hitpoints"></span>
                     </div>
-                    <div class="col-xs-4 combatStat">
+                </div>
+                <div class="col-xs-4">
+                    <div class="combatStat">
                         <span class="fieldHeader">Speed</span>
                         <span id="speed"></span>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xs-4 combatStat">
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="combatStat">
                         <span class="fieldHeader">Hit dice</span>
                         <span id="hitdice"></span>
                     </div>
-                    <div class="col-xs-4 combatStat">
+                </div>
+                <div class="col-xs-4">
+                    <div class="combatStat">
                         <span class="fieldHeader">Armor Class</span>
                         <span id="armorClass"></span>
                     </div>
-                    <div class="col-xs-4 combatStat">
+                </div>
+                <div class="col-xs-4">
+                    <div class="combatStat">
                         <span class="fieldHeader">Proficiency</span>
                         <span id="proficiencyModifier"></span>
                     </div>
@@ -107,105 +116,127 @@
     </div>
 
     <div class="row" id="mainStatsContainer">
-        <div class="col-xs-6 col-md-2 mainStat str">
-            <span class="fieldHeader">Strength</span>
-            <span id="str"></span>
-            <span class="mainStatModifier"></span>
+        <div class="col-xs-6 col-md-2">
+            <div class="mainStat str">
+                <span class="fieldHeader">Strength</span>
+                <span class="mainStatValue" id="str"></span>
+                <span class="mainStatModifier"></span>
 
-            <div id="save_str" class="str"><span class="checkModifier"></span></div>
+                <div id="save_str" class="str"><span class="checkModifier"></span></div>
+            </div>
         </div>
-        <div class="col-xs-6 col-md-2  mainStat dex">
-            <span class="fieldHeader">Dexterity</span>
-            <span id="dex"></span>
-            <span class="col-xs-6 col-md-2  mainStatModifier"></span>
+        <div class="col-xs-6 col-md-2">
+            <div class="mainStat dex">
+                <span class="fieldHeader">Dexterity</span>
+                <span class="mainStatValue" id="dex"></span>
+                <span class="mainStatModifier"></span>
 
-            <div id="save_dex" class="dex"><span class="checkModifier"></span></div>
+                <div id="save_dex" class="dex"><span class="checkModifier"></span></div>
+            </div>
         </div>
-        <div class="col-xs-6 col-md-2  mainStat con">
-            <span class="fieldHeader">Constitution</span>
-            <span id="con"></span>
-            <span class="col-xs-6 col-md-2  mainStatModifier">+</span>
+        <div class="col-xs-6 col-md-2">
+            <div class="mainStat con">
+                <span class="fieldHeader">Constitution</span>
+                <span class="mainStatValue" id="con"></span>
+                <span class="mainStatModifier">+</span>
 
-            <div id="save_con" class="con"><span class="checkModifier"></span></div>
+                <div id="save_con" class="con"><span class="checkModifier"></span></div>
+            </div>
         </div>
-        <div class="col-xs-6 col-md-2  mainStat int">
-            <span class="fieldHeader">Intelligence</span>
-            <span id="int"></span>
-            <span class="col-xs-6 col-md-2  mainStatModifier"></span>
+        <div class="col-xs-6 col-md-2">
+            <div class="mainStat int">
+                <span class="fieldHeader">Intelligence</span>
+                <span class="mainStatValue" id="int"></span>
+                <span class="mainStatModifier"></span>
 
-            <div id="save_int" class="int"><span class="checkModifier"></span></div>
+                <div id="save_int" class="int"><span class="checkModifier"></span></div>
+            </div>
         </div>
-        <div class="col-xs-6 col-md-2  mainStat wis">
-            <span class="fieldHeader">Wisdom</span>
-            <span id="wis"></span>
-            <span class="col-xs-6 col-md-2  mainStatModifier"></span>
+        <div class="col-xs-6 col-md-2">
+            <div class="mainStat wis">
+                <span class="fieldHeader">Wisdom</span>
+                <span class="mainStatValue" id="wis"></span>
+                <span class="mainStatModifier"></span>
 
-            <div id="save_wis" class="wis"><span class="checkModifier"></span></div>
+                <div id="save_wis" class="wis"><span class="checkModifier"></span></div>
+            </div>
         </div>
-        <div class="col-xs-6 col-md-2  mainStat cha">
-            <span class="fieldHeader">Charisma</span>
-            <span id="cha"></span>
-            <span class="col-xs-6 col-md-2  mainStatModifier"></span>
+        <div class="col-xs-6 col-md-2">
+            <div class="mainStat cha">
+                <span class="fieldHeader">Charisma</span>
+                <span class="mainStatValue" id="cha"></span>
+                <span class="mainStatModifier"></span>
 
-            <div id="save_cha" class="cha"><span class="checkModifier"></span></div>
+                <div id="save_cha" class="cha"><span class="checkModifier"></span></div>
+            </div>
         </div>
     </div>
 
-    <div class="mainBlock" id="throwsAndSkillsContainer">
-        <div id="skills" class="doubleBorderBox">
-            <!-- Filled out by jquery -->
-            <ul>
+    <div class="row">
+
+        <div class="col-xs-12 col-md-4" id="attacksAndSpellcasting">
+            <h4>Attacks & Spellcasting</h4>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Atk bonus</th>
+                    <th>Damage</th>
+                    <th>Type</th>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="col-xs-6 col-md-3" id="skillsContainer">
+            <div id="skills">
+                <h4>Skills</h4>
+                <!-- Filled out by jquery -->
+                <div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-xs-6 col-md-3">
+            <div class="mainBlock">
+                <h4>Features & traits</h4>
+                <div id="featuresandtraits"></div>
+            </div>
+        </div>
+
+
+        <div class="col-xs-6 col-md-2">
+            <div>
+            <h4>Other proficiencies & languages</h4>
+            <div id="otherProficienciesAndLanguages"></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-6" id="equipment">
+            <h4>Equipment</h4>
+            <div class="coins">
+                <span class="coinType">cp</span><span class="coin" id="copper"></span>
+                <span class="coinType">sp</span><span class="coin" id="silver"></span>
+                <span class="coinType">ep</span><span class="coin" id="electrum"></span>
+                <span class="coinType">gp</span><span class="coin" id="gold"></span>
+                <span class="coinType">pp</span><span class="coin" id="platinium"></span>
+            </div>
+            <ul id="equipmentList">
             </ul>
-            Skills
         </div>
-    </div>
 
-    <div class="mainBlock" id="attacksAndSpellcasting">
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Atk bonus</th>
-                <th>Damage</th>
-                <th>Type</th>
-            </tr>
-
-        </table>
-        Attacks & Spellcasting
-    </div>
-    <div class="mainBlock" id="equipment">
-        <div class="coins">
-            <span class="coinType">cp</span><span class="coin" id="copper"></span>
-            <span class="coinType">sp</span><span class="coin" id="silver"></span>
-            <span class="coinType">ep</span><span class="coin" id="electrum"></span>
-            <span class="coinType">gp</span><span class="coin" id="gold"></span>
-            <span class="coinType">pp</span><span class="coin" id="platinium"></span>
+        <div id="traitsidealsbondsflaws" class="col-md-4 col-xs-12">
+            <h4>Personality Traits</h4>
+            <div id="personalityTraits" class="whiteBox"></div>
+            <h4>Ideals</h4>
+            <div id="ideals" class="whiteBox"></div>
+            <h4>Bonds</h4>
+            <div id="bonds" class="whiteBox"></div>
+            <h4>Flaws</h4>
+            <div id="flaws" class="whiteBox"></div>
         </div>
-        <ul id="equipmentList">
-        </ul>
-        Equipment
-    </div>
-
-    <div id="traitsidealsbondsflaws" class="mainBlock">
-        <div id="personalityTraits" class="whiteBox">
-            <span class="fieldFooter">Personality Traits</span>
-        </div>
-        <div id="ideals" class="whiteBox">
-            <span class="fieldFooter">Ideals</span>
-        </div>
-        <div id="bonds" class="whiteBox">
-            <span class="fieldFooter">Bonds</span>
-        </div>
-        <div id="flaws" class="whiteBox">
-            <span class="fieldFooter">Flaws</span>
-        </div>
-    </div>
-    <div class="mainBlock">
-        <div id="featuresandtraits"></div>
-        Features & traits
-    </div>
-    <div class="mainBlock">
-        <div id="otherProficienciesAndLanguages"></div>
-        Other proficiencies & languages
     </div>
 
     <div class="mainBlock" id="spellsContainer">
