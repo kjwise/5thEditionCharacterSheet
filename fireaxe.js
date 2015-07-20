@@ -27,7 +27,7 @@ var charJson =
         "hair": "red & gray"
     },
     "abilityscores": {
-        "str": 18,
+        "str": 20,
         "dex": 14,
         "con": 18,
         "int": 8,
@@ -64,7 +64,7 @@ var charJson =
             "proficient": true,
             "type": "p"
         },
-        "axe of many + 1": {
+        "Axe of many + 1": {
             "ability": "str",
             "die": "1dX",
             "proficient": true,
@@ -112,6 +112,7 @@ var charJson =
         "flaws": "I too often hear veiled insults and threats in every word addressed to me. I am quick to anger & I have an insatiable desire for carnal pleasures."
     },
     "features": [
+        "Gold Dragon essance",
         "Feral Instinct",
         "Mindless rage",
         "Extra attack",

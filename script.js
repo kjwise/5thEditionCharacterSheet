@@ -50,7 +50,8 @@ function mapStats(characterJson, abilityToModifierStore, proficiencyModifier) {
     $.each(mainStats, function (i, ability) {
         var abilityScoreValue = characterJson.abilityscores[ability];
         // Set text and add fancy hover interaction
-        $("#" + ability).text(abilityScoreValue).hover(
+        var abilityTarget = $("#" + ability);
+        abilityTarget.text(abilityScoreValue).hover(
             function () {
                 $("." + ability).css("color", "red")
             },
@@ -66,7 +67,7 @@ function mapStats(characterJson, abilityToModifierStore, proficiencyModifier) {
             abilityToModifierStore[ability] = modifier;
         }
 
-        $("#" + ability + " ~ .mainStatModifier").text(formatModifier(modifier));
+        abilityTarget.parent().find(".mainStatModifier").first().text(formatModifier(modifier));
 
         // Deal with the saving throws and proficiencies
         if ($.inArray(ability, characterJson.savingthrow_proficiencies) > -1) {
@@ -82,15 +83,16 @@ function computeProficiencyModifier(totalLevels) {
 }
 
 function mapSkills(characterJson, abilityToModifierStore, proficiencyModifier) {
+    var targetContainer = $("#skills").find("div").first();
     $.each(skillsToAbility, function (skill, ability) {
         var modifier = abilityToModifierStore[ability];
-        // This is ugly but it works.
+        var proficiencyTag = '';
         if ($.inArray(skill.toLowerCase(), characterJson.skill_proficiences) > -1) {
-            $("#skills").find("div").first().append("<div class='" + ability + " proficient'><span class='checkModifier'>" + formatModifier(modifier + proficiencyModifier) + "</span> " + skill + "<i> (" + ability + ")</i></div>");
+            proficiencyTag = ' proficient';
+            modifier += proficiencyModifier;
         }
-        else {
-            $("#skills").find("div").first().append("<div class='" + ability + "'><span class='checkModifier'>" + formatModifier(modifier) + "</span> " + skill + "<i> (" + ability + ")</i></div>");
-        }
+        targetContainer.append("<div class='" + ability + proficiencyTag + "'>" +
+            "<span class='checkModifier'>" + formatModifier(modifier) + "</span> " + skill + "<i> (" + ability + ")</i></div>");
     });
 }
 

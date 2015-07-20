@@ -28,12 +28,23 @@ span:empty:before {
 
 }
 
+.mainStatModifier, .checkModifier {
+    text-align: center;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    display: inline-block;
+    width: 2em;
+}
+
 .mainStat .fieldHeader {
     font-weight: bold;
 }
 
+.mainStat div {
+    text-align: center;
+}
+
 .mainStatValue {
-    display: block;
     font-size: 2em;
 }
 
@@ -42,13 +53,14 @@ span:empty:before {
     margin-bottom: 0.25em;
 }
 
-.mainAttribute .fieldFooter {
+.fieldFooter {
     display: block;
     font-size: 0.75em;
     border-top: 1px solid black;
 }
 
 .mainBlock {
+    text-align: center;
     margin: 0.5em;
     background-color: #f5f5f5;
     border: 1px solid #e3e3e3;
@@ -75,10 +87,20 @@ span:empty:before {
     clear: both;
 }
 
-.checkModifier {
-    text-align: center;
+.proficient {
+    font-weight: bold;
+}
+
+#skills {
     border: 1px solid #e3e3e3;
-    border-radius: 10px;
-    display: inline-block;
-    width: 2em;
+    border-radius: 20px;
+    padding-bottom: 1em;
+}
+
+#skills h4 {
+    text-align: center;
+}
+
+#skills > div {
+    margin-left: 1em;
 }
