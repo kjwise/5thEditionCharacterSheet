@@ -15,8 +15,7 @@
 }
 
 span:empty:before {
-    content: "\200b";
-/ / unicode zero width space character
+    content: "\200b"; // unicode zero width space character
 }
 
 .mainStat {
@@ -37,6 +36,7 @@ span:empty:before {
 }
 
 .mainStat .fieldHeader {
+    line-height: 2em;
     font-weight: bold;
 }
 
@@ -74,12 +74,13 @@ span:empty:before {
     border-radius: 10px;
     text-align: center;
     background-color: #ffffff;
-    font-size: 1.25em;
+    font-size: 1.5em;
     margin-top: 0.25em;
     margin-bottom: 0.25em;
 }
 
 .combatStat .fieldHeader {
+    margin-top: 0.5em;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.5em;
@@ -103,4 +104,18 @@ span:empty:before {
 
 #skills > div {
     margin-left: 1em;
+}
+
+#featuresandtraits {
+    text-align: left;
+}
+
+#featuresandtraits .fieldHeader {
+
+}
+
+#featuresandtraits .fieldFooter {
+    display: inline;
+    border-top: none;
+    border-bottom: solid 1px #e3e3e3;
 }

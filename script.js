@@ -91,7 +91,7 @@ function mapSkills(characterJson, abilityToModifierStore, proficiencyModifier) {
             proficiencyTag = ' proficient';
             modifier += proficiencyModifier;
         }
-        targetContainer.append("<div class='" + ability + proficiencyTag + "'>" +
+        targetContainer.append("<div class='col-md-6 col-xs-6 " + ability + proficiencyTag + "'>" +
             "<span class='checkModifier'>" + formatModifier(modifier) + "</span> " + skill + "<i> (" + ability + ")</i></div>");
     });
 }
@@ -128,8 +128,17 @@ function mapPersonality(personality) {
 }
 
 function mapFeatures(features) {
+    target = $("#featuresandtraits");
     $.each(features.reverse(), function (i, feature) {
-        $("#featuresandtraits").prepend(feature + "<br/>");
+        if (feature.includes(":"))
+        {
+            var fArr = feature.split(":");
+            target.prepend('<span class="fieldHeader">' + fArr[0] +
+                '</span><br/><span class="fieldFooter">' + fArr[1] + '</span><br/>');
+        }
+        else {
+            target.prepend(feature + "<br/>");
+        }
     });
 }
 
