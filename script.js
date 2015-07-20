@@ -116,7 +116,7 @@ function mapEquipment(equipment) {
         $("#" + coinType).text(amount);
     });
     $.each(equipment.other, function (i, item) {
-        $("#equipmentList").append('<li>' + item + '</li>');
+        $("#equipmentList").append(item + '<br/>');
     });
 }
 
