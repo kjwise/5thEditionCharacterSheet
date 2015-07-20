@@ -1,239 +1,362 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
     <title>No data loaded - Character sheet</title>
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <link rel="stylesheet" media="all" href="style.css">
+
 </head>
 <body>
-<div id="charnameContainer">
-    <div id="charname">
-        <span id="character_name">No Data!</span>
-        <span class="fieldFooter">Character name</span>
-    </div>
-</div>
-<div id="mainAttributes">
-    <div class="mainAttribute">
-        <span id="character_class"></span>
-        <span class="fieldFooter">Class & level</span>
-    </div>
-    <div class="mainAttribute">
-        <span id="character_background"></span>
-        <span class="fieldFooter">Background</span>
-    </div>
-    <div class="mainAttribute">
-        <span id="player_name"></span>
-        <span class="fieldFooter">Player name</span>
-    </div>
-    <div class="mainAttribute">
-        <span id="character_race"></span>
-        <span class="fieldFooter">Race</span>
-    </div>
-    <div class="mainAttribute">
-        <span id="character_alignment"></span>
-        <span class="fieldFooter">Alignment</span>
-    </div>
-    <div class="mainAttribute">
-        <span id="character_xp">&nbsp</span>
-        <span class="fieldFooter">Experience points</span>
-    </div>
-</div>
-<div id="mainStatsContainer" class="grayRoundedBox">
-    <div class="mainStat str">
-        <span class="fieldHeader">Strength</span>
-        <span id="str"></span>
-        <span class="mainStatModifier"></span>
-    </div>
-    <div class="mainStat dex">
-        <span class="fieldHeader">Dexterity</span>
-        <span id="dex"></span>
-        <span class="mainStatModifier"></span>
-    </div>
-    <div class="mainStat con">
-        <span class="fieldHeader">Constitution</span>
-        <span id="con"></span>
-        <span class="mainStatModifier">+</span>
-    </div>
-    <div class="mainStat int">
-        <span class="fieldHeader">Intelligence</span>
-        <span id="int"></span>
-        <span class="mainStatModifier"></span>
-    </div>
-    <div class="mainStat wis">
-        <span class="fieldHeader">Wisdom</span>
-        <span id="wis"></span>
-        <span class="mainStatModifier"></span>
-    </div>
-    <div class="mainStat cha">
-        <span class="fieldHeader">Charisma</span>
-        <span id="cha"></span>
-        <span class="mainStatModifier"></span>
-    </div>
-</div>
 
-<div id="throwsAndSkillsContainer">
-    <div id="inspirationContainer">
-        <span id="inspirationPoints"></span>
-        <span id="inspiration" class="doubleBorderBox">Inspiration</span>
-    </div>
-    <div id="proficiencyContainer">
-        <span id="proficiencyModifier"></span>
-        <span id="proficiencyBonus" class="doubleBorderBox">Proficiency bonus</span>
+<div class="container">
+    <div class="row">
+        <div id="charname">
+            <h1><span id="character_name">No Data!</span>, <span id="age"></span></h1>
+
+            <div id="player">played by <span id="player_name"></span></div>
+        </div>
     </div>
 
-    <div id="savingThrows" class="doubleBorderBox">
-        <ul>
-            <li id="save_str" class="str"><span class="checkModifier"></span>Strength</li>
-            <li id="save_dex" class="dex"><span class="checkModifier"></span>Dexterity</li>
-            <li id="save_con" class="con"><span class="checkModifier"></span>Constitution</li>
-            <li id="save_int" class="int"><span class="checkModifier"></span>Intelligence</li>
-            <li id="save_wis" class="wis"><span class="checkModifier"></span>Wisdom</li>
-            <li id="save_cha" class="cha"><span class="checkModifier"></span>Charisma</li>
-        </ul>
-        Saving throws
+    <div class="row">
+        <div class="col-md-5">
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="combatStat">
+                        <span class="fieldHeader">Initiative</span>
+                        <span id="initiative"></span>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="combatStat">
+                        <span class="fieldHeader">Hit points</span>
+                        <span id="hitpoints"></span>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="combatStat">
+                        <span class="fieldHeader">Speed</span>
+                        <span id="speed"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="combatStat">
+                        <span class="fieldHeader">Hit dice</span>
+                        <span id="hitdice"></span>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="combatStat">
+                        <span class="fieldHeader">Armor Class</span>
+                        <span id="armorClass"></span>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="combatStat">
+                        <span class="fieldHeader">Proficiency</span>
+                        <span id="proficiencyModifier"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mainBlock">
+                <div class="col-xs-6 mainAttribute">
+                    <span id="character_xp">&nbsp</span>
+                    <span class="fieldFooter">Experience points</span>
+                </div>
+
+                <div class="col-xs-6 mainAttribute">
+                    <span id="inspirationPoints"></span>
+                    <span class="fieldFooter">Inspiration points</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="row mainBlock" id="mainAttributes">
+                <div class="mainAttribute col-xs-6 col-md-4">
+                    <span id="character_class"></span>
+                    <span class="fieldFooter">Class & level</span>
+                </div>
+                <div class="mainAttribute col-xs-6 col-md-4">
+                    <span id="character_race"></span>
+                    <span class="fieldFooter">Race</span>
+                </div>
+                <div class="mainAttribute col-xs-6 col-md-4">
+                    <span id="character_background"></span>
+                    <span class="fieldFooter">Background</span>
+                </div>
+                <div class="mainAttribute col-xs-6 col-md-4">
+                    <span id="character_alignment"></span>
+                    <span class="fieldFooter">Alignment</span>
+                </div>
+                <div class="mainAttribute col-xs-6 col-md-4">
+                    <span id="height"></span>
+                    <span class="fieldFooter">Height</span>
+                </div>
+                <div class="mainAttribute col-xs-6 col-md-4">
+                    <span id="weight"></span>
+                    <span class="fieldFooter">Weight</span>
+                </div>
+                <div class="mainAttribute col-xs-6 col-md-4">
+                    <span id="skin"></span>
+                    <span class="fieldFooter">Skin</span>
+                </div>
+                <div class="mainAttribute col-xs-6 col-md-4">
+                    <span id="hair"></span>
+                    <span class="fieldFooter">Hair</span>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div id="skills" class="doubleBorderBox">
-        <!-- Filled out by jquery -->
-        <ul>
-        </ul>
-        Skills
-    </div>
-</div>
-<div id="combatAndAttacksContainer">
-    <div id="combatContainer" class="grayRoundedBox">
-        <div id="armorClass" class="mainStat">
-            <span class="fieldHeader">Armor Class</span>
-        </div>
-        <div id="initiative" class="mainStat">
-            <span class="fieldHeader">Initiative</span>
-        </div>
-        <div id="speed" class="mainStat">
-            <span class="fieldHeader">Speed</span>
-        </div>
-        <div id="hitpoints" class="mainStat">
-            <span class="fieldHeader">Hit points</span>
-        </div>
-        <div id="hitdice" class="mainStat">
-            <span class="fieldHeader">Hit dice</span>
-        </div>
-    </div>
-    <div id="attacksAndSpellcasting" class="doubleBorderBox">
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Atk bonus</th>
-                <th>Damage</th>
-                <th>Type</th>
-            </tr>
+    <hr/>
 
-        </table>
-        Attacks & Spellcasting
-    </div>
-    <div id="equipment" class="doubleBorderBox">
-        <div class="coins">
-            <span class="coinType">cp</span><span class="coin" id="copper"></span>
-            <span class="coinType">sp</span><span class="coin" id="silver"></span>
-            <span class="coinType">ep</span><span class="coin" id="electrum"></span>
-            <span class="coinType">gp</span><span class="coin" id="gold"></span>
-            <span class="coinType">pp</span><span class="coin" id="platinium"></span>
-        </div>
-        <ul id="equipmentList">
-        </ul>
-        Equipment
-    </div>
-    <div id="appearanceContainer">
-        <div id="age">
-            <span class="fieldFooter">Age</span>
-        </div>
-        <div id="height">
-            <span class="fieldFooter">Height</span>
-        </div>
-        <div id="weight">
-            <span class="fieldFooter">Weight</span>
-        </div>
-        <div id="skin">
-            <span class="fieldFooter">Skin</span>
-        </div>
-        <div id="hair">
-            <span class="fieldFooter">Hair</span>
-        </div>
-        <span class="fieldHeader">Appearance</span>
-    </div>
-</div>
+    <div class="row" id="mainStatsContainer">
+        <div class="col-xs-6 col-sm-4 col-md-2">
+            <div class="mainStat str">
+                <span class="fieldHeader">Strength</span>
 
-<div id="traitsProficienciesMiscContainer">
-    <div id="traitsidealsbondsflaws" class="grayRoundedBox">
-        <div id="personalityTraits" class="whiteBox">
-            <span class="fieldFooter">Personality Traits</span>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <span class="mainStatModifier"></span>
+                        <span class="fieldFooter">Mod</span>
+                    </div>
+                    <div class="col-xs-4 mainStatValue" id="str"></div>
+                    <div id="save_str" class="col-xs-4 str">
+                        <span class="checkModifier"></span>
+                        <span class="fieldFooter">Save</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="ideals" class="whiteBox">
-            <span class="fieldFooter">Ideals</span>
-        </div>
-        <div id="bonds" class="whiteBox">
-            <span class="fieldFooter">Bonds</span>
-        </div>
-        <div id="flaws" class="whiteBox">
-            <span class="fieldFooter">Flaws</span>
-        </div>
-    </div>
-    <div class="doubleBorderBox">
-        <div id="featuresandtraits"></div>
-        Features & traits
-    </div>
-    <div class="doubleBorderBox">
-        <div id="otherProficienciesAndLanguages"></div>
-        Other proficiencies & languages
-    </div>
-</div>
-<div id="spellsContainer">
-    <div id="spellcastingAbilitySaveAttack" class="grayRoundedBox">
-        <div id="spellcastingAbility" class="whiteBox">
-            <span class="fieldFooter">Spellcasting Ability</span>
-        </div>
-        <div id="spellSaveDC" class="whiteBox">
-            <span class="fieldFooter">Spell Save DC</span>
-        </div>
-        <div id="spellAttackBonus" class="whiteBox">
-            <span class="fieldFooter">Spell Attack Bonus</span>
-        </div>
-    </div>
-</div>
-<div id="spells">
-    <div id="spells0" class="doubleBorderBox">
-        <span class="fieldFooter">Cantrips</span>
-    </div>
-    <div id="spells1" class="doubleBorderBox">
-        <span class="fieldFooter">1st level spells</span>
-    </div>
-    <div id="spells2" class="doubleBorderBox">
-        <span class="fieldFooter">2nd level spells</span>
-    </div>
-    <div id="spells3" class="doubleBorderBox">
-        <span class="fieldFooter">3rd level spells</span>
-    </div>
-    <div id="spells4" class="doubleBorderBox">
-        <span class="fieldFooter">4th level spells</span>
-    </div>
-    <div id="spells5" class="doubleBorderBox">
-        <span class="fieldFooter">5th level spells</span>
-    </div>
-    <div id="spells6" class="doubleBorderBox">
-        <span class="fieldFooter">6th level spells</span>
-    </div>
-    <div id="spells7" class="doubleBorderBox">
-        <span class="fieldFooter">7th level spells</span>
-    </div>
-    <div id="spells8" class="doubleBorderBox">
-        <span class="fieldFooter">8th level spells</span>
-    </div>
-    <div id="spells9" class="doubleBorderBox">
-        <span class="fieldFooter">9th level spells</span>
-    </div>
-</div>
+        <div class="col-xs-6 col-sm-4 col-md-2">
+            <div class="mainStat dex">
+                <span class="fieldHeader">Dexterity</span>
 
+                <div class="row">
+                    <div class="col-xs-4">
+                        <span class="mainStatModifier"></span>
+                        <span class="fieldFooter">Mod</span>
+                    </div>
+                    <div class="col-xs-4 mainStatValue" id="dex"></div>
+                    <div id="save_dex" class="col-xs-4 dex">
+                        <span class="checkModifier"></span>
+                        <span class="fieldFooter">Save</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2">
+            <div class="mainStat con">
+                <span class="fieldHeader">Constitution</span>
+
+                <div class="row">
+                    <div class="col-xs-4">
+                        <span class="mainStatModifier"></span>
+                        <span class="fieldFooter">Mod</span>
+                    </div>
+                    <div class="col-xs-4 mainStatValue" id="con"></div>
+                    <div id="save_con" class="col-xs-4 con">
+                        <span class="checkModifier"></span>
+                        <span class="fieldFooter">Save</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2">
+            <div class="mainStat int">
+                <span class="fieldHeader">Intelligence</span>
+
+                <div class="row">
+                    <div class="col-xs-4">
+                        <span class="mainStatModifier"></span>
+                        <span class="fieldFooter">Mod</span>
+                    </div>
+                    <div class="col-xs-4 mainStatValue" id="int"></div>
+                    <div id="save_int" class="col-xs-4 int">
+                        <span class="checkModifier"></span>
+                        <span class="fieldFooter">Save</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2">
+            <div class="mainStat wis">
+                <span class="fieldHeader">Wisdom</span>
+
+                <div class="row">
+                    <div class="col-xs-4">
+                        <span class="mainStatModifier"></span>
+                        <span class="fieldFooter">Mod</span>
+                    </div>
+                    <div class="col-xs-4 mainStatValue" id="wis"></div>
+                    <div id="save_wis" class="col-xs-4 wis">
+                        <span class="checkModifier"></span>
+                        <span class="fieldFooter">Save</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2">
+            <div class="mainStat cha">
+                <span class="fieldHeader">Charisma</span>
+
+                <div class="row">
+                    <div class="col-xs-4">
+                        <span class="mainStatModifier"></span>
+                        <span class="fieldFooter">Mod</span>
+                    </div>
+                    <div class="col-xs-4 mainStatValue" id="cha"></div>
+                    <div id="save_cha" class="col-xs-4 cha">
+                        <span class="checkModifier"></span>
+                        <span class="fieldFooter">Save</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-xs-12 col-md-6" id="attacksAndSpellcasting">
+            <hr/>
+            <h4>Attacks & Spellcasting</h4>
+            <table class="table table-striped">
+                <tr>
+                    <th>Name</th>
+                    <th>Attack bonus</th>
+                    <th>Damage</th>
+                    <th>Type</th>
+                </tr>
+
+            </table>
+        </div>
+
+        <div class="col-xs-12 col-md-6" id="skillsContainer">
+            <hr/>
+            <div id="skills">
+                <h4>Skills</h4>
+                <!-- Filled out by jquery -->
+                <div class="row">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-xs-6 col-md-3">
+            <hr/>
+            <div>
+                <h4>Features & traits</h4>
+
+                <div id="featuresandtraits"></div>
+            </div>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+            <hr/>
+            <h4>Equipment</h4>
+
+            <div id="equipmentList">
+            </div>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+            <hr/>
+            <h4>Coinage</h4>
+
+            <div class="coins">
+                <span class="coinType">cp</span><span class="coin" id="copper"></span>
+                <span class="coinType">sp</span><span class="coin" id="silver"></span>
+                <span class="coinType">ep</span><span class="coin" id="electrum"></span>
+                <span class="coinType">gp</span><span class="coin" id="gold"></span>
+                <span class="coinType">pp</span><span class="coin" id="platinium"></span>
+            </div>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+            <hr/>
+            <h4>Other proficiencies & languages</h4>
+
+            <div id="otherProficienciesAndLanguages"></div>
+        </div>
+
+        <div id="traitsidealsbondsflaws" class="col-md-6 col-xs-12">
+            <hr/>
+            <h4>Personality Traits</h4>
+
+            <div id="personalityTraits" class="whiteBox"></div>
+            <h4>Ideals</h4>
+
+            <div id="ideals" class="whiteBox"></div>
+            <h4>Bonds</h4>
+
+            <div id="bonds" class="whiteBox"></div>
+            <h4>Flaws</h4>
+
+            <div id="flaws" class="whiteBox"></div>
+        </div>
+    </div>
+
+    <div class="mainBlock" id="spellsContainer">
+        <div id="spellcastingAbilitySaveAttack" class="grayRoundedBox">
+            <div id="spellcastingAbility" class="whiteBox">
+                <span class="fieldFooter">Spellcasting Ability</span>
+            </div>
+            <div id="spellSaveDC" class="whiteBox">
+                <span class="fieldFooter">Spell Save DC</span>
+            </div>
+            <div id="spellAttackBonus" class="whiteBox">
+                <span class="fieldFooter">Spell Attack Bonus</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="mainBlock" id="spells">
+        <div id="spells0" class="doubleBorderBox">
+            <span class="fieldFooter">Cantrips</span>
+        </div>
+        <div id="spells1" class="doubleBorderBox">
+            <span class="fieldFooter">1st level spells</span>
+        </div>
+        <div id="spells2" class="doubleBorderBox">
+            <span class="fieldFooter">2nd level spells</span>
+        </div>
+        <div id="spells3" class="doubleBorderBox">
+            <span class="fieldFooter">3rd level spells</span>
+        </div>
+        <div id="spells4" class="doubleBorderBox">
+            <span class="fieldFooter">4th level spells</span>
+        </div>
+        <div id="spells5" class="doubleBorderBox">
+            <span class="fieldFooter">5th level spells</span>
+        </div>
+        <div id="spells6" class="doubleBorderBox">
+            <span class="fieldFooter">6th level spells</span>
+        </div>
+        <div id="spells7" class="doubleBorderBox">
+            <span class="fieldFooter">7th level spells</span>
+        </div>
+        <div id="spells8" class="doubleBorderBox">
+            <span class="fieldFooter">8th level spells</span>
+        </div>
+        <div id="spells9" class="doubleBorderBox">
+            <span class="fieldFooter">9th level spells</span>
+        </div>
+    </div>
+</div>
+<!-- </container /-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="script.js"></script>
 
 </body>
