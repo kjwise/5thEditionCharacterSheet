@@ -32,7 +32,7 @@ var charJson =
     "con": 14,
     "int": 11,
     "wis": 16,
-    "cha": 9
+    "cha": 11 // Brass Dragon Essence bumped this from 9 - special twist by DM
     },
   "savingthrow_proficiencies":[
     "str", "dex"
@@ -114,7 +114,8 @@ var charJson =
     "Hunter\'s Prey - Colossus Slayer: Extra 1d8 on already injured enemy once per turn (p.93)",
     "Sharpshooter: Long range without disadvantage; ignore cover; can choose -5 to hit, +10 to damage (p.170)",
     "Steel Will: Advantage on saving throws against being frightened (p.93)",
-    "Land\'s Stride: Unhindered movement (p.92)"
+    "Land\'s Stride: Unhindered movement (p.92)",
+    "Brass Dragon Essence: Ability score improvement (Cha)"
   ],
   "spellcasting": {
     "spellcastingAbility": "Wisdom",
