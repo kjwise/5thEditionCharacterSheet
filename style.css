@@ -24,28 +24,38 @@ span:empty:before {
     text-align: center;
     margin-top: 1em;
     margin-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0.5em;
 
 }
 
 .mainStatModifier, .checkModifier {
     text-align: center;
     border: 1px solid #e3e3e3;
-    border-radius: 10px;
+    border-radius: 7px;
     display: inline-block;
-    width: 2em;
+    min-width: 1.5em;
 }
 
 .mainStat .fieldHeader {
     line-height: 2em;
     font-weight: bold;
+    text-align: center;
+}
+
+.mainStat .fieldFooter {
+    text-align: center;
+    display: block;
 }
 
 .mainStat div {
     text-align: center;
 }
 
+
 .mainStatValue {
-    font-size: 2em;
+    font-size: 1.75em;
 }
 
 .mainAttribute {
@@ -118,4 +128,25 @@ span:empty:before {
     display: inline;
     border-top: none;
     border-bottom: solid 1px #e3e3e3;
+}
+
+.coinType {
+    display: block;
+    text-align: center;
+    background-color: #fafafa;
+    border: double 4px #e3e3e3;
+    border-radius: 25px;
+    margin-bottom: 1em;
+    padding: 0.25em;
+}
+
+.coinType h6 {
+    line-height: 1em;
+    padding-bottom: 0.2em;
+    margin-bottom: 0;
+    border-bottom: double 3px #e3e3e3;
+}
+
+.coin {
+    font-size: 1.2em;
 }
