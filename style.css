@@ -114,6 +114,7 @@ span:empty:before {
 
 #skills > div {
     margin-left: 1em;
+    page-break-before: auto;
 }
 
 #featuresandtraits {
