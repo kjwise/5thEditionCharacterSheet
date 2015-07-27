@@ -91,8 +91,8 @@ function mapSkills(characterJson, abilityToModifierStore, proficiencyModifier) {
             proficiencyTag = ' proficient';
             modifier += proficiencyModifier;
         }
-        targetContainer.append("<div class='col-md-6 col-xs-6 " + ability + proficiencyTag + "'>" +
-            "<span class='checkModifier'>" + formatModifier(modifier) + "</span> " + skill + "<i> (" + ability + ")</i></div>");
+        targetContainer.append('<div class="center-block col-xs-6 col-sm-3 col-md-6 ' + ability + proficiencyTag + '">' +
+            '<span class="checkModifier">' + formatModifier(modifier) + "</span> " + skill + '<i class="hidden-sm"> (' + ability + ')</i></div>');
     });
 }
 
@@ -130,7 +130,7 @@ function mapPersonality(personality) {
 function mapFeatures(features) {
     target = $("#featuresandtraits");
     $.each(features.reverse(), function (i, feature) {
-        if (feature.includes(":"))
+        if (feature.indexOf(":") > -1)
         {
             var fArr = feature.split(":");
             target.prepend('<span class="fieldHeader">' + fArr[0] +
@@ -207,7 +207,9 @@ function loadChar(characterJson) {
     $("#player_name").html(characterJson.mainattributes.playername || "&nbsp");
     $("#character_xp").html(characterJson.mainattributes.xp || "&nbsp");
 
-    $("#inspirationPoints").text(characterJson.inspirationpoints);
+    if ((characterJson.hasinspirationpoint || $.isNumeric(characterJson.inspirationpoints) && characterJson.inspirationpoints > 0)) {
+        $('#inspiration').prop("checked", true)
+    }
 
     // Plug in ability scores, modifiers and saving throws
     var abilityToModifierStore = {};

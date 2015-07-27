@@ -64,18 +64,48 @@
                         <span id="proficiencyModifier"></span>
                     </div>
                 </div>
+
             </div>
 
             <div class="row mainBlock">
-                <div class="col-xs-6 mainAttribute">
-                    <span id="character_xp">&nbsp</span>
-                    <span class="fieldFooter">Experience points</span>
+
+                <div class="col-xs-4 mainAttribute">
+                    <label for="inspiration">
+                        <input name="hasInspiration" id="inspiration" type="checkbox"/>
+                    </label>
+                    <span class="fieldFooter">Inspiration</span>
                 </div>
 
-                <div class="col-xs-6 mainAttribute">
-                    <span id="inspirationPoints"></span>
-                    <span class="fieldFooter">Inspiration points</span>
+                <div class="col-xs-8 mainAttribute">
+                    <form>
+                        <label>
+                            1
+                            <input name="exhaustionLevel" value="1" type="radio"/>
+                        </label>
+                        <label>
+                            2
+                            <input name="exhaustionLevel" value="2" type="radio"/>
+                        </label>
+                        <label>
+                            3
+                            <input name="exhaustionLevel" value="3" type="radio"/>
+                        </label>
+                        <label>
+                            4
+                            <input name="exhaustionLevel" value="4" type="radio"/>
+                        </label>
+                        <label>
+                            5
+                            <input name="exhaustionLevel" value="5" type="radio"/>
+                        </label>
+                        <label>
+                            6
+                            <input name="exhaustionLevel" value="6" type="radio"/>
+                        </label>
+                    </form>
+                    <span class="fieldFooter">Exhaustion</span>
                 </div>
+
             </div>
         </div>
 
@@ -86,33 +116,38 @@
                     <span class="fieldFooter">Class & level</span>
                 </div>
                 <div class="mainAttribute col-xs-6 col-md-4">
-                    <span id="character_race"></span>
-                    <span class="fieldFooter">Race</span>
-                </div>
-                <div class="mainAttribute col-xs-6 col-md-4">
-                    <span id="character_background"></span>
-                    <span class="fieldFooter">Background</span>
+                    <span id="character_xp">&nbsp</span>
+                    <span class="fieldFooter">Experience points</span>
                 </div>
                 <div class="mainAttribute col-xs-6 col-md-4">
                     <span id="character_alignment"></span>
                     <span class="fieldFooter">Alignment</span>
                 </div>
-                <div class="mainAttribute col-xs-6 col-md-4">
+                <div class="mainAttribute col-xs-6 col-sm-3 col-md-4">
+                    <span id="character_race"></span>
+                    <span class="fieldFooter">Race</span>
+                </div>
+                <div class="mainAttribute col-xs-6 col-sm-3 col-md-4">
+                    <span id="character_background"></span>
+                    <span class="fieldFooter">Background</span>
+                </div>
+                <div class="mainAttribute col-xs-3 col-sm-3 col-md-4">
                     <span id="height"></span>
                     <span class="fieldFooter">Height</span>
                 </div>
-                <div class="mainAttribute col-xs-6 col-md-4">
+                <div class="mainAttribute col-xs-3 col-sm-3 col-md-4">
                     <span id="weight"></span>
                     <span class="fieldFooter">Weight</span>
                 </div>
-                <div class="mainAttribute col-xs-6 col-md-4">
+                <div class="mainAttribute col-xs-6 col-sm-3 col-md-4">
                     <span id="skin"></span>
                     <span class="fieldFooter">Skin</span>
                 </div>
-                <div class="mainAttribute col-xs-6 col-md-4">
+                <div class="mainAttribute col-xs-6 col-sm-3 col-md-4">
                     <span id="hair"></span>
                     <span class="fieldFooter">Hair</span>
                 </div>
+
             </div>
         </div>
     </div>
@@ -242,7 +277,7 @@
 
         <div class="col-xs-12 col-md-6" id="skillsContainer">
             <hr/>
-            <div id="skills">
+            <div class="center-block" id="skills">
                 <h4>Skills</h4>
                 <!-- Filled out by jquery -->
                 <div class="row">
@@ -262,11 +297,13 @@
         </div>
 
         <div class="col-xs-6 col-md-3">
+
             <hr/>
             <h4>Equipment</h4>
 
-            <div id="equipmentList">
+            <div id="equipmentList" class="grayBox noMargin">
             </div>
+
         </div>
 
         <div class="col-xs-6 col-md-3">
@@ -332,55 +369,56 @@
         </div>
     </div>
 
-    <div class="mainBlock" id="spellsContainer">
-        <div id="spellcastingAbilitySaveAttack" class="grayRoundedBox">
-            <div id="spellcastingAbility" class="whiteBox">
-                <span class="fieldFooter">Spellcasting Ability</span>
+    <div class="mainBlock row">
+        <div class="col-xs-6 col-sm-4 col-md-3" id="spellsContainer">
+            <div id="spellcastingAbilitySaveAttack" class="grayRoundedBox">
+                <div id="spellcastingAbility" class="whiteBox">
+                    <span class="fieldFooter">Spellcasting Ability</span>
+                </div>
+                <div id="spellSaveDC" class="whiteBox">
+                    <span class="fieldFooter">Spell Save DC</span>
+                </div>
+                <div id="spellAttackBonus" class="whiteBox">
+                    <span class="fieldFooter">Spell Attack Bonus</span>
+                </div>
             </div>
-            <div id="spellSaveDC" class="whiteBox">
-                <span class="fieldFooter">Spell Save DC</span>
+        </div>
+        <div id="spells">
+            <div id="spells0" class="col-xs-6 col-sm-4 col-md-3">
+                <span class="fieldFooter">Cantrips</span>
             </div>
-            <div id="spellAttackBonus" class="whiteBox">
-                <span class="fieldFooter">Spell Attack Bonus</span>
+            <div id="spells1" class="col-xs-6 col-sm-4 col-md-3">
+                <span class="fieldFooter">1st level spells</span>
             </div>
-        </div>
-    </div>
-
-    <div class="mainBlock" id="spells">
-        <div id="spells0" class="doubleBorderBox">
-            <span class="fieldFooter">Cantrips</span>
-        </div>
-        <div id="spells1" class="doubleBorderBox">
-            <span class="fieldFooter">1st level spells</span>
-        </div>
-        <div id="spells2" class="doubleBorderBox">
-            <span class="fieldFooter">2nd level spells</span>
-        </div>
-        <div id="spells3" class="doubleBorderBox">
-            <span class="fieldFooter">3rd level spells</span>
-        </div>
-        <div id="spells4" class="doubleBorderBox">
-            <span class="fieldFooter">4th level spells</span>
-        </div>
-        <div id="spells5" class="doubleBorderBox">
-            <span class="fieldFooter">5th level spells</span>
-        </div>
-        <div id="spells6" class="doubleBorderBox">
-            <span class="fieldFooter">6th level spells</span>
-        </div>
-        <div id="spells7" class="doubleBorderBox">
-            <span class="fieldFooter">7th level spells</span>
-        </div>
-        <div id="spells8" class="doubleBorderBox">
-            <span class="fieldFooter">8th level spells</span>
-        </div>
-        <div id="spells9" class="doubleBorderBox">
-            <span class="fieldFooter">9th level spells</span>
+            <div id="spells2" class="col-xs-6 col-sm-4 col-md-3">
+                <span class="fieldFooter">2nd level spells</span>
+            </div>
+            <div id="spells3" class="col-xs-6 col-sm-4 col-md-3">
+                <span class="fieldFooter">3rd level spells</span>
+            </div>
+            <div id="spells4" class="col-xs-6 col-sm-4 col-md-3">
+                <span class="fieldFooter">4th level spells</span>
+            </div>
+            <div id="spells5" class="col-xs-6 col-sm-4 col-md-3">
+                <span class="fieldFooter">5th level spells</span>
+            </div>
+            <div id="spells6" class="col-xs-6 col-sm-4 col-md-3">
+                <span class="fieldFooter">6th level spells</span>
+            </div>
+            <div id="spells7" class="col-xs-6 col-sm-4 col-md-3">
+                <span class="fieldFooter">7th level spells</span>
+            </div>
+            <div id="spells8" class="col-xs-6 col-sm-4 col-md-3">
+                <span class="fieldFooter">8th level spells</span>
+            </div>
+            <div id="spells9" class="col-xs-6 col-sm-4 col-md-3">
+                <span class="fieldFooter">9th level spells</span>
+            </div>
         </div>
     </div>
 </div>
 <!-- </container /-->
-
+<br/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

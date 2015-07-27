@@ -7,7 +7,7 @@ var charJson =
             "hitdice": "D12"
         }
     },
-    "inspirationpoints": 0,
+    "hasinspirationpoint": true,
     "hitpoints": 105,
     "ac": "16",
     "speed": 35,
