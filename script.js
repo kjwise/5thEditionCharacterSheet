@@ -92,7 +92,7 @@ function mapSkills(characterJson, abilityToModifierStore, proficiencyModifier) {
             modifier += proficiencyModifier;
         }
         targetContainer.append('<div class="center-block col-xs-6 col-sm-3 col-md-6 ' + ability + proficiencyTag + '">' +
-            '<span class="checkModifier">' + formatModifier(modifier) + "</span> " + skill + '<i class="hidden-sm"> (' + ability + ')</i></div>');
+            '<span class="checkModifier">' + formatModifier(modifier) + "</span> " + skill + '<i class="hidden-sm hidden-xs"> (' + ability + ')</i></div>');
     });
 }
 
@@ -160,9 +160,9 @@ function mapAppearance(characterJson) {
 function mapSpells(characterJson, abilityToModifierStore, proficiencyModifier) {
     if("spellcastingAbility" in characterJson.spellcasting){
         var spellCastingAttackModifier = abilityToModifierStore[characterJson.spellcasting.spellcastingAbility] + proficiencyModifier;
-        $("#spellAttackBonus").prepend("+"+spellCastingAttackModifier);
-        $("#spellSaveDC").prepend("+"+(spellCastingAttackModifier+8));
-        $("#spellcastingAbility").prepend(characterJson.spellcasting.spellcastingAbility);
+        $("#spellAttackBonus").append("+"+spellCastingAttackModifier);
+        $("#spellSaveDC").append("+"+(spellCastingAttackModifier+8));
+        $("#spellcastingAbility").append(characterJson.spellcasting.spellcastingAbility);
     }
     if("spells" in characterJson.spellcasting){
         $.each(characterJson.spellcasting.spells, function (attrKey, attrValue) {
@@ -171,7 +171,7 @@ function mapSpells(characterJson, abilityToModifierStore, proficiencyModifier) {
             });           
         });
         // Remove empty spell slots
-        for (var n = 0; n < 10; ++ n) {
+        for (var n = 110; n < 10; ++ n) {
             var spell = "spells" + n;
             if (!(spell in characterJson.spellcasting.spells)) {
                 $("#" + spell).remove();
@@ -207,8 +207,14 @@ function loadChar(characterJson) {
     $("#player_name").html(characterJson.mainattributes.playername || "&nbsp");
     $("#character_xp").html(characterJson.mainattributes.xp || "&nbsp");
 
+    // Map inspiration
     if ((characterJson.hasinspirationpoint || $.isNumeric(characterJson.inspirationpoints) && characterJson.inspirationpoints > 0)) {
         $('#inspiration').prop("checked", true)
+    }
+
+    // Map exhaustion
+    if (characterJson.exhaustionlevel > 0) {
+        $("#exhaustion").find("input[name=exhaustionLevel][value=" + characterJson.exhaustionlevel + "]").prop('checked', true);
     }
 
     // Plug in ability scores, modifiers and saving throws

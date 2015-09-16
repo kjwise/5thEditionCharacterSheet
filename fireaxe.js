@@ -8,6 +8,7 @@ var charJson =
         }
     },
     "hasinspirationpoint": true,
+    "exhaustionlevel": 1,
     "hitpoints": 105,
     "ac": "16",
     "speed": 35,
@@ -27,12 +28,12 @@ var charJson =
         "hair": "red & gray"
     },
     "abilityscores": {
-        "str": 20,
+        "str": 19,
         "dex": 14,
         "con": 18,
         "int": 8,
         "wis": 10,
-        "cha": 14
+        "cha": 13
     },
     "savingthrow_proficiencies": [
         "str", "con"
@@ -112,7 +113,8 @@ var charJson =
         "flaws": "I too often hear veiled insults and threats in every word addressed to me. I am quick to anger & I have an insatiable desire for carnal pleasures."
     },
     "features": [
-        "Gold Dragon essance",
+        "Great Weapon Master",
+        "Gold Dragon essence",
         "Feral Instinct",
         "Mindless rage",
         "Extra attack",

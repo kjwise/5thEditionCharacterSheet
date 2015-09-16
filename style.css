@@ -143,11 +143,6 @@ label > input {
 #featuresandtraits {
     text-align: left;
 }
-
-#featuresandtraits .fieldHeader {
-
-}
-
 #featuresandtraits .fieldFooter {
     display: inline;
     border-top: none;
@@ -173,4 +168,15 @@ label > input {
 
 .coin {
     font-size: 1.2em;
+}
+
+
+#spells .fieldHeader {
+    text-align: center;
+    display: block;
+    font-size: 1.1em;
+    text-decoration: underline;
+    line-height: 2em;
+    border: solid 1px #e3e3e3;
+    background-color: #fafafa;
 }
