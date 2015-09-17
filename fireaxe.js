@@ -10,7 +10,7 @@ var charJson =
     "hasinspirationpoint": true,
     "exhaustionlevel": 1,
     "hitpoints": 105,
-    "ac": "16",
+    "ac": "18",
     "speed": 35,
     "mainattributes": {
         "background": "Noble",
@@ -103,7 +103,9 @@ var charJson =
             "Travellers' clothes",
             "Vial of perfume",
             "Cloack & hood",
-            "6x 250gp rainbow gems"
+            "6x 250gp rainbow gems",
+            "Boots of speed",
+            "Braces of defence"
         ]
     },
     "personality": {
