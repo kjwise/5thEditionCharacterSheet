@@ -1,370 +1,182 @@
-body {
-    max-width: 61em;
-}
-
-ul {
-    text-transform: capitalize;
-    text-align: left;
-    padding: 0.2em;
-    margin: 0.5em 0.5em 1em 1.8em;
-}
-
-li {
-    list-style-type: circle;
-}
-
-.fieldFooter {
-    text-transform: uppercase;
+#mainAttributes {
     display: block;
-    clear: both;
-    font-size: 0.6em;
-}
-
-.fieldHeader {
-    text-transform: uppercase;
-    display: block;
-    clear: both;
-    font-size: 0.8em;
-}
-
-.mainAttribute, #appearanceContainer {
-    font-size: 1.2em;
-    float: left;
-    display: block;
-    margin-left: 0.4em;
-    padding: 0.3em;
-    width: 10em;
-}
-
-#appearanceContainer {
-    width: 100%;
-    text-align: center;
-}
-
-#appearanceContainer .fieldHeader {
-    padding-top: 1em;
-}
-
-#appearanceContainer > div {
-    width: 5em;
-    padding: 0.2em;
-    float: left;
-}
-
-.mainAttribute .fieldFooter, #appearanceContainer .fieldFooter {
-    border-top: 1px solid gray;
-}
-
-.doubleBorderBox {
-    display: block;
-    float: left;
-    width: 100%;
-    margin-bottom: 1em;
-    border: 3px double gray;
-    font-size: 1.0em;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.grayRoundedBox {
-    display: block;
-    padding: 1em;
-    float: left;
-    background-color: lightgray;
-    border: solid 1px darkgray;
-    border-radius: 15%;
-}
-
-.whiteBox {
-    text-align: left;
-    font-size: 1.2em;
-    padding: 0.3em;
-}
-
-.whiteBox .fieldFooter {
-    margin-top: 1em;
-    text-align: center;
-}
-
-.whiteBox, .mainStat {
-    background-color: white;
-    display: block;
-    border: 1px gray solid;
-    border-radius: 8px;
-}
-
-.mainStat {
-    text-align: center;
-    margin-top: 1em;
-    padding-top: 0.5em;
-    clear: both;
-    height: 2.5em;
-    font-size: 2em;
-}
-
-.mainStat .fieldHeader {
-    font-size: 0.4em;
-}
-
-.mainStatModifier {
-    margin: auto;
-    width: 1em;
-    font-size: 0.5em;
-    border: 1px lightgray solid;
-    border-radius: 8px;
-    display: block;
-}
-
-.proficient {
-    list-style-type: disc;
-}
-
-.checkModifier {
-    display: inline-block;
-    width: 2em;
-    text-align: center;
-    margin-right: 1em;
-    line-height: 1em;
-    border-bottom: 1px lightgray solid;
-}
-
-.coins {
-    margin: -0.3em 1.2em 0 -1.5em;
-    display: block;
-    float: left;
-    width: 3em;
-}
-
-.coinType {
-    z-index: 2;
-    background: white;
-    border: 1px solid black;
-    padding: 0;
-    height: 1em;
-    margin-top: 0.6em;
-    line-height: 1.2em;
-    display: block;
-    width: 1.5em;
-    float: left;
-}
-
-.coin {
-    background-color: white;
-    padding: 0.2em;
-    display: block;
-    border: 3px black double;
-    border-radius: 25%;
-    font-size: 1.1em;
-    line-height: 1.5em;
-    height: 1.5em;
-    margin-bottom: 0.5em;
-    width: 1.6em;
-    margin-left: 1em;
-    clear: right;
-}
-
-#mainStatsContainer {
-    text-align: center;
-    width: 6em;
-    clear: left;
-    margin-right: 1em;
-    margin-bottom: 1em;
-}
-
-#mainAttributes, #charnameContainer {
-    min-width: 20em;
-}
-
-#charnameContainer {
-    max-width: 40em;
-    alignment: center;
-    display: block;
-    float: left;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 #charname {
+    display: block;
     text-align: center;
-    font-size: 2em;
-    width: 6em;
-    margin: 0.5em auto auto;
+    margin: auto;
+    width: 100%;
+    font-size: 1.5em;
 }
 
-#mainAttributes, #appearanceContainer {
-    max-width: 40em;
-    float: left;
-    clear: right;
-    display: block;
-    border: 1px gray solid;
-    border-radius: 15px;
+#player {
+    font-size: 0.8em;
+}
+
+span:empty:before {
+    content: "\200b";
+/ / unicode zero width space character
+}
+
+label {
+    width: 2em;
+    line-height: 1em;
+}
+
+label > input {
+    vertical-align: text-bottom;
+    line-height: 1em;
+}
+
+.mainStat {
+    border-radius: 10px;
+    border: solid 1px #e3e3e3;
+    text-align: center;
+    margin-top: 1em;
     margin-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0.5em;
+
 }
 
-#throwsAndSkillsContainer {
-    display: block;
-    float: left;
-    width: 16em;
-    padding: 1em;
-    font-size: 0.8em;
+.mainStatModifier, .checkModifier {
+    text-align: center;
+    border: 1px solid #e3e3e3;
+    border-radius: 7px;
+    display: inline-block;
+    min-width: 1.5em;
 }
 
-#inspirationContainer {
-    display: block;
-    line-height: 2.2em;
-    width: 100%;
-}
-
-#inspirationPoints {
-    display: block;
-    float: left;
-    border: 3px black solid;
-    border-radius: 15%;
-    margin-top: -0.1em;
-    line-height: 2.6em;
-    width: 2.7em;
-    height: 2.6em;
+.mainStat .fieldHeader {
+    line-height: 2em;
+    font-weight: bold;
     text-align: center;
 }
 
-#inspiration, #proficiencyBonus {
-    width: 81%;
-    margin-left: 3.1em;
-    float: none;
-}
-
-#inspiration {
-    margin-top: 0.2em;
-}
-
-#proficiencyContainer {
-    margin-top: 1em;
+.mainStat .fieldFooter {
+    text-align: center;
     display: block;
-    float: left;
-    line-height: 2.2em;
-    width: 100%;
 }
 
-#proficiencyModifier {
-    display: block;
-    float: left;
-    border: 1px black solid;
-    border-radius: 50%;
-    padding: 0.5em;
-    width: 2em;
-    height: 2em;
+.mainStat div {
     text-align: center;
 }
 
-#proficiencyBonus {
-    margin-top: 0.3em;
+.mainStatValue {
+    font-size: 1.75em;
 }
 
-#savingThrows, #skills {
-    line-height: 1.8em;
-    margin-top: 1em;
+.mainAttribute {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
 }
 
-#combatAndAttacksContainer {
+.fieldFooter {
     display: block;
-    float: left;
-    width: 20em;
-    padding: 0 1em;
-    font-size: 0.8em;
-    margin-right: 1em;
-}
-
-#combatContainer {
-    font-size: 0.8em;
-    width: 100%;
-}
-
-#combatContainer .mainStat {
-    margin: 0.2em;
-    font-size: 2.7em;
-    height: 1.6em;
-}
-
-#armorClass {
-    border-bottom-left-radius: 100%;
-    border-bottom-right-radius: 100%;
-    width: 1.6em;
-    padding: 0.5em;
-    clear: none;
-    float: left;
-}
-
-#initiative, #speed {
-    width: 2em;
-    float: left;
-    padding: 0.3em;
-    clear: none;
-}
-
-#hitpoints, #hitdice {
-    padding: 0;
-}
-
-#hitdice {
-    font-size: 2.5em !important;
-}
-
-#attacksAndSpellcasting, #equipment {
-    padding: 0.75em 0.75em 0;
-    line-height: 1.5em;
-    margin-top: 1em;
-}
-
-#equipment ul {
-    margin: 0;
-    padding: 0 3em;
-    font-size: 1.2em;
-    min-height: 14em;
-}
-
-#equipment li {
-    list-style-type: none;
-    text-transform: none;
-}
-
-#attacksAndSpellcasting table {
-    text-align: left;
-    margin: auto auto 1em;
-}
-
-#attacksAndSpellcasting table td {
-    text-transform: capitalize;
-    font-size: 1.1em;
-    background-color: lightgray;
-    border-radius: 15%;
-}
-
-#attacksAndSpellcasting table th {
-    font-weight: normal;
     font-size: 0.75em;
+    border-top: 1px solid black;
 }
 
-#traitsProficienciesMiscContainer {
+.mainBlock {
+    text-align: center;
+    margin: 0.5em;
+}
+
+.mainBlock, .grayBox {
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.grayBox {
+    padding-left: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.noMargin {
+    margin: 0; !important;
+}
+
+.combatStat {
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    font-size: 1.5em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+.combatStat .fieldHeader {
+    margin-top: 0.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.5em;
     display: block;
-    float: left;
+    clear: both;
+}
+
+.proficient {
+    font-weight: bold;
+}
+
+#skills {
+    border: 1px solid #e3e3e3;
+    border-radius: 20px;
+    padding-bottom: 1em;
+}
+
+#skills h4 {
     text-align: center;
-    width: 21em;
-    padding: 0 1em;
-    font-size: 0.8em;
 }
 
-#traitsidealsbondsflaws {
-    width: 20em;
-    margin-bottom: 1em;
+#skills > div {
+    margin-left: 1em;
+    page-break-before: auto;
 }
 
-#featuresandtraits, #otherProficienciesAndLanguages {
+#featuresandtraits {
+    text-align: left;
+}
+#featuresandtraits .fieldFooter {
+    display: inline;
+    border-top: none;
+    border-bottom: solid 1px #e3e3e3;
+}
+
+.coinType {
+    display: block;
+    text-align: center;
+    background-color: #fafafa;
+    border: double 4px #e3e3e3;
+    border-radius: 25px;
     margin-bottom: 1em;
-    padding: 1em;
+    padding: 0.25em;
+}
+
+.coinType h6 {
+    line-height: 1em;
+    padding-bottom: 0.2em;
+    margin-bottom: 0;
+    border-bottom: double 3px #e3e3e3;
+}
+
+.coin {
     font-size: 1.2em;
-    text-transform: none;
 }
 
-#spellAttackBonus, #spellSaveDC, #spellcastingAbility {
+
+#spells .fieldHeader {
     text-align: center;
+    display: block;
+    font-size: 1.1em;
+    text-decoration: underline;
+    line-height: 2em;
+    border: solid 1px #e3e3e3;
+    background-color: #fafafa;
 }

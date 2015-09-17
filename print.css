@@ -1,0 +1,18 @@
+@media print {
+    @page {
+        margin-top: 0;
+        margin-left: 10mm;
+        margin-right: 10mm;
+        margin-bottom: 10mm;
+    }
+
+    body {
+        width: 970px;
+        transform: scale(1.0);
+        transform-origin: 0% 0%;
+    }
+
+    div {
+        page-break-inside: avoid;
+    }
+}

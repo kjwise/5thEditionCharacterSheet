@@ -50,7 +50,8 @@ function mapStats(characterJson, abilityToModifierStore, proficiencyModifier) {
     $.each(mainStats, function (i, ability) {
         var abilityScoreValue = characterJson.abilityscores[ability];
         // Set text and add fancy hover interaction
-        $("#" + ability).text(abilityScoreValue).hover(
+        var abilityTarget = $("#" + ability);
+        abilityTarget.text(abilityScoreValue).hover(
             function () {
                 $("." + ability).css("color", "red")
             },
@@ -66,7 +67,7 @@ function mapStats(characterJson, abilityToModifierStore, proficiencyModifier) {
             abilityToModifierStore[ability] = modifier;
         }
 
-        $("#" + ability + " ~ .mainStatModifier").text(formatModifier(modifier));
+        abilityTarget.parent().find(".mainStatModifier").first().text(formatModifier(modifier));
 
         // Deal with the saving throws and proficiencies
         if ($.inArray(ability, characterJson.savingthrow_proficiencies) > -1) {
@@ -82,15 +83,16 @@ function computeProficiencyModifier(totalLevels) {
 }
 
 function mapSkills(characterJson, abilityToModifierStore, proficiencyModifier) {
+    var targetContainer = $("#skills").find("div").first();
     $.each(skillsToAbility, function (skill, ability) {
         var modifier = abilityToModifierStore[ability];
-        // This is ugly but it works.
+        var proficiencyTag = '';
         if ($.inArray(skill.toLowerCase(), characterJson.skill_proficiences) > -1) {
-            $("#skills").find("ul").append("<li class='" + ability + " proficient'><span class='checkModifier'>" + formatModifier(modifier + proficiencyModifier) + "</span>" + skill + "<i> (" + ability + ")</i></li>");
+            proficiencyTag = ' proficient';
+            modifier += proficiencyModifier;
         }
-        else {
-            $("#skills").find("ul").append("<li class='" + ability + "'><span class='checkModifier'>" + formatModifier(modifier) + "</span>" + skill + "<i> (" + ability + ")</i></li>");
-        }
+        targetContainer.append('<div class="center-block col-xs-6 col-sm-3 col-md-6 ' + ability + proficiencyTag + '">' +
+            '<span class="checkModifier">' + formatModifier(modifier) + "</span> " + skill + '<i class="hidden-sm hidden-xs"> (' + ability + ')</i></div>');
     });
 }
 
@@ -114,7 +116,7 @@ function mapEquipment(equipment) {
         $("#" + coinType).text(amount);
     });
     $.each(equipment.other, function (i, item) {
-        $("#equipmentList").append('<li>' + item + '</li>');
+        $("#equipmentList").append(item + '<br/>');
     });
 }
 
@@ -126,8 +128,17 @@ function mapPersonality(personality) {
 }
 
 function mapFeatures(features) {
+    target = $("#featuresandtraits");
     $.each(features.reverse(), function (i, feature) {
-        $("#featuresandtraits").prepend(feature + "<br/>");
+        if (feature.indexOf(":") > -1)
+        {
+            var fArr = feature.split(":");
+            target.prepend('<span class="fieldHeader">' + fArr[0] +
+                '</span><br/><span class="fieldFooter">' + fArr[1] + '</span><br/>');
+        }
+        else {
+            target.prepend(feature + "<br/>");
+        }
     });
 }
 
@@ -142,16 +153,16 @@ function mapProficiencesAndLanguages(characterJson) {
 
 function mapAppearance(characterJson) {
     $.each(characterJson.appearance, function (attrKey, attrValue) {
-        $("#" + attrKey).prepend(attrValue)
+        $("#" + attrKey).append(attrValue)
     });
 }
 
 function mapSpells(characterJson, abilityToModifierStore, proficiencyModifier) {
     if("spellcastingAbility" in characterJson.spellcasting){
         var spellCastingAttackModifier = abilityToModifierStore[characterJson.spellcasting.spellcastingAbility] + proficiencyModifier;
-        $("#spellAttackBonus").prepend("+"+spellCastingAttackModifier);
-        $("#spellSaveDC").prepend("+"+(spellCastingAttackModifier+8));
-        $("#spellcastingAbility").prepend(characterJson.spellcasting.spellcastingAbility);
+        $("#spellAttackBonus").append("+"+spellCastingAttackModifier);
+        $("#spellSaveDC").append("+"+(spellCastingAttackModifier+8));
+        $("#spellcastingAbility").append(characterJson.spellcasting.spellcastingAbility);
     }
     if("spells" in characterJson.spellcasting){
         $.each(characterJson.spellcasting.spells, function (attrKey, attrValue) {
@@ -160,7 +171,7 @@ function mapSpells(characterJson, abilityToModifierStore, proficiencyModifier) {
             });           
         });
         // Remove empty spell slots
-        for (var n = 0; n < 10; ++ n) {
+        for (var n = 110; n < 10; ++ n) {
             var spell = "spells" + n;
             if (!(spell in characterJson.spellcasting.spells)) {
                 $("#" + spell).remove();
@@ -196,7 +207,15 @@ function loadChar(characterJson) {
     $("#player_name").html(characterJson.mainattributes.playername || "&nbsp");
     $("#character_xp").html(characterJson.mainattributes.xp || "&nbsp");
 
-    $("#inspirationPoints").text(characterJson.inspirationpoints);
+    // Map inspiration
+    if ((characterJson.hasinspirationpoint || $.isNumeric(characterJson.inspirationpoints) && characterJson.inspirationpoints > 0)) {
+        $('#inspiration').prop("checked", true)
+    }
+
+    // Map exhaustion
+    if (characterJson.exhaustionlevel > 0) {
+        $("#exhaustion").find("input[name=exhaustionLevel][value=" + characterJson.exhaustionlevel + "]").prop('checked', true);
+    }
 
     // Plug in ability scores, modifiers and saving throws
     var abilityToModifierStore = {};
