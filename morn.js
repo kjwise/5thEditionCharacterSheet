@@ -95,7 +95,8 @@ var charJson =
             "Arrow of the Phoenix",
             "religious icons inlaid with precious gems x 5",
             "Decanter of endless water",
-            "pearl worth 375gp"
+            "pearl worth 375gp",
+            "Lantern of Revealing"
         ]
     },
     "personality": {
