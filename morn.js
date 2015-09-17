@@ -9,7 +9,7 @@ var charJson =
     },
     "inspirationpoints": 0,
     "hitpoints": 77, // 12, 8, 8, 8, 11, 10, 12, 8
-    "ac": 16, // 12 + 4
+    "ac": 17, // 13 + 4
     "speed": 30,
     "mainattributes": {
         "background": "Outlander",
@@ -47,7 +47,7 @@ var charJson =
     "attacks": {
         "longbow": {
             "ability": "dex",
-            "extraAttackMod": 2, // Ranged to hit bonus from "Fighting Style - Archery"
+            "extraAttackMod": 3, // Ranged to hit bonus from "Fighting Style - Archery" and +1 bow
             "extraDmgMod": 0,
             "die": "1d8",
             "proficient": true,
@@ -85,11 +85,9 @@ var charJson =
             "rabbits foot keepsake",
             "travelers clothes",
             "small blanket",
-            "studded leather armour",
             "dagger",
             "sickle",
             "scimitar",
-            "longbow",
             "quiver of 20 arrows",
             "flute",
             "Arrow of the Phoenix",
