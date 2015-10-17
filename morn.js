@@ -118,7 +118,7 @@ var charJson =
         "Brass Dragon Essence: Ability score improvement (Cha)"
     ],
     "spellcasting": {
-        "spellcastingAbility": "Wisdom",
+        "spellcastingAbility": "wis",
         "spellSlots": {
             "spells1": 4,
             "spells2": 3,
@@ -126,7 +126,8 @@ var charJson =
         },
         "spells": {
             "spells1": ["Alarm (R)", "Hunter's Mark", "Jump"],
-            "spells2": ["Darkvision", "Silence (R)"]
+            "spells2": ["Darkvision", "Silence (R)"],
+            "spells3": ["Lightning Arrow", "Protection from Energy"]
         }
     },
     "proficiencies": [
