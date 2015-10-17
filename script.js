@@ -115,7 +115,7 @@ function mapEquipment(equipment) {
     $.each(equipment.coins, function (coinType, amount) {
         $("#" + coinType).text(amount);
     });
-    $.each(equipment.other, function (i, item) {
+    $.each(equipment.other.sort(), function (i, item) {
         $("#equipmentList").append(item + '<br/>');
     });
 }
@@ -129,7 +129,7 @@ function mapPersonality(personality) {
 
 function mapFeatures(features) {
     target = $("#featuresandtraits");
-    $.each(features.reverse(), function (i, feature) {
+    $.each(features.sort().reverse(), function (i, feature) {
         if (feature.indexOf(":") > -1)
         {
             var fArr = feature.split(":");
@@ -143,10 +143,10 @@ function mapFeatures(features) {
 }
 
 function mapProficiencesAndLanguages(characterJson) {
-    $.each(characterJson.languages.reverse(), function (i, language) {
+    $.each(characterJson.languages.sort().reverse(), function (i, language) {
         $("#otherProficienciesAndLanguages").prepend(language + "<br/>");
     });
-    $.each(characterJson.proficiencies.reverse(), function (i, proficiency) {
+    $.each(characterJson.proficiencies.sort().reverse(), function (i, proficiency) {
         $("#otherProficienciesAndLanguages").prepend(proficiency + "<br/>");
     });
 }

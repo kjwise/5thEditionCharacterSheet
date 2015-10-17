@@ -3,13 +3,13 @@ var charJson =
     "name": "Fenrir Fireaxe",
     "classes": {
         "Barbarian": {
-            "level": 8,
+            "level": 9,
             "hitdice": "D12"
         }
     },
-    "hasinspirationpoint": true,
-    "exhaustionlevel": 1,
-    "hitpoints": 105,
+    "hasinspirationpoint": false,
+    "exhaustionlevel": 0,
+    "hitpoints": 118,
     "ac": "18",
     "speed": 35,
     "mainattributes": {
@@ -115,17 +115,18 @@ var charJson =
         "flaws": "I too often hear veiled insults and threats in every word addressed to me. I am quick to anger & I have an insatiable desire for carnal pleasures."
     },
     "features": [
+        "Brutal Critical (1die)",
         "Great Weapon Master",
         "Gold Dragon essence",
         "Feral Instinct",
         "Mindless rage",
         "Extra attack",
         "Fast movement",
-        "Frenzy",
+        "Great Weapon Fighting Style",
         "Reckless attack",
         "Danger Sense",
         "Unarmoured combat",
-        "Rage 4x/day +2 dmg",
+        "Rage 4x/day +3 dmg",
         "Darkvision",
         "Dwarven resilience",
         "Stonecunning",
