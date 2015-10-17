@@ -3,12 +3,12 @@ var charJson =
     "name": "Morn",
     "classes": {
         "Ranger": {
-            "level": 8,
+            "level": 9,
             "hitdice": "d10"
         }
     },
     "inspirationpoints": 0,
-    "hitpoints": 77, // 12, 8, 8, 8, 11, 10, 12, 8
+    "hitpoints": 88, // 12, 8, 8, 8, 11, 10, 12, 8, 11
     "ac": 17, // 13 + 4
     "speed": 30,
     "mainattributes": {
@@ -16,7 +16,7 @@ var charJson =
         "race": "Human",
         "alignment": "Chaotic Neutral",
         "playername": "Haffi",
-        "xp": 34000
+        "xp": 48000
     },
     "appearance": {
         "age": 27,
@@ -32,7 +32,7 @@ var charJson =
         "con": 14,
         "int": 11,
         "wis": 16,
-        "cha": 11 // Brass Dragon Essence bumped this from 9 - special twist by DM
+        "cha": 11 // Brass Dragon Essence bumped this from 9
     },
     "savingthrow_proficiencies": [
         "str", "dex"
@@ -48,7 +48,7 @@ var charJson =
         "longbow": {
             "ability": "dex",
             "extraAttackMod": 3, // Ranged to hit bonus from "Fighting Style - Archery" and +1 bow
-            "extraDmgMod": 0,
+            "extraDmgMod": +1, // +1 bow
             "die": "1d8",
             "proficient": true,
             "type": "piercing"
@@ -91,17 +91,19 @@ var charJson =
             "quiver of 20 arrows",
             "flute",
             "Arrow of the Phoenix",
-            "religious icons inlaid with precious gems x 5",
+            "religious icons inlaid with precious gems x 4",
             "Decanter of endless water",
             "pearl worth 375gp",
-            "Lantern of Revealing"
+            "Lantern of Revealing",
+            "Slippers of spider climbing",
+            "Longbow + 1"
         ]
     },
     "personality": {
         "traits": "I place no stock in wealthy or well-mannered folk. Money and manners won\'t save you from a hungry owlbear. I feel far more comfortable around animals than people.",
         "ideals": "Life is like the seasons, in constant change, and we must change with it.",
         "bonds": "Dragons destroyed our home and killed my family. Now, with nothing but what I can carry, I seek vengeance.",
-        "flaws": "I am too enamored of ale, wine, and other intoxicants."
+        "flaws": "I am obsessed with extinguishing the Dragon Cult, to the point where I go out of my way to murder their members."
     },
     "features": [
         "Wanderer: Don\'t get lost, can find food in the wild (p.136)",
@@ -119,7 +121,8 @@ var charJson =
         "spellcastingAbility": "Wisdom",
         "spellSlots": {
             "spells1": 4,
-            "spells2": 3
+            "spells2": 3,
+            "spells3": 2
         },
         "spells": {
             "spells1": ["Alarm (R)", "Hunter's Mark", "Jump"],
