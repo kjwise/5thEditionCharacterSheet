@@ -3,12 +3,12 @@ var charJson =
     "name": "Morn",
     "classes": {
         "Ranger": {
-            "level": 9,
+            "level": 10,
             "hitdice": "d10"
         }
     },
     "inspirationpoints": 0,
-    "hitpoints": 88, // 12, 8, 8, 8, 11, 10, 12, 8, 11
+    "hitpoints": 96, // 12, 8, 8, 8, 11, 10, 12, 8, 11, 8
     "ac": 17, // 13 + 4
     "speed": 30,
     "mainattributes": {
@@ -16,7 +16,7 @@ var charJson =
         "race": "Human",
         "alignment": "Chaotic Neutral",
         "playername": "Haffi",
-        "xp": 48000
+        "xp": 64000 // page 15 in PHB
     },
     "appearance": {
         "age": 27,
@@ -47,7 +47,7 @@ var charJson =
     "attacks": {
         "longbow": {
             "ability": "dex",
-            "extraAttackMod": 3, // Ranged to hit bonus from "Fighting Style - Archery" and +1 bow
+            "extraAttackMod": 3, // Ranged to hit bonus (+2) from "Fighting Style - Archery" and +1 bow
             "extraDmgMod": +1, // +1 bow
             "die": "1d8",
             "proficient": true,
@@ -92,10 +92,10 @@ var charJson =
             "flute",
             "Arrow of the Phoenix",
             "religious icons inlaid with precious gems x 4",
-            "Decanter of endless water",
+            "Decanter of Endless Water",
             "pearl worth 375gp",
             "Lantern of Revealing",
-            "Slippers of spider climbing",
+            "Slippers of Spider Climbing",
             "Longbow + 1"
         ]
     },
@@ -108,14 +108,15 @@ var charJson =
     "features": [
         "Wanderer: Don\'t get lost, can find food in the wild (p.136)",
         "Favored Enemy: Dragons, Humans, Half-Dragons (p.91)",
-        "Natural Explorer: Mountains, Grassland (p.91)",
+        "Natural Explorer: Mountains, Grassland, Forest (p.91)",
         "Fighting Style: Archery (p.91)",
         "Ranger Spellcasting (p.90-91)",
         "Hunter\'s Prey - Colossus Slayer: Extra 1d8 on already injured enemy once per turn (p.93)",
         "Sharpshooter: Long range without disadvantage; ignore cover; can choose -5 to hit, +10 to damage (p.170)",
         "Steel Will: Advantage on saving throws against being frightened (p.93)",
         "Land\'s Stride: Unhindered movement (p.92)",
-        "Brass Dragon Essence: Ability score improvement (Cha)"
+        "Brass Dragon Essence: Ability score improvement (Cha)",
+        "Hide in Plain Sight: Take 1 minute to camouflage against natural surface for +10 Dexterity (Stealth) (p.92)"
     ],
     "spellcasting": {
         "spellcastingAbility": "wis",
@@ -125,9 +126,10 @@ var charJson =
             "spells3": 2
         },
         "spells": {
-            "spells1": ["Alarm (R)", "Hunter's Mark", "Jump"],
-            "spells2": ["Darkvision", "Silence (R)"],
-            "spells3": ["Lightning Arrow", "Protection from Energy"]
+            "spells0": ["No cantrips"],
+            "spells1": ["Hunter's Mark", "Cure Wounds"],
+            "spells2": ["Darkvision"],
+            "spells3": ["Nondetection", "Lightning Arrow", "Protection from Energy"]
         }
     },
     "proficiencies": [
