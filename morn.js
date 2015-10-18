@@ -71,7 +71,7 @@ var charJson =
             "copper": 10,
             "silver": 0,
             "electrum": 0,
-            "gold": 18,
+            "gold": 0,
             "platinum": 0
         },
         "other": [
@@ -96,7 +96,8 @@ var charJson =
             "pearl worth 375gp",
             "Lantern of Revealing",
             "Slippers of Spider Climbing",
-            "Longbow + 1"
+            "Longbow + 1",
+            "draft horse"
         ]
     },
     "personality": {
