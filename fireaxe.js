@@ -3,13 +3,13 @@ var charJson =
     "name": "Fenrir Fireaxe",
     "classes": {
         "Barbarian": {
-            "level": 9,
+            "level": 10,
             "hitdice": "D12"
         }
     },
     "hasinspirationpoint": false,
     "exhaustionlevel": 0,
-    "hitpoints": 118,
+    "hitpoints": 130,
     "ac": "18",
     "speed": 35,
     "mainattributes": {
@@ -115,6 +115,7 @@ var charJson =
         "flaws": "I too often hear veiled insults and threats in every word addressed to me. I am quick to anger & I have an insatiable desire for carnal pleasures."
     },
     "features": [
+        "Intimidating presence (special)",
         "Brutal Critical (1die)",
         "Great Weapon Master",
         "Gold Dragon essence",
