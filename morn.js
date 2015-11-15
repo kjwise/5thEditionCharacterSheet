@@ -3,12 +3,12 @@ var charJson =
     "name": "Morn",
     "classes": {
         "Ranger": {
-            "level": 10,
+            "level": 11,
             "hitdice": "d10"
         }
     },
     "inspirationpoints": 0,
-    "hitpoints": 96, // 12, 8, 8, 8, 11, 10, 12, 8, 11, 8
+    "hitpoints": 106, // 12, 8, 8, 8, 11, 10, 12, 8, 11, 8, 10
     "ac": 17, // 13 + 4
     "speed": 30,
     "mainattributes": {
@@ -16,7 +16,7 @@ var charJson =
         "race": "Human",
         "alignment": "Chaotic Neutral",
         "playername": "Haffi",
-        "xp": 64000 // page 15 in PHB
+        "xp": 85000 // page 15 in PHB
     },
     "appearance": {
         "age": 27,
@@ -71,7 +71,7 @@ var charJson =
             "copper": 10,
             "silver": 0,
             "electrum": 0,
-            "gold": 0,
+            "gold": 140,
             "platinum": 0
         },
         "other": [
@@ -97,7 +97,8 @@ var charJson =
             "Lantern of Revealing",
             "Slippers of Spider Climbing",
             "Longbow + 1",
-            "draft horse"
+            "riding horse",
+            "Potion of healing"
         ]
     },
     "personality": {
@@ -117,19 +118,20 @@ var charJson =
         "Steel Will: Advantage on saving throws against being frightened (p.93)",
         "Land\'s Stride: Unhindered movement (p.92)",
         "Brass Dragon Essence: Ability score improvement (Cha)",
-        "Hide in Plain Sight: Take 1 minute to camouflage against natural surface for +10 Dexterity (Stealth) (p.92)"
+        "Hide in Plain Sight: Take 1 minute to camouflage against natural surface for +10 Dexterity (Stealth) (p.92)",
+        "Multiattack - Volley: Ranged attack against all targets in 10 foot radius area. (p.93)"
     ],
     "spellcasting": {
         "spellcastingAbility": "wis",
         "spellSlots": {
             "spells1": 4,
             "spells2": 3,
-            "spells3": 2
+            "spells3": 3
         },
         "spells": {
             "spells0": ["No cantrips"],
-            "spells1": ["Hunter's Mark", "Cure Wounds"],
-            "spells2": ["Darkvision"],
+            "spells1": ["Hunter's Mark"],
+            "spells2": ["Darkvision", "Locate Animals or Plants", "Pass Without Trace"],
             "spells3": ["Nondetection", "Lightning Arrow", "Protection from Energy"]
         }
     },
