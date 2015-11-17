@@ -3,13 +3,13 @@ var charJson =
     "name": "Fenrir Fireaxe",
     "classes": {
         "Barbarian": {
-            "level": 10,
+            "level": 11,
             "hitdice": "D12"
         }
     },
     "hasinspirationpoint": false,
     "exhaustionlevel": 0,
-    "hitpoints": 130,
+    "hitpoints": 136,
     "ac": "18",
     "speed": 35,
     "mainattributes": {
@@ -83,9 +83,9 @@ var charJson =
     "equipment": {
         "coins": {
             "copper": 0,
-            "silver": 0,
+            "silver": 100,
             "electrum": 1000,
-            "gold": 680,
+            "gold": 850,
             "platinium": 40
         },
         "other": [
@@ -105,7 +105,9 @@ var charJson =
             "Cloack & hood",
             "6x 250gp rainbow gems",
             "Boots of speed",
-            "Braces of defence"
+            "Braces of defence",
+            "Magical vine",
+            "Potion of healing"
         ]
     },
     "personality": {
@@ -115,8 +117,9 @@ var charJson =
         "flaws": "I too often hear veiled insults and threats in every word addressed to me. I am quick to anger & I have an insatiable desire for carnal pleasures."
     },
     "features": [
-        "Intimidating presence (special)",
-        "Brutal Critical (1die)",
+        "Relentless rage: DC 10 safe to keep fighting at 1 hp, +5 DC subsequently",
+        "Rage dash: I can dash as a bonus action",
+        "Brutal Critical: 1 extra die",
         "Great Weapon Master",
         "Gold Dragon essence",
         "Feral Instinct",
