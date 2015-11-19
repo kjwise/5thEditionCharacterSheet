@@ -113,6 +113,7 @@ var charJson =
         "Natural Explorer: Mountains, Grassland, Forest (p.91)",
         "Fighting Style: Archery (p.91)",
         "Ranger Spellcasting (p.90-91)",
+        "Primeval Awareness: Expend a spell slots to track creatures (p.92)",
         "Hunter\'s Prey - Colossus Slayer: Extra 1d8 on already injured enemy once per turn (p.93)",
         "Sharpshooter: Long range without disadvantage; ignore cover; can choose -5 to hit, +10 to damage (p.170)",
         "Steel Will: Advantage on saving throws against being frightened (p.93)",
