@@ -90,15 +90,16 @@ var charJson =
             "scimitar",
             "quiver of 20 arrows",
             "flute",
-            "Arrow of the Phoenix",
+            "Arrow of the Phoenix (attuned): returns after 1d4 rounds, 1d6 fire damage",
             "religious icons inlaid with precious gems x 4",
             "Decanter of Endless Water",
             "pearl worth 375gp",
             "Lantern of Revealing",
-            "Slippers of Spider Climbing",
+            "Slippers of Spider Climbing (attuned): allows me to walk on walls and ceilings",
             "Longbow + 1",
             "riding horse",
-            "Potion of healing"
+            "Potion of healing",
+            "8 x Arrow +3"
         ]
     },
     "personality": {
@@ -136,7 +137,7 @@ var charJson =
             "spells3": ["Nondetection", "Lightning Arrow", "Protection from Energy"]
         }
     },
-    "proficiencies": [
+    "proficiencies": [ // have started learning more about tanning process, focusing on methods of harvesting material from dead dragons
         "Flute",
         "Light & medium armor",
         "Simple & martial weapons"
@@ -146,5 +147,11 @@ var charJson =
         "Draconic",
         "Halfling",
         "Elvish"
+    ],
+    "contacts": [
+        "Leosyn - Harper agent",
+        "Lord Volmer - Waterthonian noble, totally a vampire",
+        "Blaggothcus - storm giant, we got rid of a white dragon (Glassiel) for him",
+        "Varram - former Dragon Cult member"
     ]
 };
