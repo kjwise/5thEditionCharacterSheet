@@ -112,8 +112,7 @@ function mapAttacks(characterJson, abilityToModifierStore, proficiencyModifier) 
 }
 
 function renderListitem(target, item) {
-    if (item.indexOf(":") > -1)
-    {
+    if (item.indexOf(":") > -1) {
         var arr = item.split(":");
         target.append('<span class="fieldHeader">' + arr[0] +
             '</span><br/><span class="fieldFooter">' + arr[1] + '</span><br/>');
@@ -129,7 +128,7 @@ function mapEquipment(equipment) {
     });
     var target = $("#equipmentList");
     var equipment = equipment.other.sort();
-    var attuned = $.grep(equipment, function(item, i) {
+    var attuned = $.grep(equipment, function (item, i) {
         return item.toLowerCase().indexOf("attuned") > -1;
     });
 
@@ -137,7 +136,7 @@ function mapEquipment(equipment) {
         renderListitem(target, item);
     });
 
-    equipment = $.grep(equipment, function(item, i) {
+    equipment = $.grep(equipment, function (item, i) {
         return attuned.indexOf(item) < 0;
     });
 
@@ -175,21 +174,27 @@ function mapAppearance(characterJson) {
     });
 }
 
+function mapContacts(characterJson) {
+    $.each(characterJson.contacts, function (i, contact) {
+        $("#contactlist").append(contact + "<br/>");
+    });
+}
+
 function mapSpells(characterJson, abilityToModifierStore, proficiencyModifier) {
-    if("spellcastingAbility" in characterJson.spellcasting){
+    if ("spellcastingAbility" in characterJson.spellcasting) {
         var spellCastingAttackModifier = abilityToModifierStore[characterJson.spellcasting.spellcastingAbility] + proficiencyModifier;
-        $("#spellAttackBonus").append("+"+spellCastingAttackModifier);
-        $("#spellSaveDC").append("+"+(spellCastingAttackModifier+8));
+        $("#spellAttackBonus").append("+" + spellCastingAttackModifier);
+        $("#spellSaveDC").append("+" + (spellCastingAttackModifier + 8));
         $("#spellcastingAbility").append(characterJson.spellcasting.spellcastingAbility);
     }
-    if("spells" in characterJson.spellcasting){
+    if ("spells" in characterJson.spellcasting) {
         $.each(characterJson.spellcasting.spells, function (attrKey, attrValue) {
-            $.each(attrValue, function(spellKey, spellName){
-                $("#" + attrKey).append("<div>"+spellName+"</div>")
-            });           
+            $.each(attrValue, function (spellKey, spellName) {
+                $("#" + attrKey).append("<div>" + spellName + "</div>")
+            });
         });
         // Remove empty spell slots
-        for (var n = 110; n < 10; ++ n) {
+        for (var n = 110; n < 10; ++n) {
             var spell = "spells" + n;
             if (!(spell in characterJson.spellcasting.spells)) {
                 $("#" + spell).remove();
@@ -262,7 +267,10 @@ function loadChar(characterJson) {
     mapFeatures(characterJson.features);
     mapProficiencesAndLanguages(characterJson);
     mapAppearance(characterJson);
-    if("spellcasting" in characterJson){
+    if ("contacts" in characterJson) {
+        mapContacts(characterJson);
+    }
+    if ("spellcasting" in characterJson) {
         mapSpells(characterJson, abilityToModifierStore, proficiencyModifier);
     }
     else {

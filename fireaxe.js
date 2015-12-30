@@ -7,7 +7,7 @@ var charJson =
             "hitdice": "D12"
         }
     },
-    "hasinspirationpoint": false,
+    "hasinspirationpoint": true,
     "exhaustionlevel": 0,
     "hitpoints": 136,
     "ac": "18",
@@ -78,7 +78,7 @@ var charJson =
             "silver": 100,
             "electrum": 1000,
             "gold": 850,
-            "platinium": 40
+            "platinum": 40
         },
         "other": [
             "Axe of Many + 2: (Attuned) does +1d4 dmg per turn",
@@ -138,5 +138,11 @@ var charJson =
         "Common",
         "Dwarfish",
         "Draconian"
+    ],
+    "contacts": [
+        "Order of the Gauntlet +1",
+        "Harpers",
+        "Lord Volmer",
+        "Emerald Enclave"
     ]
 };
