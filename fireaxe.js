@@ -45,9 +45,9 @@ var charJson =
         "persuasion"
     ],
     "attacks": {
-        "Greatsword of wounding + 2": {
+        "Axe of Many (wounding) + 2": {
             "ability": "str",
-            "die": "2d6 + 1d4 per wound",
+            "die": "1d12 + 1d4 per wound",
             "proficient": true,
             "type": "s",
             "extraAttackMod": 2,
@@ -65,14 +65,6 @@ var charJson =
             "proficient": true,
             "type": "p"
         },
-        "Axe of many + 1": {
-            "ability": "str",
-            "die": "1dX",
-            "proficient": true,
-            "type": "s",
-            "extraAttackMod": 1,
-            "extraDmgMod": 1
-        },
         "3x handaxe": {
             "ability": "str",
             "die": "1d6",
@@ -89,6 +81,7 @@ var charJson =
             "platinium": 40
         },
         "other": [
+            "Axe of Many + 2: (Attuned) does +1d4 dmg per turn",
             "Explorer's pack",
             "Set of fine clothes",
             "Signet ring, vial of perfume",
@@ -102,11 +95,10 @@ var charJson =
             "Grappling hook & rope",
             "Travellers' clothes",
             "Vial of perfume",
-            "Cloack & hood",
+            "Cloak & hood",
             "6x 250gp rainbow gems",
-            "Boots of speed",
-            "Braces of defence",
-            "Magical vine",
+            "Boots of speed: (Attuned) Doubles movement speed for 10 minutes per long rest. Bonus action to activate.",
+            "Braces of defence: (Attuned) +2 armor",
             "Potion of healing"
         ]
     },
