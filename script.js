@@ -111,12 +111,38 @@ function mapAttacks(characterJson, abilityToModifierStore, proficiencyModifier) 
     });
 }
 
+function renderListitem(target, item) {
+    if (item.indexOf(":") > -1)
+    {
+        var arr = item.split(":");
+        target.append('<span class="fieldHeader">' + arr[0] +
+            '</span><br/><span class="fieldFooter">' + arr[1] + '</span><br/>');
+    }
+    else {
+        target.append(item + "<br/>");
+    }
+}
+
 function mapEquipment(equipment) {
     $.each(equipment.coins, function (coinType, amount) {
         $("#" + coinType).text(amount);
     });
-    $.each(equipment.other.sort(), function (i, item) {
-        $("#equipmentList").append(item + '<br/>');
+    var target = $("#equipmentList");
+    var equipment = equipment.other.sort();
+    var attuned = $.grep(equipment, function(item, i) {
+        return item.toLowerCase().indexOf("attuned") > -1;
+    });
+
+    $.each(attuned, function (i, item) {
+        renderListitem(target, item);
+    });
+
+    equipment = $.grep(equipment, function(item, i) {
+        return attuned.indexOf(item) < 0;
+    });
+
+    $.each(equipment, function (i, item) {
+        renderListitem(target, item);
     });
 }
 
@@ -128,17 +154,9 @@ function mapPersonality(personality) {
 }
 
 function mapFeatures(features) {
-    target = $("#featuresandtraits");
-    $.each(features.sort().reverse(), function (i, feature) {
-        if (feature.indexOf(":") > -1)
-        {
-            var fArr = feature.split(":");
-            target.prepend('<span class="fieldHeader">' + fArr[0] +
-                '</span><br/><span class="fieldFooter">' + fArr[1] + '</span><br/>');
-        }
-        else {
-            target.prepend(feature + "<br/>");
-        }
+    var target = $("#featuresandtraits");
+    $.each(features.sort(), function (i, feature) {
+        renderListitem(target, feature);
     });
 }
 
@@ -248,8 +266,8 @@ function loadChar(characterJson) {
         mapSpells(characterJson, abilityToModifierStore, proficiencyModifier);
     }
     else {
-        $("#spells").remove();
-        $("#spellcastingAbilitySaveAttack").remove();
+        $("#spellsContainer").remove();
+        $("#spellAbilitiesContainer").remove();
     }
 }
 

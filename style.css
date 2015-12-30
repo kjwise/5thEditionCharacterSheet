@@ -143,7 +143,8 @@ label > input {
 #featuresandtraits {
     text-align: left;
 }
-#featuresandtraits .fieldFooter {
+
+#featuresandtraits .fieldFooter, #equipmentList .fieldFooter {
     display: inline;
     border-top: none;
     border-bottom: solid 1px #e3e3e3;
