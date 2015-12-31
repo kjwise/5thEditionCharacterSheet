@@ -111,7 +111,7 @@ function mapAttacks(characterJson, abilityToModifierStore, proficiencyModifier) 
     });
 }
 
-function renderListitem(target, item) {
+function renderListItem(target, item) {
     if (item.indexOf(":") > -1) {
         var arr = item.split(":");
         target.append('<span class="fieldHeader">' + arr[0] +
@@ -127,21 +127,21 @@ function mapEquipment(equipment) {
         $("#" + coinType).text(amount);
     });
     var target = $("#equipmentList");
-    var equipment = equipment.other.sort();
-    var attuned = $.grep(equipment, function (item, i) {
+    var sortedEquipment = equipment.other.sort();
+    var attuned = $.grep(sortedEquipment, function (item) {
         return item.toLowerCase().indexOf("attuned") > -1;
     });
 
     $.each(attuned, function (i, item) {
-        renderListitem(target, item);
+        renderListItem(target, item);
     });
 
-    equipment = $.grep(equipment, function (item, i) {
+    sortedEquipment = $.grep(sortedEquipment, function (item) {
         return attuned.indexOf(item) < 0;
     });
 
-    $.each(equipment, function (i, item) {
-        renderListitem(target, item);
+    $.each(sortedEquipment, function (i, item) {
+        renderListItem(target, item);
     });
 }
 
@@ -155,7 +155,7 @@ function mapPersonality(personality) {
 function mapFeatures(features) {
     var target = $("#featuresandtraits");
     $.each(features.sort(), function (i, feature) {
-        renderListitem(target, feature);
+        renderListItem(target, feature);
     });
 }
 
@@ -281,6 +281,7 @@ function loadChar(characterJson) {
 
 // Inject the JSONp "script" from the location defined in the URL.
 var charURL = decodeURIComponent(getVars()["charURL"]);
+if (charURL === 'undefined') charURL = 'fireaxe.js';
 $.ajax({
     url: charURL,
     dataType: 'script',
@@ -289,6 +290,6 @@ $.ajax({
         loadChar(charJson);
     },
     error: function (XMLHttpRequest, textStatus, errorThrown) {
-        alert("Failed loading data from charURL - " + textStatus + " - " + errorThrown);
+        alert("Failed loading data from charURL " + charURL + "  - " + textStatus + " - " + errorThrown);
     }
 });
