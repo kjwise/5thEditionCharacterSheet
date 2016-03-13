@@ -3,20 +3,20 @@ var charJson =
     "name": "Morn",
     "classes": {
         "Ranger": {
-            "level": 11,
+            "level": 12,
             "hitdice": "d10"
         }
     },
     "inspirationpoints": 0,
-    "hitpoints": 106, // 12, 8, 8, 8, 11, 10, 12, 8, 11, 8, 10
-    "ac": 17, // 13 + 4
+    "hitpoints": 115, // 12, 8, 8, 8, 11, 10, 12, 8, 11, 8, 10, 9
+    "ac": 18, // 13 + 5
     "speed": 30,
     "mainattributes": {
         "background": "Outlander",
         "race": "Human",
         "alignment": "Chaotic Neutral",
         "playername": "Haffi",
-        "xp": 85000 // page 15 in PHB
+        "xp": 100000 // page 15 in PHB
     },
     "appearance": {
         "age": 27,
@@ -28,7 +28,7 @@ var charJson =
     },
     "abilityscores": {
         "str": 14,
-        "dex": 18, // 8th level ability score increase bumped this from 16
+        "dex": 20, // 8th, 12th level ABI's bumped this from 16
         "con": 14,
         "int": 11,
         "wis": 16,
