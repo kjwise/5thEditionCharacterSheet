@@ -3,13 +3,13 @@ var charJson =
     "name": "Fenrir Fireaxe",
     "classes": {
         "Barbarian": {
-            "level": 11,
+            "level": 12,
             "hitdice": "D12"
         }
     },
     "hasinspirationpoint": true,
     "exhaustionlevel": 0,
-    "hitpoints": 136,
+    "hitpoints": 147,
     "ac": "18",
     "speed": 35,
     "mainattributes": {
@@ -28,12 +28,12 @@ var charJson =
         "hair": "red & gray"
     },
     "abilityscores": {
-        "str": 19,
+        "str": 20,
         "dex": 14,
         "con": 18,
         "int": 8,
         "wis": 10,
-        "cha": 13
+        "cha": 14
     },
     "savingthrow_proficiencies": [
         "str", "con"
@@ -122,7 +122,7 @@ var charJson =
         "Reckless attack",
         "Danger Sense",
         "Unarmoured combat",
-        "Rage 4x/day +3 dmg",
+        "Rage 5x/day +3 dmg",
         "Darkvision",
         "Dwarven resilience",
         "Stonecunning",
@@ -141,8 +141,9 @@ var charJson =
     ],
     "contacts": [
         "Order of the Gauntlet +1",
-        "Harpers",
         "Lord Volmer",
-        "Emerald Enclave"
+        "Emerald Enclave",
+        "Varram - the failed dwarf cultist",
+        "Leosyn - Harper agent"
     ]
 };
