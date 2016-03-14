@@ -53,9 +53,11 @@ var charJson =
             "proficient": true,
             "type": "piercing"
         },
-        "scimitar": {
-            "ability": "dex",
-            "die": "1d6",
+        "longsword": {
+            "ability": "str",
+            "extraAttackMod": 2, // +2 weapon
+            "extraDmgMod": 2, // +2 weapon
+            "die": "1d8",
             "proficient": true,
             "type": "slashing"
         },
@@ -90,7 +92,7 @@ var charJson =
             "scimitar",
             "quiver of 20 arrows",
             "flute",
-            "Arrow of the Phoenix (attuned): returns after 1d4 rounds, 1d6 fire damage",
+            "Arrow of the Phoenix (attuned): returns after 1d4 rounds, 1d6 fire damage", // Tasmikella informed me that the arrow *is* the Phoenix
             "religious icons inlaid with precious gems x 4",
             "Decanter of Endless Water",
             "pearl worth 375gp",
@@ -99,7 +101,8 @@ var charJson =
             "Longbow + 1",
             "riding horse",
             "Potion of healing",
-            "8 x Arrow +3"
+            "8 x Arrow +3",
+            "Longsword +2 of Life Stealing" // +10 necrotic damage on hit 3 times per day (recharge d3 per day) & gain 10 temp hitpoints, on crit this is triggered without expending a charge
         ]
     },
     "personality": {
