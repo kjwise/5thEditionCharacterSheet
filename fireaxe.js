@@ -45,9 +45,9 @@ var charJson =
         "persuasion"
     ],
     "attacks": {
-        "Axe of Many (wounding) + 2": {
+        "Axe of Many + 2": {
             "ability": "str",
-            "die": "1d12 + 1d4 per wound",
+            "die": "1d12 + 1d6 + 1d4 wounding (per turn)",
             "proficient": true,
             "type": "s",
             "extraAttackMod": 2,
@@ -81,7 +81,7 @@ var charJson =
             "platinum": 40
         },
         "other": [
-            "Axe of Many + 2: (Attuned) does +1d4 dmg per turn",
+            "Axe of Many + 2: (Attuned) does +1d6 and +1d4 dmg per turn, destroys all holy water within 10f radius",
             "Explorer's pack",
             "Set of fine clothes",
             "Signet ring, vial of perfume",
