@@ -116,6 +116,7 @@ var charJson =
         "Gold Dragon essence",
         "Feral Instinct",
         "Mindless rage",
+        "Mobile: +10 feet no opp. att. from creatures I melee att.",
         "Extra attack",
         "Fast movement",
         "Great Weapon Fighting Style",
