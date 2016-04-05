@@ -11,7 +11,7 @@ var charJson =
     "exhaustionlevel": 0,
     "hitpoints": 147,
     "ac": "18",
-    "speed": 35,
+    "speed": 45,
     "mainattributes": {
         "background": "Noble",
         "race": "Mountain Dwarf",
