@@ -53,23 +53,19 @@ var charJson =
             "extraAttackMod": 2,
             "extraDmgMod": 2
         },
-        "Mithril Spear": {
-            "ability": "str",
-            "die": "1d6",
-            "proficient": true,
-            "type": "p"
-        },
-        "Heavy Crossbow": {
-            "ability": "dex",
-            "die": "1d10",
-            "proficient": true,
-            "type": "p"
-        },
         "3x handaxe": {
             "ability": "str",
             "die": "1d6",
             "proficient": true,
             "type": "s"
+        },
+        "2x Dagger +1": {
+            "ability": "str",
+            "die": "1d6",
+            "proficient": true,
+            "type": "p",
+            "extraAttackMod": 1,
+            "extraDmgMod": 1
         }
     },
     "equipment": {
@@ -99,7 +95,10 @@ var charJson =
             "6x 250gp rainbow gems",
             "Boots of speed: (Attuned) Doubles movement speed for 10 minutes per long rest. Bonus action to activate.",
             "Braces of defence: (Attuned) +2 armor",
-            "Potion of healing"
+            "2x Potion of healing",
+            "Potion of Fire Breath",
+            "Potion of Growth",
+            "2x dagger +1"
         ]
     },
     "personality": {
