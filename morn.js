@@ -87,9 +87,6 @@ var charJson =
             "rabbits foot keepsake",
             "travelers clothes",
             "small blanket",
-            "dagger",
-            "sickle",
-            "scimitar",
             "quiver of 20 arrows",
             "flute",
             "Arrow of the Phoenix (attuned): returns after 1d4 rounds, 1d6 fire damage", // Tasmikella informed me that the arrow *is* the Phoenix
@@ -99,10 +96,10 @@ var charJson =
             "Lantern of Revealing",
             "Slippers of Spider Climbing (attuned): allows me to walk on walls and ceilings",
             "Longbow + 1",
-            "riding horse",
-            "Potion of healing",
+            "2 x Potion of healing",
             "8 x Arrow +3",
-            "Longsword +2 of Life Stealing" // +10 necrotic damage on hit 3 times per day (recharge d3 per day) & gain 10 temp hitpoints, on crit this is triggered without expending a charge
+            "Longsword +2 of Life Stealing (attuned)", // +10 necrotic damage on hit 3 times per day (recharge d3 per day) & gain 10 temp hitpoints, on crit this is triggered without expending a charge
+            "Drift globe" // command to trigger Daylight spell, command to have it follow me
         ]
     },
     "personality": {
