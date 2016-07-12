@@ -3,13 +3,13 @@ var charJson =
     "name": "Fenrir Fireaxe",
     "classes": {
         "Barbarian": {
-            "level": 12,
+            "level": 13,
             "hitdice": "D12"
         }
     },
     "hasinspirationpoint": true,
     "exhaustionlevel": 0,
-    "hitpoints": 147,
+    "hitpoints": 158,
     "ac": "18",
     "speed": 45,
     "mainattributes": {
@@ -98,7 +98,8 @@ var charJson =
             "2x Potion of healing",
             "Potion of Fire Breath",
             "Potion of Growth",
-            "2x dagger +1"
+            "2x dagger +1",
+            "Blue dragon horn"
         ]
     },
     "personality": {
@@ -110,7 +111,7 @@ var charJson =
     "features": [
         "Relentless rage: DC 10 safe to keep fighting at 1 hp, +5 DC subsequently",
         "Rage dash: I can dash as a bonus action",
-        "Brutal Critical: 1 extra die",
+        "Brutal Critical: 2 extra die",
         "Great Weapon Master",
         "Gold Dragon essence",
         "Feral Instinct",
