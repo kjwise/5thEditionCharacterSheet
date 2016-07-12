@@ -57,7 +57,7 @@ var charJson =
             "ability": "str",
             "extraAttackMod": 2, // +2 weapon
             "extraDmgMod": 2, // +2 weapon
-            "die": "1d8",
+            "die": "1d8/1d10",
             "proficient": true,
             "type": "slashing"
         },
