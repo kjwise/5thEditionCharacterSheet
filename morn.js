@@ -3,7 +3,7 @@ var charJson =
     "name": "Morn",
     "classes": {
         "Ranger": {
-            "level": 12,
+            "level": 13,
             "hitdice": "d10"
         }
     },
