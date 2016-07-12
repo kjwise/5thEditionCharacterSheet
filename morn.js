@@ -16,7 +16,7 @@ var charJson =
         "race": "Human",
         "alignment": "Chaotic Neutral",
         "playername": "Haffi",
-        "xp": 100000 // page 15 in PHB
+        "xp": 120000 // page 15 in PHB
     },
     "appearance": {
         "age": 27,
@@ -94,7 +94,7 @@ var charJson =
             "pearl worth 375gp",
             "Lantern of Revealing",
             "Slippers of Spider Climbing (attuned): allows me to walk on walls and ceilings",
-            "Longbow + 1 'Flamebow' (attuned)", // Enchanted by Phoenix upon release from Arrow of the Phoenix, is now Flamebow. Bonus action to activate +2d6 flame damage on arrows.
+            "Longbow + 1 'Flamebow' (attuned): bonus action to activate +2d6 fire damage", // Enchanted by Phoenix upon release from Arrow of the Phoenix, is now Flamebow. Bonus action to activate +2d6 flame damage on arrows.
             "2 x Potion of healing",
             "8 x Arrow +3",
             "Longsword +2 of Life Stealing (attuned)", // +10 necrotic damage on hit 3 times per day (recharge d3 per day) & gain 10 temp hitpoints, on crit this is triggered without expending a charge
@@ -128,7 +128,8 @@ var charJson =
         "spellSlots": {
             "spells1": 4,
             "spells2": 3,
-            "spells3": 3
+            "spells3": 3,
+            "spells4": 1
         },
         "spells": {
             "spells0": ["N/A"],
