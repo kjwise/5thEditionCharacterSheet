@@ -3,12 +3,12 @@ var charJson =
     "name": "Morn",
     "classes": {
         "Ranger": {
-            "level": 12,
+            "level": 13,
             "hitdice": "d10"
         }
     },
     "inspirationpoints": 0,
-    "hitpoints": 115, // 12, 8, 8, 8, 11, 10, 12, 8, 11, 8, 10, 9
+    "hitpoints": 123, // 12, 8, 8, 8, 11, 10, 12, 8, 11, 8, 10, 9, 8
     "ac": 18, // 13 + 5
     "speed": 30,
     "mainattributes": {
@@ -89,13 +89,12 @@ var charJson =
             "small blanket",
             "quiver of 20 arrows",
             "flute",
-            "Arrow of the Phoenix (attuned): returns after 1d4 rounds, 1d6 fire damage", // Tasmikella informed me that the arrow *is* the Phoenix
             "religious icons inlaid with precious gems x 4",
             "Decanter of Endless Water",
             "pearl worth 375gp",
             "Lantern of Revealing",
             "Slippers of Spider Climbing (attuned): allows me to walk on walls and ceilings",
-            "Longbow + 1",
+            "Longbow + 1 'Flamebow' (attuned)", // Enchanted by Phoenix upon release from Arrow of the Phoenix, is now Flamebow. Bonus action to activate +2d6 flame damage on arrows.
             "2 x Potion of healing",
             "8 x Arrow +3",
             "Longsword +2 of Life Stealing (attuned)", // +10 necrotic damage on hit 3 times per day (recharge d3 per day) & gain 10 temp hitpoints, on crit this is triggered without expending a charge
@@ -132,10 +131,11 @@ var charJson =
             "spells3": 3
         },
         "spells": {
-            "spells0": ["No cantrips"],
+            "spells0": ["N/A"],
             "spells1": ["Hunter's Mark"],
             "spells2": ["Darkvision", "Locate Animals or Plants", "Pass Without Trace"],
-            "spells3": ["Nondetection", "Lightning Arrow", "Protection from Energy"]
+            "spells3": ["Nondetection", "Lightning Arrow", "Protection from Energy"],
+            "spells4": ["Locate Creature"]
         }
     },
     "proficiencies": [ // have started learning more about tanning process, focusing on methods of harvesting material from dead dragons
