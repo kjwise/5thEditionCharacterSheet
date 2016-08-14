@@ -3,12 +3,12 @@ var charJson =
     "name": "Morn",
     "classes": {
         "Ranger": {
-            "level": 13,
+            "level": 14,
             "hitdice": "d10"
         }
     },
-    "inspirationpoints": 0,
-    "hitpoints": 123, // 12, 8, 8, 8, 11, 10, 12, 8, 11, 8, 10, 9, 8
+    "inspirationpoints": 1,
+    "hitpoints": 131, // 12, 8, 8, 8, 11, 10, 12, 8, 11, 8, 10, 9, 8, 8
     "ac": 18, // 13 + 5
     "speed": 30,
     "mainattributes": {
@@ -16,7 +16,7 @@ var charJson =
         "race": "Human",
         "alignment": "Chaotic Neutral",
         "playername": "Haffi",
-        "xp": 120000 // page 15 in PHB
+        "xp": 140000 // page 15 in PHB
     },
     "appearance": {
         "age": 27,
@@ -96,9 +96,11 @@ var charJson =
             "Slippers of Spider Climbing (attuned): allows me to walk on walls and ceilings",
             "Longbow + 1 'Flamebow' (attuned): bonus action to activate +2d6 fire damage", // Enchanted by Phoenix upon release from Arrow of the Phoenix, is now Flamebow. Bonus action to activate +2d6 flame damage on arrows.
             "2 x Potion of healing",
-            "8 x Arrow +3",
+            "7 x Arrow +3",
             "Longsword +2 of Life Stealing (attuned)", // +10 necrotic damage on hit 3 times per day (recharge d3 per day) & gain 10 temp hitpoints, on crit this is triggered without expending a charge
-            "Drift globe" // command to trigger Daylight spell, command to have it follow me
+            "Drift globe", // command to trigger Daylight spell, command to have it follow me
+            "Ring of cold resistance", // requires attunement
+            "Ring of shooting stars" // requires attunement
         ]
     },
     "personality": {
@@ -109,7 +111,7 @@ var charJson =
     },
     "features": [
         "Wanderer: Don\'t get lost, can find food in the wild (p.136)",
-        "Favored Enemy: Dragons, Humans, Half-Dragons (p.91)",
+        "Favored Enemy: Dragons, Humans, Half-Dragons, Fiends (p.91)",
         "Natural Explorer: Mountains, Grassland, Forest (p.91)",
         "Fighting Style: Archery (p.91)",
         "Ranger Spellcasting (p.90-91)",
@@ -121,7 +123,9 @@ var charJson =
         "Brass Dragon Essence: Ability score improvement (Cha)",
         "Hide in Plain Sight: Take 1 minute to camouflage against natural surface for +10 Dexterity (Stealth) (p.92)",
         "Multiattack - Volley: Ranged attack against all targets in 10 foot radius area. (p.93)",
-        "Bahamut's benefit - Lucky: May re-roll d20 and choose which to use three times per long rest. (p.16x)"
+        "Bahamut's benefit - Lucky: May re-roll d20 and choose which to use three times per long rest. (p.16x)",
+        "Vanish - Bonus action to Hide, can't be tracked by nonmagical means. (p.92)",
+        "Charm of heroism - single use action (potion-like) to gain 10 temp hit points & Bless"
     ],
     "spellcasting": {
         "spellcastingAbility": "wis",
@@ -154,6 +158,8 @@ var charJson =
         "Leosyn - Harper agent",
         "Lord Volmer - Waterthonian noble, totally a vampire",
         "Blaggothcus - storm giant, we got rid of a white dragon (Glassiel) for him",
-        "Varram - former Dragon Cult member"
+        "Varram - former Dragon Cult member",
+        "Tasmikella - former Dragon Cult Member",
+        "Maccath - Arcane Brotherhood agent"
     ]
 };
