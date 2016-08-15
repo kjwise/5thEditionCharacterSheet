@@ -3,14 +3,14 @@ var charJson =
     "name": "Fenrir Fireaxe",
     "classes": {
         "Barbarian": {
-            "level": 13,
+            "level": 14,
             "hitdice": "D12"
         }
     },
     "hasinspirationpoint": true,
     "exhaustionlevel": 0,
-    "hitpoints": 158,
-    "ac": "18",
+    "hitpoints": 163,
+    "ac": "17 / 22",
     "speed": 45,
     "mainattributes": {
         "background": "Noble",
@@ -45,13 +45,13 @@ var charJson =
         "persuasion"
     ],
     "attacks": {
-        "Axe of Many + 2": {
+        "Axe of Many": {
             "ability": "str",
-            "die": "1d12 + 1d6 + 1d4 wounding (per turn)",
+            "die": "1d12 + 1d6 (see equipment!)",
             "proficient": true,
             "type": "s",
-            "extraAttackMod": 2,
-            "extraDmgMod": 2
+            "extraAttackMod": 1,
+            "extraDmgMod": 1
         },
         "3x handaxe": {
             "ability": "str",
@@ -73,11 +73,11 @@ var charJson =
             "copper": 0,
             "silver": 100,
             "electrum": 1000,
-            "gold": 850,
+            "gold": 2550,
             "platinum": 40
         },
         "other": [
-            "Axe of Many + 2: (Attuned) does +1d6 and +1d4 dmg per turn, destroys all holy water within 10f radius",
+            "Axe of Many + (1, 2): (Attuned) does +1d6 base, +1/+3d6 dmg per turn vs dragons or +1/+2d6 fire dmg or +2/+1d4 wounding, destroys all holy water within 10f radius",
             "Explorer's pack",
             "Set of fine clothes",
             "Signet ring, vial of perfume",
@@ -93,13 +93,16 @@ var charJson =
             "Vial of perfume",
             "Cloak & hood",
             "6x 250gp rainbow gems",
+            "10k gold in gems",
             "Boots of speed: (Attuned) Doubles movement speed for 10 minutes per long rest. Bonus action to activate.",
-            "Braces of defence: (Attuned) +2 armor",
+            "Cloak of protection: (Attuned) +1 armor and +1 to all saves",
             "2x Potion of healing",
             "Potion of Fire Breath",
             "Potion of Growth",
             "2x dagger +1",
-            "Blue dragon horn"
+            "Blue dragon horn",
+            "Shield +3: When used, add +5 to current ac",
+            "Charm of heroism: 1 use as an action"
         ]
     },
     "personality": {
@@ -111,6 +114,7 @@ var charJson =
     "features": [
         "Relentless rage: DC 10 safe to keep fighting at 1 hp, +5 DC subsequently",
         "Rage dash: I can dash as a bonus action",
+        "Retaliation: reaction attack those that attack me within 5 feet",
         "Brutal Critical: 2 extra die",
         "Great Weapon Master",
         "Gold Dragon essence",
