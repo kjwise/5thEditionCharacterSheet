@@ -1,6 +1,6 @@
 var charJson =
 {
-    "name": "Volen",
+    "name": "Volen", // born and raised on the outskirts of a cattle ranch to the north of Longsaddle
     "classes": {
         "Fighter": {
             "level": 1,
@@ -9,17 +9,17 @@ var charJson =
     },
     "inspirationpoints": 0,
     "hitpoints": 13, // 13
-    "ac": 18, // 16 + 2
+    "ac": 18, // 16 (chain mail) + 2 (shield)
     "speed": 30,
     "mainattributes": {
-        "background": "Mercenary Veteran",
+        "background": "Mercenary Veteran", // served for almost four years in Red Shields
         "race": "Half-Orc",
         "alignment": "Lawful Neutral",
         "playername": "Haffi",
         "xp": 0 // page 15 in PHB
     },
     "appearance": {
-        "age": 17,
+        "age": 19, // left home at 14 years of age
         "height": "6\'5\"",
         "weight": "205 lbs.",
         "eyes": "black",
@@ -36,8 +36,7 @@ var charJson =
     },
     "savingthrow_proficiencies": [
         "str",
-        "con",
-        "dex" //temporary until feature to deal with Shield Mastery is added
+        "con"
     ],
     "skill_proficiences": [
         "acrobatics",
@@ -67,7 +66,7 @@ var charJson =
             "copper": 0,
             "silver": 0,
             "electrum": 0,
-            "gold": 120,
+            "gold": 10,
             "platinum": 0
         },
         "other": [
@@ -78,9 +77,10 @@ var charJson =
             "10 torches",
             "10 days rations",
             "50\' hemp rope",
-            "travelers clothes",
-            "Seargent\'s insignia", // 
-            "bone dice"
+            "traveler\'s clothes",
+            "seargent\'s insignia", // left the Red Shields in good standing
+            "bone dice",
+            "a cameo of a hideous person" // trinket 61, connected to father in some way
         ]
     },
     "personality": {
@@ -92,11 +92,11 @@ var charJson =
     "features": [
         "Menacing: Proficient in Intimidation (p.41)",
         "Relentless Endurance: Once per long rest, drop to 1 instead of 0 hit ponts (p.41)",
-        "Savage Attacks: Roll additional damage die on critical hits(p.41)",
+        "Savage Attacks: Roll additional damage die on critical hits (p.41)",
         "Fighting Style: Duelist, +2 dmg while using a single one handed weapon (p.72)",
         "Second Wind: Once per long rest, regain hit points equal to d10 + Fighter level (p.72)",
         "Shield Master: Shove as bonus action, shield AC bonus to dex saves, evasion",
-        "Mercenary Life: have knowledge of and contacts within mercenary companies (scag p.152)"
+        "Mercenary Life: I have knowledge of and contacts within mercenary companies (scag p.152)"
     ],
     "proficiencies": [ 
         "Dice games",
@@ -109,6 +109,7 @@ var charJson =
         "Orc"
     ],
     "contacts": [
-    "Mercenary company"
+    "Garrik - Officer in the \'Red Shields\' mercenary band.",
+    "Kara - Priest of the Red Knight, military advisor."
     ]
 };
