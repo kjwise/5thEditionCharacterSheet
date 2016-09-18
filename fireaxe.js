@@ -11,7 +11,7 @@ var charJson =
     "exhaustionlevel": 0,
     "hitpoints": 163,
     "ac": "17 / 22",
-    "speed": 45,
+    "speed": 55,
     "mainattributes": {
         "background": "Noble",
         "race": "Mountain Dwarf",
@@ -78,6 +78,7 @@ var charJson =
         },
         "other": [
             "Axe of Many + (1, 2): (Attuned) does +1d6 base, +1/+3d6 dmg per turn vs dragons or +1/+2d6 fire dmg or +2/+1d4 wounding, destroys all holy water within 10f radius",
+            "Axe of Many: (Attuned) plus 10 base speed",
             "Explorer's pack",
             "Set of fine clothes",
             "Signet ring, vial of perfume",
@@ -92,17 +93,14 @@ var charJson =
             "Travellers' clothes",
             "Vial of perfume",
             "Cloak & hood",
-            "6x 250gp rainbow gems",
-            "10k gold in gems",
             "Boots of speed: (Attuned) Doubles movement speed for 10 minutes per long rest. Bonus action to activate.",
             "Cloak of protection: (Attuned) +1 armor and +1 to all saves",
             "2x Potion of healing",
+            "Potion of protection from energy",
             "Potion of Fire Breath",
-            "Potion of Growth",
             "2x dagger +1",
             "Blue dragon horn",
-            "Shield +3: When used, add +5 to current ac",
-            "Charm of heroism: 1 use as an action"
+            "Shield +3: When used, add +5 to current ac"
         ]
     },
     "personality": {
