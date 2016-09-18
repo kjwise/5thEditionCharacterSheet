@@ -1,6 +1,6 @@
 var charJson =
 {
-    "name": "Morn",
+    "name": "Morn", // this character is retired after completing Hoard of the Dragon Queen and Rise of Tiamat
     "classes": {
         "Ranger": {
             "level": 14,
@@ -10,7 +10,7 @@ var charJson =
     "inspirationpoints": 1,
     "hitpoints": 131, // 12, 8, 8, 8, 11, 10, 12, 8, 11, 8, 10, 9, 8, 8
     "ac": 18, // 13 + 5
-    "speed": 30,
+    "speed": 40,
     "mainattributes": {
         "background": "Outlander",
         "race": "Human",
@@ -90,17 +90,17 @@ var charJson =
             "quiver of 20 arrows",
             "flute",
             "religious icons inlaid with precious gems x 4",
-            "Decanter of Endless Water",
             "pearl worth 375gp",
+            "Decanter of Endless Water",
             "Lantern of Revealing",
-            "Slippers of Spider Climbing (attuned): allows me to walk on walls and ceilings",
-            "Longbow + 1 'Flamebow' (attuned): bonus action to activate +2d6 fire damage", // Enchanted by Phoenix upon release from Arrow of the Phoenix, is now Flamebow. Bonus action to activate +2d6 flame damage on arrows.
-            "2 x Potion of healing",
-            "7 x Arrow +3",
-            "Longsword +2 of Life Stealing (attuned)", // +10 necrotic damage on hit 3 times per day (recharge d3 per day) & gain 10 temp hitpoints, on crit this is triggered without expending a charge
             "Drift globe", // command to trigger Daylight spell, command to have it follow me
+            "Shield +3",
+            "Slippers of Spider Climbing (attuned): allows me to walk on walls and ceilings", // requires attunement
+            "Longbow + 1 of the Phoenix (attuned): bonus action to activate +2d6 fire damage, grants +10 to movement speed", // requires attunement Enchanted by Phoenix upon release from Arrow of the Phoenix, is now Flamebow. Bonus action to activate +2d6 flame damage on arrows.
+            "Longsword +2 of Life Stealing", // requires attunement +10 necrotic damage on hit 3 times per day (recharge d3 per day) & gain 10 temp hitpoints, on crit this is triggered without expending a charge
             "Ring of cold resistance", // requires attunement
-            "Ring of shooting stars" // requires attunement
+            "Ring of shooting stars (attuned)", // requires attunement
+            "Girdle of Giant Strength" // requires attunement, grants str 20
         ]
     },
     "personality": {
@@ -124,8 +124,7 @@ var charJson =
         "Hide in Plain Sight: Take 1 minute to camouflage against natural surface for +10 Dexterity (Stealth) (p.92)",
         "Multiattack - Volley: Ranged attack against all targets in 10 foot radius area. (p.93)",
         "Bahamut's benefit - Lucky: May re-roll d20 and choose which to use three times per long rest. (p.16x)",
-        "Vanish - Bonus action to Hide, can't be tracked by nonmagical means. (p.92)",
-        "Charm of heroism - single use action (potion-like) to gain 10 temp hit points & Bless"
+        "Vanish - Bonus action to Hide, can't be tracked by nonmagical means. (p.92)"
     ],
     "spellcasting": {
         "spellcastingAbility": "wis",
