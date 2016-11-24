@@ -3,13 +3,13 @@ var charJson =
     "name": "Mehen Marr Magus",
     "classes": {
         "Paladin": {
-            "level": 1,
+            "level": 3,
             "hitdice": "d10"
         }
     },
     "inspirationpoints": 0,
-    "hitpoints": 12,
-    "ac": 18,
+    "hitpoints": 31,
+    "ac": 19,
     "speed": 30,
     "mainattributes": {
         "background": "FA - Arcane Brotherhood",
@@ -42,7 +42,7 @@ var charJson =
         "athletics",
         "persuasion",
         "insight",
-        "religion"
+        "arcana"
     ],
     "attacks": {
         "Warhammer": {
@@ -65,7 +65,7 @@ var charJson =
             "copper": 0,
             "silver": 0,
             "electrum": 0,
-            "gold": 15,
+            "gold": 25,
             "platinum": 0
         },
         "other": [
@@ -90,11 +90,15 @@ var charJson =
     "features": [
         "Silver dragon ancestry: Cold resistance",
         "Breath Weapon 2d6 cold dmg: Cold cone 15 ft Con save (8 +prof +con mod) 1 per rest.",
-        "Divine Sense: Action to detect good and evil 1+ cha mod per long rest",
-        "Lay on hands",
-        "FEAT - Magic Initiate Warlock: Hex, El-blast & Greenflame blade"
+        "F - Magic Initiate Warlock: Hex, El-blast & Greenflame blade",
+        "C - Divine Sense: Action to detect good and evil 1+ cha mod per long rest",
+        "C - Lay on hands: Restore level * 5 hp",
+        "C - Fighting style - Defense: +1 AC",
+        "C - Divine health: Immune to disease",
+        "C - Oath of Vengeance: Abjure Enemy & Wow of Enmity",
+        "Spell slots - 3 1st level spell slots"
     ],
-    "proficiencies": [ 
+    "proficiencies": [
         "All armor and shields",
         "Simple & martial weapons"
     ],
@@ -105,6 +109,17 @@ var charJson =
         "Primordial"
     ],
     "contacts": [
-        "Someone someone Arcane Brotherhood"
-    ]
+        "Someone someone Arcane Brotherhood",
+        "Rothar Hatherhand (enemy)"
+    ],
+    "spellcasting": {
+        "spellcastingAbility": "cha",
+        "spellSlots": {
+            "spells1": 4,
+        },
+        "spells": {
+            "spells0": ["Green flame blade", "Eldritch blast"],
+            "spells1": ["*Hunter's Mark", "*Bane", "*Hex", "Thunderous Smite", "Command", "Shield of Faith", "Cure Wounds"],
+        }
+    }
 };
