@@ -3,12 +3,12 @@ var charJson =
     "name": "Mehen Marr Magus",
     "classes": {
         "Paladin": {
-            "level": 3,
+            "level": 4,
             "hitdice": "d10"
         }
     },
     "inspirationpoints": 0,
-    "hitpoints": 31,
+    "hitpoints": 44,
     "ac": 19,
     "speed": 30,
     "mainattributes": {
@@ -29,9 +29,9 @@ var charJson =
     "abilityscores": {
         "str": 16, // +2 Dragonborn
         "dex": 12,
-        "con": 15,
+        "con": 16,
         "int": 8,
-        "wis": 9,
+        "wis": 10,
         "cha": 16 // +1 Dragonborn
     },
     "savingthrow_proficiencies": [
@@ -78,7 +78,8 @@ var charJson =
             "Shield",
             "Javelins",
             "Chain mail",
-            "Battle axe"
+            "Battle axe",
+            "250 GP Ring"
         ]
     },
     "personality": {
@@ -110,6 +111,7 @@ var charJson =
     ],
     "contacts": [
         "Someone someone Arcane Brotherhood",
+        "Prophet of the Earth - Marlos Unrayle",
         "Rothar Hatherhand (enemy)"
     ],
     "spellcasting": {
@@ -119,7 +121,7 @@ var charJson =
         },
         "spells": {
             "spells0": ["Green flame blade", "Eldritch blast"],
-            "spells1": ["*Hunter's Mark", "*Bane", "*Hex", "Thunderous Smite", "Command", "Shield of Faith", "Cure Wounds"],
+            "spells1": ["*Hunter's Mark", "*Bane", "*Hex", "Thunderous Smite", "Command", "Shield of Faith", "Cure Wounds", "Compelled Duel"],
         }
     }
 };
