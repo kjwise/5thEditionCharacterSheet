@@ -3,13 +3,13 @@ var charJson =
     "name": "Mehen Marr Magus",
     "classes": {
         "Paladin": {
-            "level": 4,
+            "level": 5,
             "hitdice": "d10"
         }
     },
     "inspirationpoints": 0,
-    "hitpoints": 44,
-    "ac": 19,
+    "hitpoints": 52,
+    "ac": 21,
     "speed": 30,
     "mainattributes": {
         "background": "FA - Arcane Brotherhood",
@@ -77,7 +77,7 @@ var charJson =
             "Longsword",
             "Shield",
             "Javelins",
-            "Chain mail",
+            "Plate mail",
             "Battle axe",
             "250 GP Ring"
         ]
@@ -89,15 +89,17 @@ var charJson =
         "flaws": "I put too much trust in those that wield power within the Arcane Brotherhood."
     },
     "features": [
-        "Silver dragon ancestry: Cold resistance",
-        "Breath Weapon 2d6 cold dmg: Cold cone 15 ft Con save (8 +prof +con mod) 1 per rest.",
+        "DB - Silver dragon ancestry: Cold resistance",
+        "DB - Breath Weapon 2d6 cold dmg: Cold cone 15 ft Con save (8 +prof +con mod) 1 per rest.",
         "F - Magic Initiate Warlock: Hex, El-blast & Greenflame blade",
         "C - Divine Sense: Action to detect good and evil 1+ cha mod per long rest",
         "C - Lay on hands: Restore level * 5 hp",
         "C - Fighting style - Defense: +1 AC",
         "C - Divine health: Immune to disease",
         "C - Oath of Vengeance: Abjure Enemy & Wow of Enmity",
-        "Spell slots - 3 1st level spell slots"
+        "C - Extra Attack",
+        "Spell slots - 5 1st level",
+        "Spell slots - 2 2nd level",
     ],
     "proficiencies": [
         "All armor and shields",
@@ -117,11 +119,13 @@ var charJson =
     "spellcasting": {
         "spellcastingAbility": "cha",
         "spellSlots": {
-            "spells1": 4,
+            "spells1": 5,
+            "spells2": 2,
         },
         "spells": {
             "spells0": ["Green flame blade", "Eldritch blast"],
-            "spells1": ["*Hunter's Mark", "*Bane", "*Hex", "Thunderous Smite", "Command", "Shield of Faith", "Cure Wounds", "Compelled Duel"],
+            "spells1": ["*Hunter's Mark", "*Bane", "*Hex", "Thunderous Smite", "Command", "Shield of Faith", "Compelled Duel"],
+            "spells2": ["*Hold Person", "*Misty Step", "Magic Weapon"]
         }
     }
 };
