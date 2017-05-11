@@ -3,12 +3,12 @@ var charJson =
     "name": "Mehen Marr Magus",
     "classes": {
         "Paladin": {
-            "level": 5,
+            "level": 6,
             "hitdice": "d10"
         }
     },
-    "inspirationpoints": 0,
-    "hitpoints": 52,
+    "inspirationpoints": 1,
+    "hitpoints": 62,
     "ac": 21,
     "speed": 30,
     "mainattributes": {
@@ -65,21 +65,25 @@ var charJson =
             "copper": 0,
             "silver": 0,
             "electrum": 0,
-            "gold": 25,
+            "gold": 125,
             "platinum": 0
         },
         "other": [
-            "A rank insignia from a lost legioneer",
-            "Explorer's pack",
-            "Traveler\'s clothes",
-            "Holy symbol of Mystra",
-            "Symbol of the Arcane Brotherhood",
-            "Longsword",
-            "Shield",
-            "Javelins",
-            "Plate mail",
-            "Battle axe",
-            "250 GP Ring"
+    	    "Bottle of bottled breath",
+          "A rank insignia from a lost legioneer",
+          "Explorer's pack",
+          "Traveler\'s clothes",
+          "Holy symbol of Mystra",
+          "Symbol of the Arcane Brotherhood",
+          "Longsword",
+          "Shield",
+          "Javelins",
+          "Plate mail",
+          "Battle axe",
+          "250 GP Ring",
+    	    "Potion of Heroism",
+    	    "Feathered Cloak of Gliding",
+          "Balloon pack: Levitate and featherfall"
         ]
     },
     "personality": {
@@ -90,14 +94,16 @@ var charJson =
     },
     "features": [
         "DB - Silver dragon ancestry: Cold resistance",
-        "DB - Breath Weapon 2d6 cold dmg: Cold cone 15 ft Con save (8 +prof +con mod) 1 per rest.",
+        "DB - Breath Weapon 3d6 cold dmg: Cold cone 15 ft Con save (8 +prof +con mod) 1 per rest.",
         "F - Magic Initiate Warlock: Hex, El-blast & Greenflame blade",
-        "C - Divine Sense: Action to detect good and evil 1+ cha mod per long rest",
-        "C - Lay on hands: Restore level * 5 hp",
+	      "C - Divine Smite: 2d8 on hit per 1st lvl spell slot",
+        "C - Divine Sense: Action to detect good and evil 1+ cha mod per LR",
+        "C - Lay on hands: Restore - level * 5 hp per LR",
         "C - Fighting style - Defense: +1 AC",
         "C - Divine health: Immune to disease",
-        "C - Oath of Vengeance: Abjure Enemy & Wow of Enmity",
+        "C - Oath of Vengeance: Abjure Enemy & Wow of Enmity per rest",
         "C - Extra Attack",
+        "C - Aura of Protection: +Cha mod on save 10ft radius",
         "Spell slots - 5 1st level",
         "Spell slots - 2 2nd level",
     ],
@@ -113,8 +119,9 @@ var charJson =
     ],
     "contacts": [
         "Someone someone Arcane Brotherhood",
-        "Prophet of the Earth - Marlos Unrayle",
-        "Rothar Hatherhand (enemy)"
+        "Prophet of the Earth - Marlos Unrayle (enemy?)",
+        "Rothar Hatherhand (enemy)",
+	"Erizi Kalinoth Queen (enemy?)"
     ],
     "spellcasting": {
         "spellcastingAbility": "cha",
@@ -124,8 +131,8 @@ var charJson =
         },
         "spells": {
             "spells0": ["Green flame blade", "Eldritch blast"],
-            "spells1": ["*Hunter's Mark", "*Bane", "*Hex", "Thunderous Smite", "Command", "Shield of Faith", "Compelled Duel"],
-            "spells2": ["*Hold Person", "*Misty Step", "Magic Weapon"]
+            "spells1": ["*Hunter's Mark", "*Bane", "*Hex", "Thunderous Smite", "Protection from Evil and Good", "Command", "Shield of Faith", "Compelled Duel"],
+            "spells2": ["*Hold Person", "*Misty Step", "Magic Weapon", ""]
         }
     }
 };
