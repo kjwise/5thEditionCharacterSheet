@@ -3,13 +3,13 @@ var charJson =
     "name": "Mehen Marr Magus",
     "classes": {
         "Paladin": {
-            "level": 6,
+            "level": 7,
             "hitdice": "d10"
         }
     },
     "inspirationpoints": 1,
-    "hitpoints": 62,
-    "ac": 21,
+    "hitpoints": 73,
+    "ac": "19 / 21 w.s",
     "speed": 30,
     "mainattributes": {
         "background": "FA - Arcane Brotherhood",
@@ -58,6 +58,14 @@ var charJson =
             "die": "1d6",
             "proficient": true,
             "type": "piercing"
+        },
+        "Greataxe": {
+          "ability": "str",
+          "extraAttackMod": +1,
+          "extraDmgMod": +1,
+          "die": "1d12",
+          "proficient": true,
+          "type": "slashing"
         }
     },
     "equipment": {
@@ -65,7 +73,7 @@ var charJson =
             "copper": 0,
             "silver": 0,
             "electrum": 0,
-            "gold": 125,
+            "gold": 950,
             "platinum": 0
         },
         "other": [
@@ -96,6 +104,7 @@ var charJson =
         "DB - Silver dragon ancestry: Cold resistance",
         "DB - Breath Weapon 3d6 cold dmg: Cold cone 15 ft Con save (8 +prof +con mod) 1 per rest.",
         "F - Magic Initiate Warlock: Hex, El-blast & Greenflame blade",
+        "C - Relentless Avanger: Opp attack allows half move without aoo",
 	      "C - Divine Smite: 2d8 on hit per 1st lvl spell slot",
         "C - Divine Sense: Action to detect good and evil 1+ cha mod per LR",
         "C - Lay on hands: Restore - level * 5 hp per LR",
@@ -105,7 +114,7 @@ var charJson =
         "C - Extra Attack",
         "C - Aura of Protection: +Cha mod on save 10ft radius",
         "Spell slots - 5 1st level",
-        "Spell slots - 2 2nd level",
+        "Spell slots - 3 2nd level",
     ],
     "proficiencies": [
         "All armor and shields",
@@ -127,7 +136,7 @@ var charJson =
         "spellcastingAbility": "cha",
         "spellSlots": {
             "spells1": 5,
-            "spells2": 2,
+            "spells2": 3,
         },
         "spells": {
             "spells0": ["Green flame blade", "Eldritch blast"],
