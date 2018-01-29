@@ -3,12 +3,12 @@ var charJson =
     "name": "Mehen Marr Magus",
     "classes": {
         "Paladin": {
-            "level": 7,
+            "level": 12,
             "hitdice": "d10"
         }
     },
     "inspirationpoints": 1,
-    "hitpoints": 73,
+    "hitpoints": 125,
     "ac": "19 / 21 w.s",
     "speed": 30,
     "mainattributes": {
@@ -27,7 +27,7 @@ var charJson =
         "hair": "silver"
     },
     "abilityscores": {
-        "str": 16, // +2 Dragonborn
+        "str": 20, // +2 Dragonborn
         "dex": 12,
         "con": 16,
         "int": 8,
@@ -47,7 +47,8 @@ var charJson =
     "attacks": {
         "Warhammer": {
             "ability": "str",
-            "extraDmgMod": +0,
+            "extraDmgMod": +3,
+            "extraAttackMod": +3,
             "die": "1d8",
             "proficient": true,
             "type": "bludgeon"
@@ -59,14 +60,6 @@ var charJson =
             "proficient": true,
             "type": "piercing"
         },
-        "Greataxe": {
-          "ability": "str",
-          "extraAttackMod": +1,
-          "extraDmgMod": +1,
-          "die": "1d12",
-          "proficient": true,
-          "type": "slashing"
-        }
     },
     "equipment": {
         "coins": {
@@ -87,11 +80,11 @@ var charJson =
           "Shield",
           "Javelins",
           "Plate mail",
-          "Battle axe",
           "250 GP Ring",
     	    "Potion of Heroism",
     	    "Feathered Cloak of Gliding",
-          "Balloon pack: Levitate and featherfall"
+          "Balloon pack: Levitate and featherfall",
+          "GLEAMING WarHammer +3 ranged 20/60 extra 1d8 when ranged 2d8 giant - Previous owner Toebreaker"
         ]
     },
     "personality": {
@@ -102,7 +95,7 @@ var charJson =
     },
     "features": [
         "DB - Silver dragon ancestry: Cold resistance",
-        "DB - Breath Weapon 3d6 cold dmg: Cold cone 15 ft Con save (8 +prof +con mod) 1 per rest.",
+        "DB - Breath Weapon 4d6 cold dmg: Cold cone 15 ft Con save (8 +prof +con mod) 1 per rest.",
         "F - Magic Initiate Warlock: Hex, El-blast & Greenflame blade",
         "C - Relentless Avanger: Opp attack allows half move without aoo",
 	      "C - Divine Smite: 2d8 on hit per 1st lvl spell slot",
@@ -113,8 +106,11 @@ var charJson =
         "C - Oath of Vengeance: Abjure Enemy & Wow of Enmity per rest",
         "C - Extra Attack",
         "C - Aura of Protection: +Cha mod on save 10ft radius",
+        "C - Aura of Courage: No on frightened in 10ft radius",
+        "C - Improved Divine Smite! +1d8 ALL ATTACKS",
         "Spell slots - 5 1st level",
         "Spell slots - 3 2nd level",
+        "Spell slots - 2 3rd level",
     ],
     "proficiencies": [
         "All armor and shields",
@@ -137,11 +133,13 @@ var charJson =
         "spellSlots": {
             "spells1": 5,
             "spells2": 3,
+            "spells3": 3,
         },
         "spells": {
             "spells0": ["Green flame blade", "Eldritch blast"],
             "spells1": ["*Hunter's Mark", "*Bane", "*Hex", "Thunderous Smite", "Protection from Evil and Good", "Command", "Shield of Faith", "Compelled Duel"],
-            "spells2": ["*Hold Person", "*Misty Step", "Magic Weapon", ""]
+            "spells2": ["*Hold Person", "*Misty Step", "Magic Weapon", ""],
+            "spells3": ["*Haste", "*Protection from Energy", "Remove Curse", "Magic Circle", ""]
         }
     }
 };
