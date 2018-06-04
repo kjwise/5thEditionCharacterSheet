@@ -84,7 +84,8 @@ var charJson =
     	    "Potion of Heroism",
     	    "Feathered Cloak of Gliding",
           "Balloon pack: Levitate and featherfall",
-          "GLEAMING WarHammer +3 ranged 20/60 extra 1d8 when ranged 2d8 giant - Previous owner Toebreaker"
+          "GLEAMING WarHammer +3 ranged 20/60 extra 1d8 when ranged 2d8 giant - Previous owner Toebreaker",
+          "Trident of Fish Command +1 - 3 charges (1d3 charges at dawn)"
         ]
     },
     "personality": {
