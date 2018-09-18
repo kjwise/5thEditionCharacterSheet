@@ -3,14 +3,14 @@ var charJson =
     "name": "Eldon 'Cloak' Turen",
     "classes": {
         "Ranger": {
-            "level": 3,
+            "level": 4,
             "hitdice": "d10"
         }
     },
     "inspirationpoints": 0,
-    "hitpoints": 33,
+    "hitpoints": 41,
     "initiative": 5, // Dex + Wis because gloom stalker
-    "ac": "15",
+    "ac": "16",
     "speed": 25,
     "mainattributes": {
         "background": "Outlander",
@@ -29,7 +29,7 @@ var charJson =
     },
     "abilityscores": {
         "str": 8,
-        "dex": 16, // +1 Svirfneblin
+        "dex": 18, // +1 Svirfneblin, +2 ability score improvement lvl 4
         "con": 14,
         "int": 16, // +2 gnome
         "wis": 14,
@@ -72,7 +72,9 @@ var charJson =
             "platinum": 0
         },
         "other": [
-    	    "Leather armor",
+          "Assasins Brand: Magically summon a dagger into my hand as a bonus action",
+    	    "Studded Leather armor",
+          "5 potions of healing",
           "Short bow: Range 80/320",
           "Hand-axe",
           "Mace",
@@ -84,7 +86,8 @@ var charJson =
           "A trophy from an animal I killed",
           "A set of traveller's clothes",
           "Kalimba - musical instrument",
-          "A living spider - size of tarantula"
+          "A living spider - size of tarantula",
+          "Five flashbang arrows: 1d6 non magical 10 feet radius DC 10 con save or be blinded"
         ]
     },
     "personality": {
