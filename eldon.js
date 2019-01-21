@@ -3,12 +3,12 @@ var charJson =
     "name": "Eldon 'Cloak' Turen",
     "classes": {
         "Ranger": {
-            "level": 4,
+            "level": 5,
             "hitdice": "d10"
         }
     },
     "inspirationpoints": 0,
-    "hitpoints": 41,
+    "hitpoints": 53,
     "initiative": 5, // Dex + Wis because gloom stalker
     "ac": "16",
     "speed": 25,
@@ -97,15 +97,16 @@ var charJson =
         "flaws": "Don't expect me to save those who can't save themselves."
     },
     "features": [
-        "!!! - Madness level 1",
+        "!!! - Madness level 2",
         "G - Gnome cunning: int, wis, cha saving throw advantage against magic",
         "DG - Superior darkvision (150 feet)",
         "DG - Stone Camouflage: Adv on stealth checks in rocky terrain",
         "DG - Undercommon",
         "Background feature: Deep Delver",
+        "R - Extra Attack",
         "R - Natural Explorer: Underdark - double proficiency bonus on wis and int checks related to terrain, advantage on iniative and on attacks on creatures that have not yet acted",
         "R - Favorite Enemy Monstrosities",
-        "R - Spellcasting: 3 1st level slots - 3 spells known",
+        "R - Spellcasting: 4 1st level slots - 2 2nd level - 4 spells known",
         "R - Archery Fighting Style: +2 bonus to attack rolls",
         "Feat - Sharpshooter: Page 170",
         "GS - Dread ambusher: extra attack first turn on combat with +1d8 dmg, 10 extra move, +wis to initiative",
@@ -132,6 +133,8 @@ var charJson =
         "spells": {
             "spells0": ["None at the moment!"],
             "spells1": ["Snare", "Hunters mark", "Disguise self"],
+            "spells2": ["Pass without trace", "Spike growth"],
         }
     }
 };
+
