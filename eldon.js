@@ -5,10 +5,14 @@ var charJson =
         "Ranger": {
             "level": 5,
             "hitdice": "d10"
+        },
+        "Rogue": {
+            "level": 1,
+            "hitdice": "d8"
         }
     },
     "inspirationpoints": 0,
-    "hitpoints": 53,
+    "hitpoints": 62,
     "initiative": 5, // Dex + Wis because gloom stalker
     "ac": "16",
     "speed": 25,
@@ -44,13 +48,14 @@ var charJson =
         "perception",
         "stealth",
         "athletics",
-        "survival"
+        "survival",
+        "sleight of hand"
     ],
     "attacks": {
-        "Shortbow": {
+        "Shortbow +1": {
             "ability": "dex",
-            "extraDmgMod": +0,
-            "extraAttackMod": +2, // Archery fighting style
+            "extraDmgMod": +1,
+            "extraAttackMod": +3, // Archery fighting style, bow +1
             "die": "1d6",
             "proficient": true,
             "type": "piercing"
@@ -80,6 +85,7 @@ var charJson =
           "Mace",
           "Explorer's pack",
           "Quiver of 20 arrows",
+          "Bow +1: Bonus action activate - 5 rounds extra 1d6 force damage",
           "A staff",
           "A hunting trap",
           "A pouch of 10 gb",
@@ -98,6 +104,9 @@ var charJson =
     },
     "features": [
         "!!! - Madness level 2",
+        "R - Expertise (Stealth, Survival): Double proficiency bonus",
+        "R - Sneak Attack: +1d6 once per turn",
+        "R - Thieves cant",
         "G - Gnome cunning: int, wis, cha saving throw advantage against magic",
         "DG - Superior darkvision (150 feet)",
         "DG - Stone Camouflage: Adv on stealth checks in rocky terrain",
@@ -137,4 +146,3 @@ var charJson =
         }
     }
 };
-
