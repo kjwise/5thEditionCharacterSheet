@@ -85,7 +85,7 @@ var charJson =
           "Mace",
           "Explorer's pack",
           "Quiver of 20 arrows",
-          "Bow +1: Bonus action activate - 5 rounds extra 1d6 force damage",
+          "Bow +1: Bonus action activate - 1 minutes (10 rounds= extra 1d6 force damage, double against constructs",
           "A staff",
           "A hunting trap",
           "A pouch of 10 gb",
