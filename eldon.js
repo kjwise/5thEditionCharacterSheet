@@ -7,14 +7,14 @@ var charJson =
             "hitdice": "d10"
         },
         "Rogue": {
-            "level": 1,
+            "level": 2,
             "hitdice": "d8"
         }
     },
     "inspirationpoints": 0,
-    "hitpoints": 62,
+    "hitpoints": 73,
     "initiative": 5, // Dex + Wis because gloom stalker
-    "ac": "16",
+    "ac": "17",
     "speed": 25,
     "mainattributes": {
         "background": "Outlander",
@@ -60,9 +60,10 @@ var charJson =
             "proficient": true,
             "type": "piercing"
         },
-        "Handaxe": {
-            "ability": "str",
-            "extraDmgMod": +0,
+        "+2 Shortsword": {
+            "ability": "dex",
+            "extraDmgMod": +2,
+            "extraAttackMod": +2,
             "die": "1d6",
             "proficient": true,
             "type": "slashing"
@@ -77,6 +78,7 @@ var charJson =
             "platinum": 0
         },
         "other": [
+          "+2 Shortsword",
           "Assasins Brand: Magically summon a dagger into my hand as a bonus action",
     	    "Studded Leather armor",
           "5 potions of healing",
@@ -103,20 +105,21 @@ var charJson =
         "flaws": "Don't expect me to save those who can't save themselves."
     },
     "features": [
-        "!!! - Madness level 2",
-        "R - Expertise (Stealth, Survival): Double proficiency bonus",
-        "R - Sneak Attack: +1d6 once per turn",
-        "R - Thieves cant",
+        "B - Blessing of protection +1 AC and Saves",
+        "RO - Expertise (Stealth, Survival): Double proficiency bonus",
+        "RO - Sneak Attack: +1d6 once per turn",
+        "RO - Thieves cant",
+        "RO - Cunning action",
         "G - Gnome cunning: int, wis, cha saving throw advantage against magic",
         "DG - Superior darkvision (150 feet)",
         "DG - Stone Camouflage: Adv on stealth checks in rocky terrain",
         "DG - Undercommon",
         "Background feature: Deep Delver",
-        "R - Extra Attack",
-        "R - Natural Explorer: Underdark - double proficiency bonus on wis and int checks related to terrain, advantage on iniative and on attacks on creatures that have not yet acted",
-        "R - Favorite Enemy Monstrosities",
-        "R - Spellcasting: 4 1st level slots - 2 2nd level - 4 spells known",
-        "R - Archery Fighting Style: +2 bonus to attack rolls",
+        "RA - Extra Attack",
+        "RA - Natural Explorer: Underdark - double proficiency bonus on wis and int checks related to terrain, advantage on iniative and on attacks on creatures that have not yet acted",
+        "RA - Favorite Enemy Monstrosities",
+        "RA - Spellcasting: 4 1st level slots - 2 2nd level - 4 spells known",
+        "RA - Archery Fighting Style: +2 bonus to attack rolls",
         "Feat - Sharpshooter: Page 170",
         "GS - Dread ambusher: extra attack first turn on combat with +1d8 dmg, 10 extra move, +wis to initiative",
         "GS - Umbral sight: +30 dark vision, invisible to creatures using darkvision in darkness"
