@@ -7,7 +7,7 @@ var charJson =
             "hitdice": "d10"
         },
         "Rogue": {
-            "level": 2,
+            "level": 3,
             "hitdice": "d8"
         }
     },
