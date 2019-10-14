@@ -12,7 +12,7 @@ var charJson =
         }
     },
     "inspirationpoints": 0,
-    "hitpoints": 73,
+    "hitpoints": 79,
     "initiative": 5, // Dex + Wis because gloom stalker
     "ac": "17",
     "speed": 25,
@@ -107,9 +107,11 @@ var charJson =
     "features": [
         "B - Blessing of protection +1 AC and Saves",
         "RO - Expertise (Stealth, Survival): Double proficiency bonus",
-        "RO - Sneak Attack: +1d6 once per turn",
+        "RO - Sneak Attack: +2d6 once per turn",
         "RO - Thieves cant",
         "RO - Cunning action",
+        "ROA - Assassinate", 
+        "ROA - Proficiency poison and disguise kit", 
         "G - Gnome cunning: int, wis, cha saving throw advantage against magic",
         "DG - Superior darkvision (150 feet)",
         "DG - Stone Camouflage: Adv on stealth checks in rocky terrain",
