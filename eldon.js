@@ -7,12 +7,12 @@ var charJson =
             "hitdice": "d10"
         },
         "Rogue": {
-            "level": 3,
+            "level": 4,
             "hitdice": "d8"
         }
     },
     "inspirationpoints": 0,
-    "hitpoints": 79,
+    "hitpoints": 86,
     "initiative": 5, // Dex + Wis because gloom stalker
     "ac": "17",
     "speed": 25,
@@ -33,7 +33,7 @@ var charJson =
     },
     "abilityscores": {
         "str": 8,
-        "dex": 18, // +1 Svirfneblin, +2 ability score improvement lvl 4
+        "dex": 20, // +1 Svirfneblin, +2 ability score improvement lvl 4
         "con": 14,
         "int": 16, // +2 gnome
         "wis": 14,
@@ -85,6 +85,8 @@ var charJson =
           "Short bow: Range 80/320",
           "Hand-axe",
           "Mace",
+          "Wings of flying: cmd word batwings 1 hour 60ft move",
+          "Amulet thing: 5000gp",
           "Explorer's pack",
           "Quiver of 20 arrows",
           "Bow +1: Bonus action activate - 1 minutes (10 rounds= extra 1d6 force damage, double against constructs",
@@ -110,6 +112,7 @@ var charJson =
         "RO - Sneak Attack: +2d6 once per turn",
         "RO - Thieves cant",
         "RO - Cunning action",
+        "RO - Ability score increase (lvl4, dex)",
         "ROA - Assassinate", 
         "ROA - Proficiency poison and disguise kit", 
         "G - Gnome cunning: int, wis, cha saving throw advantage against magic",
