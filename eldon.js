@@ -7,12 +7,12 @@ var charJson =
             "hitdice": "d10"
         },
         "Rogue": {
-            "level": 4,
+            "level": 5,
             "hitdice": "d8"
         }
     },
     "inspirationpoints": 0,
-    "hitpoints": 86,
+    "hitpoints": 92,
     "initiative": 5, // Dex + Wis because gloom stalker
     "ac": "17",
     "speed": 25,
@@ -50,6 +50,10 @@ var charJson =
         "athletics",
         "survival",
         "sleight of hand"
+    ],
+    "skill_expertise": [
+        "stealth",
+        "survival"
     ],
     "attacks": {
         "Shortbow +1": {
@@ -109,7 +113,8 @@ var charJson =
     "features": [
         "B - Blessing of protection +1 AC and Saves",
         "RO - Expertise (Stealth, Survival): Double proficiency bonus",
-        "RO - Sneak Attack: +2d6 once per turn",
+        "RO - Sneak Attack: +3d6 once per turn",
+        "RO - Uncanny dodge: Use reaction to halve damage when hit with attack",
         "RO - Thieves cant",
         "RO - Cunning action",
         "RO - Ability score increase (lvl4, dex)",

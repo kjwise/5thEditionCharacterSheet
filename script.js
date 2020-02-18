@@ -90,6 +90,10 @@ function mapSkills(characterJson, abilityToModifierStore, proficiencyModifier) {
         if ($.inArray(skill.toLowerCase(), characterJson.skill_proficiences) > -1) {
             proficiencyTag = ' proficient';
             modifier += proficiencyModifier;
+            // Check for skill expertise which doubles proficiency modifier
+            if ($.inArray(skill.toLowerCase(), characterJson.skill_expertise) > -1) {
+                modifier += proficiencyModifier;
+            }
         }
         targetContainer.append('<div class="center-block col-xs-6 col-sm-3 col-md-6 ' + ability + proficiencyTag + '">' +
             '<span class="checkModifier">' + formatModifier(modifier) + "</span> " + skill + '<i class="hidden-sm hidden-xs"> (' + ability + ')</i></div>');
