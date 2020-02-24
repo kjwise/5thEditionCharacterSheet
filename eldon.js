@@ -7,12 +7,12 @@ var charJson =
             "hitdice": "d10"
         },
         "Rogue": {
-            "level": 5,
+            "level": 6,
             "hitdice": "d8"
         }
     },
     "inspirationpoints": 0,
-    "hitpoints": 92,
+    "hitpoints": 101,
     "initiative": 5, // Dex + Wis because gloom stalker
     "ac": "17",
     "speed": 25,
@@ -53,7 +53,9 @@ var charJson =
     ],
     "skill_expertise": [
         "stealth",
-        "survival"
+        "survival",
+        "perception",
+        "investigation"
     ],
     "attacks": {
         "Shortbow +1": {
@@ -82,9 +84,10 @@ var charJson =
             "platinum": 0
         },
         "other": [
+          "Gem of seeing: 3 charges of True Sight, regenerates 1d3 carges at dawn",
           "+2 Shortsword",
-          "Assasins Brand: Magically summon a dagger into my hand as a bonus action",
-    	    "Studded Leather armor",
+          "Assassins Brand: Magically summon a dagger into my hand as a bonus action",
+    	  "Studded Leather armor",
           "5 potions of healing",
           "Short bow: Range 80/320",
           "Hand-axe",
