@@ -13,7 +13,7 @@ var charJson =
     },
     "inspirationpoints": 0,
     "hitpoints": 101,
-    "initiative": 5, // Dex + Wis because gloom stalker
+    "initiative": 7, // Dex + Wis because gloom stalker
     "ac": "17",
     "speed": 25,
     "mainattributes": {
